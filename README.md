@@ -6,6 +6,7 @@ Showcase your GitHub repo's success with these two simple, static buttons featur
 To get started, checkout http://markdotto.github.com/github-buttons!
 
 
+
 Usage
 -----
 
@@ -21,33 +22,39 @@ Options
 -------
 
 `user`
+
 GitHub username that owns the repo
 
 `repo`
+
 GitHub repository to pull the forks and watchers counts
 
 `type`
+
 Type of button to show: `watchers` or `forks`
 
 `count`
-Show the optional watchers or forks count
+
+Show the optional watchers or forks count: _none_ by default or `true`
 
 `size`
-Optional flag for using a larger button (30px tall instead of 20px)
+
+Optional flag for using a larger button: _none_ by default or `large`
+
 
 
 Bug tracker
 -----------
 
-Have a bug? Please create an issue here on GitHub!
+Have a bug? Please create an issue here on GitHub at https://github.com/markdotto/github-buttons/issues.
 
-https://github.com/markdotto/github-buttons
 
 
 Twitter account
 ---------------
 
 Keep up to date on announcements and more by following Mark on Twitter, <a href="http://twitter.com/mdo">@mdo</a>.
+
 
 
 Authors
@@ -57,6 +64,7 @@ Authors
 
 + http://twitter.com/mdo
 + http://github.com/markdotto
+
 
 
 Copyright and license
