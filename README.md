@@ -12,55 +12,28 @@ Usage
 These buttons are hosted via GitHub Pages, meaning all you need to do is include an iframe and you're set. Once included, you can configure it with various options. Here's the include:
 
 ``` html
-<iframe src="github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+<iframe src="github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE" allowtransparency="true"
+  frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 ```
 
 
 Options
 -------
 
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Usage and options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>`user`</td>
-      <td>GitHub username that owns the repo</td>
-    </tr>
-    <tr>
-      <td>`repo`</td>
-      <td>GitHub repository to pull the forks and watchers counts</td>
-    </tr>
-    <tr>
-      <td>`type`</td>
-      <td>
-        Type of button to show:<br>
-        `watchers`<br>
-        `forks`
-      </td>
-    </tr>
-    <tr>
-      <td>`count`</td>
-      <td>
-        Show the optional watchers or forks count<br>
-        `true`<br>
-        `false`
-      </td>
-    </tr>
-    <tr>
-      <td>`size`</td>
-      <td>
-        Optional flag for using a larger button (30px tall instead of 20px):<br>
-        _none_ (default)<br>
-        `large`
-      </td>
-    </tr>
-  </tbody>
-</table>
+`user`
+GitHub username that owns the repo
+
+`repo`
+GitHub repository to pull the forks and watchers counts
+
+`type`
+Type of button to show: `watchers` or `forks`
+
+`count`
+Show the optional watchers or forks count
+
+`size`
+Optional flag for using a larger button (30px tall instead of 20px)
 
 
 Bug tracker
