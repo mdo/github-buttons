@@ -89,6 +89,7 @@ body {
   margin-left: 4px;
 }
 </style>
+
 <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
 <script type="text/javascript">
   // Read a page's GET URL variables and return them as an associative array.
@@ -108,6 +109,7 @@ body {
   var type = getUrlVars()['type'];
   var count = getUrlVars()['count'];
   var size = getUrlVars()['size'];
+
   // Le jQuery
   $(document).ready(function($){
     // Add commas
@@ -122,6 +124,9 @@ body {
       }
       return x1 + x2;
     }
+
+    // Set href to be URL for repo
+    $('.gh-btn').attr('href', 'https://github.com/'+user'/'+repo+'/');
 
     // Add the class and change the text label
     if (type == 'watchers') {
@@ -155,7 +160,7 @@ body {
 </script>
 
 <span class="github-btn">
-  <a href="https://github.com/twitter/bootstrap" class="gh-btn">
+  <a href="#" class="gh-btn">
     <span class="gh-ico"></span>
     <span class="gh-text"></span>
   </a>
