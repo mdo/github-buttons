@@ -13,8 +13,8 @@ Usage
 These buttons are hosted via GitHub Pages, meaning all you need to do is include an iframe and you're set. Once included, you can configure it with various options. Here's the include:
 
 ``` html
-<iframe src="github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE" allowtransparency="true"
-  frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 ```
 
 
