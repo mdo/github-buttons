@@ -13,6 +13,7 @@ body {
   background-image: linear-gradient(#eee, #fff 25%, #fff);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: auto;
 }
 body,
 p,
@@ -136,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Download button */
 .download {
-  margin: 30px 0 40px;
+  margin: 30px 0 50px;
   text-align: center;
 }
 .download .btn {
