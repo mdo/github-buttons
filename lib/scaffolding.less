@@ -1,0 +1,38 @@
+/*
+ * Scaffolding
+ * Basic and global styles for generating a grid system, structural layout, and page templates
+ * ------------------------------------------------------------------------------------------- */
+
+
+// STRUCTURAL LAYOUT
+// -----------------
+
+body {
+  background-color: @white;
+  margin: 0;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @grayDark;
+}
+
+// Container (centered, fixed-width layouts)
+.container {
+  .fixed-container();
+}
+
+
+// BASE STYLES
+// -----------
+
+// Links
+a {
+  color: @linkColor;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  &:hover {
+    color: @linkColorHover;
+    text-decoration: underline;
+  }
+}

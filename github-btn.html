@@ -1,0 +1,163 @@
+<style type="text/css">
+body {
+  padding: 0;
+  margin: 0;
+  font: bold 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.github-btn {
+  height: 20px;
+  overflow: hidden;
+}
+.github-btn .gh-btn,
+.github-btn .gh-count,
+.github-btn .gh-ico {
+  float: left;
+}
+.github-btn .gh-btn,
+.github-btn .gh-count {
+  padding: 2px 5px 2px 4px;
+  color: #666;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+.github-btn .gh-btn {
+  background-color: #e6e6e6;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+}
+.github-btn .gh-btn:hover {
+  color: #333;
+  text-decoration: none;
+  background-position: 0 -10px;
+}
+.github-btn .gh-btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
+     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
+}
+.github-btn .gh-ico {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: middle;
+  background: url(img/github-icons.png) no-repeat 0 0;
+  opacity: .65;
+}
+.github-btn .gh-btn:hover .gh-ico {
+  opacity: .75;
+}
+.github-btn .gh-count {
+  display: none; /* hidden to start */
+  margin-left: 2px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.github-btn-large {
+  height: 30px;
+}
+.github-btn-large .gh-btn,
+.github-btn-large .gh-count {
+  padding: 3px 10px 3px 8px;
+  font-size: 16px;
+  line-height: 22px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+.github-btn-large .gh-ico {
+  width: 22px;
+  height: 22px;
+  background-position: 0 -20px;
+}
+.github-btn-large .gh-count {
+  margin-left: 4px;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+  // Read a page's GET URL variables and return them as an associative array.
+  // Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+  function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
+  var user = getUrlVars()['user'];
+  var repo = getUrlVars()['repo'];
+  var type = getUrlVars()['type'];
+  var count = getUrlVars()['count'];
+  var size = getUrlVars()['size'];
+  // Le jQuery
+  $(document).ready(function($){
+    // Add commas
+    function addCommas(nStr) {
+      nStr += '';
+      x = nStr.split('.');
+      x1 = x[0];
+      x2 = x.length > 1 ? '.' + x[1] : '';
+      var rgx = /(\d+)(\d{3})/;
+      while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+      }
+      return x1 + x2;
+    }
+
+    // Add the class and change the text label
+    if (type == 'watchers') {
+      $('.github-btn').addClass('github-watchers');
+      $('.gh-text').html('Watch');
+    } else if (type == 'forks') {
+      $('.github-btn').addClass('github-forks');
+      $('.gh-text').html('Fork');
+    }
+
+    // Show the count if asked
+    if (count == 'true') {
+      $('.gh-count').show();
+    }
+
+    // Change the size
+    if (size == 'large') {
+      $('.github-btn').addClass('github-btn-large');
+    }
+
+    // GitHub data
+    $.ajax("https://api.github.com/repos/"+user+"/"+repo+"", {
+      dataType: "jsonp",
+      success: function (obj) {
+        $('.github-watchers .gh-count').html(addCommas(obj['data']['watchers']));
+        $('.github-forks .gh-count').html(addCommas(obj['data']['forks']));
+      }
+    });
+
+  });
+</script>
+
+<span class="github-btn">
+  <a href="https://github.com/twitter/bootstrap" class="gh-btn">
+    <span class="gh-ico"></span>
+    <span class="gh-text"></span>
+  </a>
+  <span class="gh-count"></span>
+</span>
