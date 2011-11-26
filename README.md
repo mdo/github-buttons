@@ -21,24 +21,19 @@ These buttons are hosted via GitHub Pages, meaning all you need to do is include
 Options
 -------
 
-`user`
-
+`user`<br>
 GitHub username that owns the repo
 
-`repo`
-
+`repo`<br>
 GitHub repository to pull the forks and watchers counts
 
-`type`
-
+`type`<br>
 Type of button to show: `watchers` or `forks`
 
-`count`
-
+`count`<br>
 Show the optional watchers or forks count: _none_ by default or `true`
 
-`size`
-
+`size`<br>
 Optional flag for using a larger button: _none_ by default or `large`
 
 
