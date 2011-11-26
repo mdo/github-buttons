@@ -1,48 +1,66 @@
-TWITTER BOOTSTRAP
-=================
+UNOFFICIAL GITHUB BUTTONS
+=========================
 
-Bootstrap is Twitter's toolkit for kickstarting CSS for websites, apps, and more. It includes base CSS styles for typography, forms, buttons, tables, grids, navigation, alerts, and more.
+Showcase your GitHub repo's success with these two simple, static buttons featuring dynamic watch and fork counts and a link to your GitHub repo.
 
-To get started -- checkout http://twitter.github.com/bootstrap!
+To get started, checkout http://markdotto.github.com/github-buttons!
 
 
 Usage
 -----
 
-You can use Twitter Bootstrap in one of two ways: just drop the compiled CSS into any new project and start cranking, or run LESS on your site and compile on the fly like a boss.
-
-Here's what the LESS version looks like:
+These buttons are hosted via GitHub Pages, meaning all you need to do is include an iframe and you're set. Once included, you can configure it with various options. Here's the include:
 
 ``` html
-<link rel="stylesheet/less" type="text/css" href="lib/bootstrap.less">
-<script src="less.js" type="text/javascript"></script>
+<iframe src="github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
 ```
 
-Or if you prefer, the standard css way:
 
-``` html
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
-```
+Options
+-------
 
-For more info, refer to the docs!
-
-
-Versioning
-----------
-
-For transparency and insight into our release cycle, and for striving to maintain backwards compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the follow format:
-
-`<major>.<minor>.<patch>`
-
-And constructed with the following guidelines:
-
-* Breaking backwards compatibility bumps the major
-* New additions without breaking backwards compatibility bumps the minor
-* Bug fixes and misc changes bump the patch
-
-For more information on SemVer, please visit http://semver.org/.
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Usage and options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`user`</td>
+      <td>GitHub username that owns the repo</td>
+    </tr>
+    <tr>
+      <td>`repo`</td>
+      <td>GitHub repository to pull the forks and watchers counts</td>
+    </tr>
+    <tr>
+      <td>`type`</td>
+      <td>
+        Type of button to show:<br>
+        `watchers`<br>
+        `forks`
+      </td>
+    </tr>
+    <tr>
+      <td>`count`</td>
+      <td>
+        Show the optional watchers or forks count<br>
+        `true`<br>
+        `false`
+      </td>
+    </tr>
+    <tr>
+      <td>`size`</td>
+      <td>
+        Optional flag for using a larger button (30px tall instead of 20px):<br>
+        _none_ (default)<br>
+        `large`
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 Bug tracker
@@ -50,37 +68,13 @@ Bug tracker
 
 Have a bug? Please create an issue here on GitHub!
 
-https://github.com/twitter/bootstrap/issues
+https://github.com/markdotto/github-buttons
 
 
 Twitter account
 ---------------
 
-Keep up to date on announcements and more by following Bootstrap on Twitter, <a href="http://twitter.com/TwBootstrap">@TwBootstrap</a>.
-
-
-Mailing list
-------------
-
-Have a question? Ask on our mailing list!
-
-twitter-bootstrap@googlegroups.com
-
-http://groups.google.com/group/twitter-bootstrap
-
-
-Developers
-----------
-
-We have included a makefile with convenience methods for working with the bootstrap library.
-
-+ **build** - `make build`
-This will run the less compiler on the bootstrap lib and generate a bootstrap.css and bootstrap.min.css file.
-The lessc compiler is required for this command to run.
-
-+ **watch** - `make watch`
-This is a convenience method for watching your less files and automatically building them whenever you save.
-Watchr is required for this command to run.
+Keep up to date on announcements and more by following Mark on Twitter, <a href="http://twitter.com/mdo">@mdo</a>.
 
 
 Authors
@@ -91,16 +85,11 @@ Authors
 + http://twitter.com/mdo
 + http://github.com/markdotto
 
-**Jacob Thornton**
-
-+ http://twitter.com/fat
-+ http://github.com/fat
-
 
 Copyright and license
 ---------------------
 
-Copyright 2011 Twitter, Inc.
+Copyright 2011 Mark Otto.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
