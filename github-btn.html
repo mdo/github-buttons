@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font: bold 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 .github-btn {
   height: 20px;
@@ -112,7 +113,8 @@ body {
 
   // Le jQuery
   $(document).ready(function($){
-    // Add commas
+    // Add commas to numbers
+    // Source: http://www.mredkj.com/javascript/nfbasic.html
     function addCommas(nStr) {
       nStr += '';
       x = nStr.split('.');
@@ -129,10 +131,10 @@ body {
     $('.gh-btn').attr('href', 'https://github.com/'+user'/'+repo+'/');
 
     // Add the class and change the text label
-    if (type == 'watchers') {
+    if (type == 'watch') {
       $('.github-btn').addClass('github-watchers');
       $('.gh-text').html('Watch');
-    } else if (type == 'forks') {
+    } else if (type == 'fork') {
       $('.github-btn').addClass('github-forks');
       $('.gh-text').html('Fork');
     }
@@ -148,7 +150,8 @@ body {
     }
 
     // GitHub data
-    $.ajax("https://api.github.com/repos/"+user+"/"+repo+"", {
+    // Credit for assistance from Richard Henry and Ben Hodgson
+    $.ajax('https://api.github.com/repos/'+user+'/'+repo+'', {
       dataType: "jsonp",
       success: function (obj) {
         $('.github-watchers .gh-count').html(addCommas(obj['data']['watchers']));
