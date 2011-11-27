@@ -3,18 +3,19 @@ body {
   padding: 0;
   margin: 0;
   font: bold 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 .github-btn {
   height: 20px;
   overflow: hidden;
 }
-.gh-btn,
-.gh-count,
-.gh-ico {
+.github-btn .gh-btn,
+.github-btn .gh-count,
+.github-btn .gh-ico {
   float: left;
 }
-.gh-btn,
-.gh-count {
+.github-btn .gh-btn,
+.github-btn .gh-count {
   padding: 2px 5px 2px 4px;
   color: #666;
   text-decoration: none;
@@ -25,7 +26,7 @@ body {
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
-.gh-btn {
+.github-btn .gh-btn {
   background-color: #e6e6e6;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
   background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
@@ -40,17 +41,17 @@ body {
      -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
           box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
 }
-.gh-btn:hover {
+.github-btn .gh-btn:hover {
   color: #333;
   text-decoration: none;
   background-position: 0 -10px;
 }
-.gh-btn:active {
+.github-btn .gh-btn:active {
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
      -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
           box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
 }
-.gh-ico {
+.github-btn .gh-ico {
   width: 14px;
   height: 14px;
   margin-right: 4px;
@@ -58,10 +59,10 @@ body {
   background: url(github-icons.png) no-repeat 0 0;
   opacity: .65;
 }
-.gh-btn:hover .gh-ico {
+.github-btn .gh-btn:hover .gh-ico {
   opacity: .75;
 }
-.gh-count {
+.github-btn .gh-count {
   display: none; /* hidden to start */
   margin-left: 2px;
   background-color: #fff;
@@ -112,7 +113,8 @@ body {
 
   // Le jQuery
   $(document).ready(function($){
-    // Add commas
+    // Add commas to numbers
+    // Source: http://www.mredkj.com/javascript/nfbasic.html
     function addCommas(nStr) {
       nStr += '';
       x = nStr.split('.');
@@ -129,10 +131,10 @@ body {
     $('.gh-btn').attr('href', 'https://github.com/'+user+'/'+repo+'/');
 
     // Add the class and change the text label
-    if (type == 'watchers') {
+    if (type == 'watch') {
       $('.github-btn').addClass('github-watchers');
       $('.gh-text').html('Watch');
-    } else if (type == 'forks') {
+    } else if (type == 'fork') {
       $('.github-btn').addClass('github-forks');
       $('.gh-text').html('Fork');
     }
@@ -148,7 +150,8 @@ body {
     }
 
     // GitHub data
-    $.ajax("https://api.github.com/repos/"+user+"/"+repo+"", {
+    // Credit for assistance from Richard Henry and Ben Hodgson
+    $.ajax('https://api.github.com/repos/'+user+'/'+repo+'', {
       dataType: "jsonp",
       success: function (obj) {
         $('.github-watchers .gh-count').html(addCommas(obj['data']['watchers']));
