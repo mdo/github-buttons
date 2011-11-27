@@ -13,28 +13,82 @@ Usage
 These buttons are hosted via GitHub Pages, meaning all you need to do is include an iframe and you're set. Once included, you can configure it with various options. Here's the include:
 
 ``` html
-<iframe src="github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE" allowtransparency="true"
-  frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 ```
 
-
-Options
--------
+### Requirements
 
 `user`<br>
-GitHub username that owns the repo
+GitHub username that owns the repo<br>
 
 `repo`<br>
 GitHub repository to pull the forks and watchers counts
 
 `type`<br>
-Type of button to show: `watchers` or `forks`
+Type of button to show: `watch` or `fork`
+
+### Optional
 
 `count`<br>
-Show the optional watchers or forks count: _none_ by default or `true`
+Show the optional watchers or forks count: *none* by default or `true`
 
 `size`<br>
-Optional flag for using a larger button: _none_ by default or `large`
+Optional flag for using a larger button: *none* by default or `large`
+
+
+
+Examples
+--------
+
+**Basic Watch button**
+
+``` html
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
+```
+
+**Basic Fork button**
+
+``` html
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=fork"
+  allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
+```
+
+**Watch with count**
+
+``` html
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+```
+
+**Fork with count**
+
+``` html
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=fork&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+```
+
+**Large Watch button with count**
+
+``` html
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe>
+```
+
+
+
+Limitations
+-----------
+
+For the first version, functionality is limited and some concessions were made:
+
+- Width and height must be specificed for all buttons (which actually adds some control for those with OCD like myself).
+- All attributes must be passed through via URL parameters.
+- jQuery is included for all functionality. It adds some weight, but in the form of an extra request.
+- CSS and javascript are all included in the same HTML file to reduce complexity and requests.
+
+More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
 
 
 
