@@ -10,13 +10,13 @@ body {
   height: 20px;
   overflow: hidden;
 }
-.github-btn .gh-btn,
-.github-btn .gh-count,
-.github-btn .gh-ico {
+.gh-btn,
+.gh-count,
+.gh-ico {
   float: left;
 }
-.github-btn .gh-btn,
-.github-btn .gh-count {
+.gh-btn,
+.gh-count {
   padding: 2px 5px 2px 4px;
   color: #666;
   text-decoration: none;
@@ -27,7 +27,7 @@ body {
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
-.github-btn .gh-btn {
+.gh-btn {
   background-color: #e6e6e6;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
   background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
@@ -42,17 +42,17 @@ body {
      -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
           box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
 }
-.github-btn .gh-btn:hover {
+.gh-btn:hover {
   color: #333;
   text-decoration: none;
   background-position: 0 -10px;
 }
-.github-btn .gh-btn:active {
+.gh-btn:active {
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
      -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
           box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
 }
-.github-btn .gh-ico {
+.gh-ico {
   width: 14px;
   height: 14px;
   margin-right: 4px;
@@ -60,16 +60,20 @@ body {
   background: url(github-icons.png) no-repeat 0 0;
   opacity: .65;
 }
-.github-btn .gh-btn:hover .gh-ico {
+.gh-btn:hover .gh-ico {
   opacity: .75;
 }
-.github-btn .gh-count {
+.gh-count {
   display: none; /* hidden to start */
   margin-left: 2px;
   background-color: #fff;
   border: 1px solid #ddd;
 }
-
+.gh-count:hover {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #d5d5d5;
+}
 .github-btn-large {
   height: 30px;
 }
@@ -96,7 +100,7 @@ body {
     <span class="gh-ico"></span>
     <span id="gh-text" class="gh-text"></span>
   </a>
-  <span id="gh-count" class="gh-count"></span>
+  <a id="gh-count" href="#" target="_blank" class="gh-count"></a>
 </span>
 <script type="text/javascript">
   // Read a page's GET URL variables and return them as an associative array.
@@ -145,13 +149,15 @@ body {
   // Set href to be URL for repo
   button.href = 'https://github.com/' + user + '/' + repo + '/';
 
-  // Add the class and change the text label
+  // Add the class, change the text label, set count link href
   if (type == 'watch') {
     mainButton.className += ' github-watchers';
     text.innerHTML = 'Watch';
+    counter.href = 'https://github.com/' + user + '/' + repo + '/watchers';
   } else if (type == 'fork') {
     mainButton.className += ' github-forks';
     text.innerHTML = 'Fork';
+    counter.href = 'https://github.com/' + user + '/' + repo + '/network';
   }
 
   // Show the count if asked
