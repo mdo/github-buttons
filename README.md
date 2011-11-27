@@ -85,7 +85,6 @@ For the first version, functionality is limited and some concessions were made:
 
 - Width and height must be specificed for all buttons (which actually adds some control for those with OCD like myself).
 - All attributes must be passed through via URL parameters.
-- jQuery is included for all functionality. It adds some weight, but in the form of an extra request.
 - CSS and javascript are all included in the same HTML file to reduce complexity and requests.
 
 More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
