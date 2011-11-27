@@ -90,12 +90,17 @@ body {
   margin-left: 4px;
 }
 </style>
-
-<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<span id="github-btn" class="github-btn">
+  <a id="gh-btn" href="#" class="gh-btn">
+    <span class="gh-ico"></span>
+    <span id="gh-text" class="gh-text"></span>
+  </a>
+  <span id="gh-count" class="gh-count"></span>
+</span>
 <script type="text/javascript">
   // Read a page's GET URL variables and return them as an associative array.
   // Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
-  function getUrlVars() {
+  var params = function () {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
     for(var i = 0; i < hashes.length; i++) {
@@ -104,68 +109,60 @@ body {
       vars[hash[0]] = hash[1];
     }
     return vars;
+  }()
+  var user = params.user,
+      repo = params.repo,
+      type = params.type,
+      count = params.count,
+      size = params.size,
+      head = document.getElementsByTagName('head')[0],
+      button = document.getElementById('gh-btn'),
+      mainButton = document.getElementById('github-btn'),
+      text = document.getElementById('gh-text'),
+      counter = document.getElementById('gh-count');
+
+
+  // Add commas to numbers
+  function addCommas(n) {
+    return n.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
   }
-  var user = getUrlVars()['user'];
-  var repo = getUrlVars()['repo'];
-  var type = getUrlVars()['type'];
-  var count = getUrlVars()['count'];
-  var size = getUrlVars()['size'];
 
-  // Le jQuery
-  $(document).ready(function($){
-    // Add commas to numbers
-    // Source: http://www.mredkj.com/javascript/nfbasic.html
-    function addCommas(nStr) {
-      nStr += '';
-      x = nStr.split('.');
-      x1 = x[0];
-      x2 = x.length > 1 ? '.' + x[1] : '';
-      var rgx = /(\d+)(\d{3})/;
-      while (rgx.test(x1)) {
-        x1 = x1.replace(rgx, '$1' + ',' + '$2');
-      }
-      return x1 + x2;
-    }
+  function jsonp(path) {
+    var el = document.createElement('script');
+    el.src = path + '?callback=callback';
+    head.insertBefore(el, head.firstChild);
+  }
 
-    // Set href to be URL for repo
-    $('.gh-btn').attr('href', 'https://github.com/'+user+'/'+repo+'/');
-
-    // Add the class and change the text label
+  function callback(obj) {
     if (type == 'watch') {
-      $('.github-btn').addClass('github-watchers');
-      $('.gh-text').html('Watch');
-    } else if (type == 'fork') {
-      $('.github-btn').addClass('github-forks');
-      $('.gh-text').html('Fork');
+      counter.innerHTML = addCommas(obj.data.watchers);
+    } else {
+      counter.innerHTML = addCommas(obj.data.forks);
     }
+  }
 
-    // Show the count if asked
-    if (count == 'true') {
-      $('.gh-count').show();
-    }
+  // Set href to be URL for repo
+  button.href = 'https://github.com/' + user + '/' + repo + '/';
 
-    // Change the size
-    if (size == 'large') {
-      $('.github-btn').addClass('github-btn-large');
-    }
+  // Add the class and change the text label
+  if (type == 'watch') {
+    mainButton.className += ' github-watchers';
+    text.innerHTML = 'Watch';
+  } else if (type == 'fork') {
+    mainButton.className += ' github-forks';
+    text.innerHTML = 'Fork';
+  }
 
-    // GitHub data
-    // Credit for assistance from Richard Henry and Ben Hodgson
-    $.ajax('https://api.github.com/repos/'+user+'/'+repo+'', {
-      dataType: "jsonp",
-      success: function (obj) {
-        $('.github-watchers .gh-count').html(addCommas(obj['data']['watchers']));
-        $('.github-forks .gh-count').html(addCommas(obj['data']['forks']));
-      }
-    });
+  // Show the count if asked
+  if (count == 'true') {
+    counter.style.display = 'block'
+  }
 
-  });
+  // Change the size
+  if (size == 'large') {
+    mainButton.className += ' github-btn-large';
+  }
+
+  jsonp('https://api.github.com/repos/' + user + '/' + repo);
+
 </script>
-
-<span class="github-btn">
-  <a href="#" class="gh-btn">
-    <span class="gh-ico"></span>
-    <span class="gh-text"></span>
-  </a>
-  <span class="gh-count"></span>
-</span>
