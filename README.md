@@ -42,30 +42,35 @@ Examples
 --------
 
 **Basic Watch button**
+
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch"
   allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 ```
 
 **Basic Fork button**
+
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=fork"
   allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
 ```
 
 **Watch with count**
+
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
 ```
 
 **Fork with count**
+
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=fork&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
 ```
 
 **Large Watch button with count**
+
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe>
