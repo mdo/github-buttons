@@ -144,6 +144,11 @@ body {
     } else {
       counter.innerHTML = addCommas(obj.data.forks);
     }
+
+    // Show the count if asked
+    if (count == 'true') {
+      counter.style.display = 'block'
+    }
   }
 
   // Set href to be URL for repo
@@ -158,11 +163,6 @@ body {
     mainButton.className += ' github-forks';
     text.innerHTML = 'Fork';
     counter.href = 'https://github.com/' + user + '/' + repo + '/network';
-  }
-
-  // Show the count if asked
-  if (count == 'true') {
-    counter.style.display = 'block'
   }
 
   // Change the size
