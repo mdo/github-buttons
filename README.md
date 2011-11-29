@@ -1,7 +1,7 @@
 UNOFFICIAL GITHUB BUTTONS
 =========================
 
-Showcase your GitHub repo's success with these two simple, static buttons featuring dynamic watch and fork counts and a link to your GitHub repo.
+Showcase your GitHub (repo's) success with these three simple, static buttons featuring dynamic watch, fork and follower counts and a link to your GitHub repo or profile page.
 
 To get started, checkout http://markdotto.github.com/github-buttons!
 
@@ -26,7 +26,7 @@ GitHub username that owns the repo<br>
 GitHub repository to pull the forks and watchers counts
 
 `type`<br>
-Type of button to show: `watch` or `fork`
+Type of button to show: `watch` or `fork` or `me`
 
 ### Optional
 
@@ -55,6 +55,13 @@ Examples
   allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
 ```
 
+**Basic Me button**
+
+``` html
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&type=me"
+  allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+```
+
 **Watch with count**
 
 ``` html
@@ -69,14 +76,19 @@ Examples
   allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
 ```
 
+**Me with count**
+
+``` html
+<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&type=me&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+```
+
 **Large Watch button with count**
 
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe>
 ```
-
-
 
 Limitations
 -----------
