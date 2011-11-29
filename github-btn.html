@@ -141,9 +141,11 @@ body {
   function callback(obj) {
     if (type == 'watch') {
       counter.innerHTML = addCommas(obj.data.watchers);
-    } else {
+    } else if (type == 'fork') {
       counter.innerHTML = addCommas(obj.data.forks);
-    }
+    } else if (type == 'me') {
+	  counter.innerHTML = addCommas(obj.data.followers)
+	}
   }
 
   // Set href to be URL for repo
@@ -158,6 +160,11 @@ body {
     mainButton.className += ' github-forks';
     text.innerHTML = 'Fork';
     counter.href = 'https://github.com/' + user + '/' + repo + '/network';
+  } else if (type == 'me') {
+	mainButton.className += ' github-me';
+	text.innerHTML = user;
+	button.href = 'https://github.com/' + user //overwrite href
+	counter.href = 'https://github.com/' + user + '/followers';
   }
 
   // Show the count if asked
@@ -170,5 +177,10 @@ body {
     mainButton.className += ' github-btn-large';
   }
 
-  jsonp('https://api.github.com/repos/' + user + '/' + repo);
+  if (type == 'me') {
+	jsonp('https://api.github.com/users/' + user);
+  } else {
+    jsonp('https://api.github.com/repos/' + user + '/' + repo);
+  }
+  
 </script>
