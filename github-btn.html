@@ -1,4 +1,4 @@
-<style type="text/css">
+<html><body><style type="text/css">
 body {
   padding: 0;
   margin: 0;
@@ -42,7 +42,8 @@ body {
      -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
           box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
 }
-.gh-btn:hover {
+.gh-btn:hover,
+.gh-btn:focus {
   color: #333;
   text-decoration: none;
   background-position: 0 -10px;
@@ -60,7 +61,8 @@ body {
   background: url(github-icons.png) no-repeat 0 0;
   opacity: .65;
 }
-.gh-btn:hover .gh-ico {
+.gh-btn:hover .gh-ico,
+.gh-btn:focus .gh-ico {
   opacity: .75;
 }
 .gh-count {
@@ -69,7 +71,8 @@ body {
   background-color: #fff;
   border: 1px solid #ddd;
 }
-.gh-count:hover {
+.gh-count:hover,
+.gh-count:focus {
   color: #333;
   background-color: #f5f5f5;
   border-color: #d5d5d5;
@@ -144,6 +147,11 @@ body {
     } else {
       counter.innerHTML = addCommas(obj.data.forks);
     }
+
+    // Show the count if asked
+    if (count == 'true') {
+      counter.style.display = 'block'
+    }
   }
 
   // Set href to be URL for repo
@@ -160,15 +168,10 @@ body {
     counter.href = 'https://github.com/' + user + '/' + repo + '/network';
   }
 
-  // Show the count if asked
-  if (count == 'true') {
-    counter.style.display = 'block'
-  }
-
   // Change the size
   if (size == 'large') {
     mainButton.className += ' github-btn-large';
   }
 
   jsonp('https://api.github.com/repos/' + user + '/' + repo);
-</script>
+</script></body></html>
