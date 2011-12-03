@@ -1,4 +1,6 @@
-# Numerous always-ignore extensions
+# ALWAYS IGNORE
+# -------------
+
 *.diff
 *.err
 *.orig
@@ -9,6 +11,14 @@
 *.vi
 *~
 
-# OS or Editor folders
+
+# OS & EDITOR FOLDERS
+# -------------------
+
 .DS_Store
 thumbs.db
+
+
+# LOCAL TEST PAGE
+# ---------------
+test.html
