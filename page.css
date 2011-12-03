@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Set width of site */
 .container {
   width: auto;
-  max-width: 700px;
+  max-width: 820px;
 }
 
 /* Clearfix */
@@ -118,14 +118,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .about-watch,
-.about-fork {
-  width: 45%;
-}
-.about-buttons .about-watch {
+.about-fork,
+.about-follow {
+  width: 32%;
   float: left;
 }
-.about-buttons .about-fork {
-  float: right;
+.about-buttons div + div {
+  margin-left: 2%;
 }
 .about-buttons ul {
   margin-left: 0;
@@ -176,4 +175,40 @@ iframe + iframe {
   height: 1px;
   margin: 0 auto;
   background-color: #eee;
+}
+
+
+/* RESPONSIVE
+-------------------------------------------------- */
+
+@media (max-width: 840px) {
+  .masthead h1 {
+    font-size: 60px;
+  }
+  .masthead p,
+  .masthead .tagline {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .about-watch,
+  .about-fork,
+  .about-follow {
+    width: auto;
+    float: none;
+  }
+  .about-buttons div + div {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .masthead h1 {
+    font-size: 40px;
+  }
+  .masthead p,
+  .masthead .tagline {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
