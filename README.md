@@ -59,7 +59,7 @@ Examples
 
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&type=follow"
-  allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+  allowtransparency="true" frameborder="0" scrolling="0" width="132px" height="20px"></iframe>
 ```
 
 **Watch with count**
@@ -80,7 +80,7 @@ Examples
 
 ``` html
 <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&type=follow&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+  allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="20px"></iframe>
 ```
 
 **Large Watch button with count**
