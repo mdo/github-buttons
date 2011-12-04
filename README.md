@@ -26,7 +26,7 @@ GitHub username that owns the repo<br>
 GitHub repository to pull the forks and watchers counts
 
 `type`<br>
-Type of button to show: `watch` or `fork` or `me`
+Type of button to show: `watch` or `fork` or `follow`
 
 ### Optional
 
