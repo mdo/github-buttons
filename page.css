@@ -108,6 +108,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
   font-size: 24px;
 }
+.masthead .tweet-button {
+  width: 55px;
+  margin: 0 auto 20px;
+}
 
 
 /* BODY
@@ -196,6 +200,7 @@ iframe + iframe {
   .about-follow {
     width: auto;
     float: none;
+    margin-bottom: 20px;
   }
   .about-buttons div + div {
     margin-left: 0;
