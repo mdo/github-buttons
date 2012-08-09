@@ -67,8 +67,9 @@ body {
   opacity: .75;
 }
 .gh-count {
+  position: relative;
   display: none; /* hidden to start */
-  margin-left: 2px;
+  margin-left: 4px;
   background-color: #fff;
   border: 1px solid #ddd;
 }
@@ -77,6 +78,31 @@ body {
   color: #333;
   background-color: #f5f5f5;
   border-color: #d5d5d5;
+}
+.gh-count:before,
+.gh-count:after {
+  content: ' ';
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.gh-count:before {
+  top: 50%;
+  left: -3px;
+  margin-top: -4px;
+  border-width: 4px 4px 4px 0;
+  border-right-color: #fff;
+}
+.gh-count:after {
+  top: 50%;
+  left: -4px;
+  z-index: -1;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #ccc;
 }
 .github-btn-large {
   height: 30px;
@@ -96,12 +122,22 @@ body {
   background-position: 0 -20px;
 }
 .github-btn-large .gh-count {
-  margin-left: 4px;
+  margin-left: 6px;
 }
-@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+.github-btn-large .gh-count:before {
+  left: -5px;
+  margin-top: -6px;
+  border-width: 6px 6px 6px 0;
+}
+.github-btn-large .gh-count:after {
+  left: -6px;
+  margin-top: -7px;
+  border-width: 7px 7px 7px 0;
+}
+@media (-moz-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
   .gh-ico {
-    background: url(github-icons-2x.png) no-repeat 0 0;
-    background-size:22px 42px;
+    background-image: url(github-icons-2x.png);
+    background-size: 22px 42px;
   }
 
 }
@@ -170,7 +206,7 @@ body {
   // Add the class, change the text label, set count link href
   if (type == 'watch') {
     mainButton.className += ' github-watchers';
-    text.innerHTML = 'Watch';
+    text.innerHTML = 'Star';
     counter.href = 'https://github.com/' + user + '/' + repo + '/watchers';
   } else if (type == 'fork') {
     mainButton.className += ' github-forks';

@@ -67,18 +67,11 @@ h1, h2, h3, h4, h5, h6 {
   background-position: 0 -15px;
 }
 .primary.btn:active {
+  background-image: none;
   background-color: #3072b3; /* Old browsers */
-  background-repeat: repeat-x; /* Repeat the gradient */
-  background-image: -moz-linear-gradient(top, #285e93 0%, #3072b3 100%); /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#285e93), color-stop(100%,#3072b3)); /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top, #285e93 0%,#3072b3 100%); /* Chrome 10+,Safari 5.1+ */
-  background-image: -ms-linear-gradient(top, #285e93 0%,#3072b3 100%); /* IE10+ */
-  background-image: -o-linear-gradient(top, #285e93 0%,#3072b3 100%); /* Opera 11.10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#285e93', endColorstr='#3072b3',GradientType=0 ); /* IE6-9 */
-  background-image: linear-gradient(top, #285e93 0%,#3072b3 100%); /* W3C */
-  -webkit-box-shadow: inset 0 10px 10px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.2);
-     -moz-box-shadow: inset 0 10px 10px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.2);
-          box-shadow: inset 0 10px 10px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.2);
+  -webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
+     -moz-box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
+          box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
 }
 
 
@@ -121,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-buttons {
   text-align: center;
 }
-.about-watch,
+.about-star,
 .about-fork,
 .about-follow {
   width: 32%;
