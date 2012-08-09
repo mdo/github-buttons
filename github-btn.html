@@ -38,33 +38,46 @@ body {
   background-repeat: no-repeat;
   border: 1px solid #d4d4d4;
   border-bottom-color: #bcbcbc;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+.gh-btn:hover,
+.gh-btn:focus,
+.gh-btn:active {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  border-color: #518cc6 #518cc6 #2a65a0;
+  background-color: #3072b3;
 }
 .gh-btn:hover,
 .gh-btn:focus {
-  color: #333;
-  text-decoration: none;
-  background-position: 0 -10px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+  background-image: -webkit-linear-gradient(#599bdc, #3072b3);
+  background-image: -moz-linear-gradient(top, #599bdc, #3072b3);
+  background-image: -ms-linear-gradient(#599bdc, #3072b3);
+  background-image: -o-linear-gradient(#599bdc, #3072b3);
+  background-image: linear-gradient(#599bdc, #3072b3);
 }
 .gh-btn:active {
   background-image: none;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
-     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
-          box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
+     -moz-box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
+          box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
 }
 .gh-ico {
   width: 14px;
-  height: 14px;
+  height: 15px;
+  margin-top: -1px;
   margin-right: 4px;
   vertical-align: middle;
   background: url(github-icons.png) no-repeat 0 0;
-  opacity: .65;
 }
 .gh-btn:hover .gh-ico,
-.gh-btn:focus .gh-ico {
-  opacity: .75;
+.gh-btn:focus .gh-ico,
+.gh-btn:active .gh-ico {
+  background-position: -25px 0;
 }
 .gh-count {
   position: relative;
@@ -116,8 +129,13 @@ body {
 }
 .github-btn-large .gh-ico {
   width: 22px;
-  height: 22px;
+  height: 23px;
   background-position: 0 -20px;
+}
+.github-btn-large:hover .gh-ico,
+.github-btn-large:focus .gh-ico,
+.github-btn-large:active .gh-ico {
+  background-position: -25px -20px;
 }
 .github-btn-large .gh-count {
   margin-left: 6px;
@@ -135,7 +153,7 @@ body {
 @media (-moz-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
   .gh-ico {
     background-image: url(github-icons-2x.png);
-    background-size: 22px 42px;
+    background-size: 50px 45px;
   }
 
 }
