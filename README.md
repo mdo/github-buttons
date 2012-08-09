@@ -3,7 +3,7 @@ UNOFFICIAL GITHUB BUTTONS
 
 Showcase your GitHub (repo's) success with these three simple, static buttons featuring dynamic watch, fork and follower counts and a link to your GitHub repo or profile page.
 
-To get started, checkout http://markdotto.github.com/github-buttons!
+To get started, checkout http://ghbtns.com!
 
 
 
@@ -13,7 +13,7 @@ Usage
 These buttons are hosted via GitHub Pages, meaning all you need to do is include an iframe and you're set. Once included, you can configure it with various options. Here's the include:
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
+<iframe src="http://ghbtns.com/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
   allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 ```
 
@@ -44,49 +44,49 @@ Examples
 **Basic Watch button**
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch"
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=watch"
   allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 ```
 
 **Basic Fork button**
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=fork"
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=fork"
   allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
 ```
 
 **Basic Follow button**
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&type=follow"
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&type=follow"
   allowtransparency="true" frameborder="0" scrolling="0" width="132px" height="20px"></iframe>
 ```
 
 **Watch with count**
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true"
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
 ```
 
 **Fork with count**
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=fork&count=true"
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=fork&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
 ```
 
 **Follow with count**
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&type=follow&count=true"
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&type=follow&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="20px"></iframe>
 ```
 
 **Large Watch button with count**
 
 ``` html
-<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true&size=large"
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe>
 ```
 
