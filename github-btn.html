@@ -227,11 +227,12 @@ body {
   } else if (type == 'fork') {
     mainButton.className += ' github-forks';
     text.innerHTML = 'Fork';
+    button.href += 'fork_select';
     counter.href = 'https://github.com/' + user + '/' + repo + '/network';
   } else if (type == 'follow') {
     mainButton.className += ' github-me';
     text.innerHTML = 'Follow @' + user;
-    button.href = 'https://github.com/' + user;
+    button.href = 'https://github.com/users/follow?target=' + user;
     counter.href = 'https://github.com/' + user + '/followers';
   }
 
