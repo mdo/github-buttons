@@ -150,6 +150,68 @@ body {
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
 }
+.github-btn-vertical .gh-btn {
+  display: block;
+}
+.github-btn-vertical .gh-ico {
+  display: inline-block;
+  float: none;
+}
+.github-btn-vertical .gh-btn,
+.github-btn-vertical .gh-count {
+  float: none;
+  text-align: center;
+}
+.github-btn-vertical .gh-btn {
+  padding: 2px 5px 2px 5px;
+}
+.github-btn-large.github-btn-vertical .gh-btn {
+  padding: 3px 10px 3px 10px;
+}
+.github-btn-vertical .gh-count {
+  padding: 10px;
+  margin-left: 0;
+  margin-bottom: 6px;
+}
+.github-btn-large.github-btn-vertical .gh-count {
+  padding: 15px;
+  margin-bottom: 8px;
+}
+.github-btn-vertical .gh-count:before {
+  left: 50%;
+  top: auto;
+  bottom: -4px;
+  margin-top: 0;
+  margin-left: -4px;
+  border-width: 4px 4px 0 4px;
+  border-color: transparent;
+  border-top-color: #fafafa;
+}
+.github-btn-vertical .gh-count:after {
+  left: 50%;
+  top: auto;
+  bottom: -5px;
+  margin-top: 0;
+  margin-left: -5px;
+  border-width: 5px 5px 0 5px;
+  border-color: transparent;
+  border-top-color: #d4d4d4;
+}
+.github-btn-large.github-btn-vertical .gh-count:before {
+  bottom: -5px;
+  margin-left: -6px;
+  border-width: 6px 6px 0 6px;
+}
+.github-btn-large.github-btn-vertical .gh-count:after {
+  bottom: -6px;
+  margin-left: -7px;
+  border-width: 7px 7px 0 7px;
+}
+.github-btn-vertical .github-btn {
+  display: block;
+  width: auto;
+  height: auto;
+}
 @media (-moz-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
   .gh-ico {
     background-image: url(github-icons-2x.png);
@@ -163,7 +225,7 @@ body {
     <span class="gh-ico"></span>
     <span id="gh-text" class="gh-text"></span>
   </a>
-  <a id="gh-count" href="#" target="_blank" class="gh-count"></a>
+  <a id="gh-count" href="#" target="_blank" class="gh-count">&nbsp;</a>
 </span>
 <script type="text/javascript">
   // Read a page's GET URL variables and return them as an associative array.
@@ -174,7 +236,7 @@ body {
     for(var i = 0; i < hashes.length; i++) {
       hash = hashes[i].split('=');
       vars.push(hash[0]);
-      vars[hash[0]] = hash[1];
+      vars[decodeURIComponent(hash[0])] = decodeURIComponent(hash[1]);
     }
     return vars;
   }()
@@ -183,6 +245,7 @@ body {
       type = params.type,
       count = params.count,
       size = params.size,
+      layout = params.layout,
       head = document.getElementsByTagName('head')[0],
       button = document.getElementById('gh-btn'),
       mainButton = document.getElementById('github-btn'),
@@ -192,7 +255,7 @@ body {
 
   // Add commas to numbers
   function addCommas(n) {
-    return n.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+    return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,')
   }
 
   function jsonp(path) {
@@ -212,7 +275,7 @@ body {
 
     // Show the count if asked
     if (count == 'true') {
-      counter.style.display = 'block'
+      counter.style.display = 'block';
     }
   }
 
@@ -238,6 +301,14 @@ body {
   // Change the size
   if (size == 'large') {
     mainButton.className += ' github-btn-large';
+  }
+
+  // Change the layout
+  if (layout == 'vertical') {
+    mainButton.appendChild(button);
+    mainButton.className += ' github-btn-vertical';
+  } else {
+    mainButton.className += ' github-btn-horizontal';
   }
 
   if (type == 'follow') {
