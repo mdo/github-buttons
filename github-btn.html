@@ -208,7 +208,10 @@ body {
       counter.innerHTML = addCommas(obj.data.forks);
     } else if (type == 'follow') {
       counter.innerHTML = addCommas(obj.data.followers);
+    } else if (type == 'download') {
+      count = 'false';
     }
+
 
     // Show the count if asked
     if (count == 'true') {
@@ -233,6 +236,10 @@ body {
     text.innerHTML = 'Follow @' + user;
     button.href = 'https://github.com/' + user;
     counter.href = 'https://github.com/' + user + '/followers';
+  } else if (type == 'download') {
+    mainButton.className += ' github-downloads';
+    text.innerHTML = 'Download on Github';
+    counter.href = 'https://github.com/' + user + '/' + repo;
   }
 
   // Change the size
