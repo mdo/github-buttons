@@ -99,6 +99,15 @@ For the first version, functionality is limited and some concessions were made:
 - All attributes must be passed through via URL parameters.
 - CSS and javascript are all included in the same HTML file to reduce complexity and requests.
 
+**Usage with SSL**
+
+In order to avoid `insecure content` warnings when using GitHub Buttons on a page behind an SSL certificate, simply host a copy of the `github-btn.html` file on your secure directory and substitute your domain in the iframe include: 
+
+``` html
+<iframe src="https://YOURDOMAIN.com/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+```
+
 More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
 
 
