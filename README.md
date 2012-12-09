@@ -115,7 +115,7 @@ More refinement and functionalty is planned with open-sourcing--any help is alwa
 Bug tracker
 -----------
 
-Have a bug? Please create an issue here on GitHub at https://github.com/markdotto/github-buttons/issues.
+Have a bug? Please create an issue here on GitHub at https://github.com/mdo/github-buttons/issues.
 
 
 
@@ -132,7 +132,7 @@ Authors
 **Mark Otto**
 
 + http://twitter.com/mdo
-+ http://github.com/markdotto
++ http://github.com/mdo
 
 
 
