@@ -9,6 +9,7 @@ body {
 .github-btn {
   height: 20px;
   overflow: hidden;
+  display: inline-block;
 }
 .gh-btn,
 .gh-count,
@@ -178,6 +179,7 @@ body {
       type = params.type,
       count = params.count,
       size = params.size,
+      align = params.align,
       head = document.getElementsByTagName('head')[0],
       button = document.getElementById('gh-btn'),
       mainButton = document.getElementById('github-btn'),
@@ -208,6 +210,10 @@ body {
     // Show the count if asked
     if (count == 'true') {
       counter.style.display = 'block';
+    }
+
+    if (align) {
+        document.body.style.textAlign = align;
     }
   }
 
