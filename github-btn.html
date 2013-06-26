@@ -197,12 +197,10 @@ body {
   }
 
   function stargazerCount(response) {
-    console.debug('star', response);
     counter.innerHTML = response.data.length;
   }
 
   function callback(obj) {
-    console.debug(obj.data.watchers);
     switch (type) {
       case 'watch':
         counter.innerHTML = addCommas(obj.data.watchers);
