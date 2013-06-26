@@ -209,7 +209,7 @@ body {
         jsonp(obj.data.stargazers_url, 'stargazerCount');
         break;
       case 'fork':
-        counter.innerHTML = addCommas(obj.data.forks);
+        counter.innerHTML = addCommas(obj.data.network_count);
         break;
       case 'follow':
         counter.innerHTML = addCommas(obj.data.followers);
