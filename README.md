@@ -44,49 +44,49 @@ Examples
 **Basic Watch button**
 
 ``` html
-<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=watch"
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch"
   allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
 ```
 
 **Basic Fork button**
 
 ``` html
-<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=fork"
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=fork"
   allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
 ```
 
 **Basic Follow button**
 
 ``` html
-<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&type=follow"
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&type=follow"
   allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
 ```
 
 **Watch with count**
 
 ``` html
-<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true"
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 ```
 
 **Fork with count**
 
 ``` html
-<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=fork&count=true"
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=fork&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
 ```
 
 **Follow with count**
 
 ``` html
-<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&type=follow&count=true"
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
 ```
 
 **Large Watch button with count**
 
 ``` html
-<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=watch&count=true&size=large"
+<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
 ```
 
