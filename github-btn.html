@@ -228,6 +228,10 @@ body {
     text.innerHTML = 'Follow @' + user;
     button.href = 'https://github.com/' + user;
     counter.href = 'https://github.com/' + user + '/followers';
+  } else if (type == 'view') {
+    mainButton.className += ' github-view';
+    text.innerHTML = 'View @' + user + ' on github';
+    button.href = 'https://github.com/' + user;
   }
 
   // Change the size
