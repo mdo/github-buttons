@@ -172,7 +172,7 @@ body {
       vars[hash[0]] = hash[1];
     }
     return vars;
-  }()
+  }();
   var user = params.user,
       repo = params.repo,
       type = params.type,
@@ -203,6 +203,16 @@ body {
       counter.innerHTML = addCommas(obj.data.forks);
     } else if (type == 'follow') {
       counter.innerHTML = addCommas(obj.data.followers);
+    } else if (type == 'download') {
+      if (obj.data[0] && obj.data[0].name) {
+        counter.innerHTML = addCommas(obj.data[0].name);
+        counter.href = obj.data[0].zipball_url;
+      } else {
+        // BC for if release count 0
+        counter.href = 'https://github.com/' + user + '/' + repo;
+        button.href = 'https://github.com/' + user + '/' + repo;
+        count = false;
+      }
     }
 
     // Show the count if asked
@@ -228,6 +238,10 @@ body {
     text.innerHTML = 'Follow @' + user;
     button.href = 'https://github.com/' + user;
     counter.href = 'https://github.com/' + user + '/followers';
+  } else if (type == 'download') {
+    mainButton.className += ' github-download';
+    text.innerHTML = 'Download';
+    button.href = 'https://github.com/' + user + '/' + repo + '/releases';
   }
 
   // Change the size
@@ -237,6 +251,8 @@ body {
 
   if (type == 'follow') {
     jsonp('https://api.github.com/users/' + user);
+  } else if (type == 'download') {
+    jsonp('https://api.github.com/repos/' + user + '/' + repo + '/releases');
   } else {
     jsonp('https://api.github.com/repos/' + user + '/' + repo);
   }
