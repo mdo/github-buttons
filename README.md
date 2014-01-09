@@ -1,7 +1,7 @@
 UNOFFICIAL GITHUB BUTTONS
 =========================
 
-Showcase your GitHub (repo's) success with these three simple, static buttons featuring dynamic watch, fork and follower counts and a link to your GitHub repo or profile page.
+Showcase your GitHub (repo's) success with these three simple, static buttons featuring dynamic watch, fork and follower counts and a link to your GitHub repo, profile page, download URL.
 
 To get started, checkout http://ghbtns.com!
 
@@ -26,7 +26,7 @@ GitHub username that owns the repo<br>
 GitHub repository to pull the forks and watchers counts
 
 `type`<br>
-Type of button to show: `watch` or `fork` or `follow`
+Type of button to show: `watch` or `fork` or `follow` or `download`
 
 ### Optional
 
@@ -62,6 +62,13 @@ Examples
   allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
 ```
 
+**Basic Download button**
+
+``` html
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=download"
+  allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+```
+
 **Watch with count**
 
 ``` html
@@ -81,6 +88,13 @@ Examples
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=markdotto&type=follow&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
+```
+
+**Download with latest release name**
+
+``` html
+<iframe src="http://ghbtns.com/github-btn.html?user=markdotto&repo=github-buttons&type=download&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
 ```
 
 **Large Watch button with count**
