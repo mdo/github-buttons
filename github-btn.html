@@ -172,8 +172,9 @@ body {
       vars[hash[0]] = hash[1];
     }
     return vars;
-  }()
+  }();
   var user = params.user,
+      github = "https://github.com/" + user + "/",
       repo = params.repo,
       type = params.type,
       count = params.count,
@@ -192,11 +193,11 @@ body {
 
   function jsonp(path) {
     var el = document.createElement('script');
-    el.src = path + '?callback=callback';
+    el.src = path + '?callback=cb';
     head.insertBefore(el, head.firstChild);
   }
 
-  function callback(obj) {
+  function cb(obj) {
     if (type == 'watch') {
       counter.innerHTML = addCommas(obj.data.watchers);
     } else if (type == 'fork') {
@@ -212,22 +213,22 @@ body {
   }
 
   // Set href to be URL for repo
-  button.href = 'https://github.com/' + user + '/' + repo + '/';
+  button.href = github + repo + '/';
 
   // Add the class, change the text label, set count link href
   if (type == 'watch') {
     mainButton.className += ' github-watchers';
     text.innerHTML = 'Star';
-    counter.href = 'https://github.com/' + user + '/' + repo + '/stargazers';
+    counter.href = github + repo + '/stargazers';
   } else if (type == 'fork') {
     mainButton.className += ' github-forks';
     text.innerHTML = 'Fork';
-    counter.href = 'https://github.com/' + user + '/' + repo + '/network';
+    counter.href = github + repo + '/network';
   } else if (type == 'follow') {
     mainButton.className += ' github-me';
     text.innerHTML = 'Follow @' + user;
-    button.href = 'https://github.com/' + user;
-    counter.href = 'https://github.com/' + user + '/followers';
+    button.href = github;
+    counter.href = github + 'followers';
   }
 
   // Change the size
