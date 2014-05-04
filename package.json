@@ -1,0 +1,35 @@
+{
+  "name": "github-buttons",
+  "version": "0.1.0",
+  "description": "Showcase your GitHub (repo's) success with these buttons",
+  "main": "github-btn.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdo/github-buttons.git"
+  },
+  "keywords": [
+    "github",
+    "buttons",
+    "iframe",
+    "html"
+  ],
+  "author": {
+    "name": "Mark Otto",
+    "email": "markdotto@gmail.com",
+    "url": "https://github.com/mdo"
+  },
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/mdo/github-buttons/issues"
+  },
+  "homepage": "https://github.com/mdo/github-buttons",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-replace": "^0.2.0",
+    "uglify-js": "^2.4.13",
+    "clean-css": "^2.1.8"
+  }
+}
