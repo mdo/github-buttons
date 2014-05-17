@@ -123,10 +123,6 @@ h1, h2, h3, h4, h5, h6 {
 .about-buttons div + div {
   margin-left: 2%;
 }
-.about-buttons ul {
-  margin-left: 0;
-  list-style: none;
-}
 .about-buttons iframe {
   margin: 10px 0;
 }
