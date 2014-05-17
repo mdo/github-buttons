@@ -10,6 +10,7 @@
 *.swp
 *.vi
 *~
+.ruby-version
 
 
 # OS & EDITOR FOLDERS
@@ -17,8 +18,3 @@
 
 .DS_Store
 thumbs.db
-
-
-# LOCAL TEST PAGE
-# ---------------
-test.html
