@@ -115,6 +115,12 @@ Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/git
 
 
 
+## See also
+
+- [ntkme/github-buttons](https://github.com/ntkme/github-buttons)
+
+
+
 ## Twitter account
 Keep up to date on announcements and more by following Mark on Twitter, <a href="http://twitter.com/mdo">@mdo</a>.
 
