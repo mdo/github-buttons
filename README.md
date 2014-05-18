@@ -12,7 +12,7 @@ These buttons are hosted via GitHub Pages, meaning all you need to do is include
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  frameborder="0" scrolling="0" width="62" height="20"></iframe>
 ```
 
 ### Requirements
@@ -42,49 +42,49 @@ Optional flag for using a larger button: *none* by default or `large`
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  frameborder="0" scrolling="0" width="62" height="20"></iframe>
 ```
 
 **Basic Fork button**
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=fork"
-  allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
+  frameborder="0" scrolling="0" width="53" height="20"></iframe>
 ```
 
 **Basic Follow button**
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=mdo&type=follow"
-  allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+  frameborder="0" scrolling="0" width="132" height="20"></iframe>
 ```
 
 **Watch with count**
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+  frameborder="0" scrolling="0" width="110" height="20"></iframe>
 ```
 
 **Fork with count**
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=fork&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+  frameborder="0" scrolling="0" width="95" height="20"></iframe>
 ```
 
 **Follow with count**
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
+  frameborder="0" scrolling="0" width="165" height="20"></iframe>
 ```
 
 **Large Watch button with count**
 
 ``` html
 <iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true&size=large"
-  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+  frameborder="0" scrolling="0" width="170" height="30"></iframe>
 ```
 
 
@@ -103,7 +103,7 @@ In order to avoid `insecure content` warnings when using GitHub Buttons on a pag
 
 ``` html
 <iframe src="https://YOURDOMAIN.com/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  frameborder="0" scrolling="0" width="62" height="20"></iframe>
 ```
 
 More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
