@@ -109,23 +109,6 @@ In order to avoid `insecure content` warnings when using GitHub Buttons on a pag
 More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
 
 
-Build
------
-
-In order to build github-buttons, you need to have Node.js/npm.
-
-Once the repository cloned, install the project:
-
-```bash
-cd github-buttons
-npm install
-```
-
-Now you can build the project using:
-```bash
-gulp
-```
-
 
 ## Bug tracker
 Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/github-buttons/issues>.

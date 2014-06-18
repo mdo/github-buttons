@@ -25,11 +25,5 @@
   "bugs": {
     "url": "https://github.com/mdo/github-buttons/issues"
   },
-  "homepage": "https://github.com/mdo/github-buttons",
-  "devDependencies": {
-    "gulp": "^3.6.2",
-    "gulp-replace": "^0.2.0",
-    "uglify-js": "^2.4.13",
-    "clean-css": "^2.1.8"
-  }
+  "homepage": "https://github.com/mdo/github-buttons"
 }
