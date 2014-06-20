@@ -144,6 +144,7 @@ body {
       type = params.type,
       count = params.count,
       size = params.size,
+      v = params.v,
       head = document.getElementsByTagName('head')[0],
       button = document.getElementById('gh-btn'),
       mainButton = document.getElementById('github-btn'),
@@ -165,7 +166,11 @@ body {
   function callback(obj) {
     switch (type) {
       case 'watch':
-        counter.innerHTML = addCommas(obj.data.subscribers_count);
+        if (v == '2') {
+          counter.innerHTML = addCommas(obj.data.subscribers_count);
+        } else {
+          counter.innerHTML = addCommas(obj.data.stargazers_count);
+        }
         break;
       case 'star':
         counter.innerHTML = addCommas(obj.data.stargazers_count);
@@ -190,9 +195,15 @@ body {
   // Add the class, change the text label, set count link href
   switch (type) {
     case 'watch':
-      mainButton.className += ' github-watchers';
-      text.innerHTML = 'Watch';
-      counter.href = 'https://github.com/' + user + '/' + repo;
+      if (v == '2') {
+        mainButton.className += ' github-watchers';
+        text.innerHTML = 'Watch';
+        counter.href = 'https://github.com/' + user + '/' + repo;
+      } else {
+        mainButton.className += ' github-stargazers';
+        text.innerHTML = 'Star';
+        counter.href = 'https://github.com/' + user + '/' + repo + '/stargazers';
+      }
       break;
     case 'star':
       mainButton.className += ' github-stargazers';
