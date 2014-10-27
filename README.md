@@ -106,6 +106,11 @@ In order to avoid `insecure content` warnings when using GitHub Buttons on a pag
   allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
 ```
 
+Another option is to use the `mdo.github.io` domain, and the URL of the HTML file becomes: 
+```html
+https://mdo.github.io/github-buttons/github-btn.html
+```
+
 More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
 
 
