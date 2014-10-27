@@ -107,7 +107,9 @@ In order to avoid `insecure content` warnings when using GitHub Buttons on a pag
 ```
 
 Another option is to use the `mdo.github.io` domain, and the URL of the HTML file becomes: 
-```https://mdo.github.io/github-buttons/github-btn.html```
+```html
+https://mdo.github.io/github-buttons/github-btn.html
+```
 
 More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
 
