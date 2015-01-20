@@ -2,6 +2,20 @@
 layout: default
 ---
 
+<div class="tweet-button">
+  <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="mdo">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+</div>
+
+Introducing the unofficial
+
+# GitHub buttons
+
+Showcase your GitHub repo's success with hotlinkable GitHub star, fork, or follow buttons. Available in two sizes with up-to-date counts.
+
+Made by [@mdo](http://twitter.com/mdo). Licensed [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0").
+
+---
+
 ## Star
 
 <div class="example">
@@ -79,3 +93,14 @@ This deprecated button is still around to avoid breaking every site that current
 ## Open source
 
 The unofficial GitHub buttons are available on GitHub for downloading, forking, or contributing.
+
+<p>
+  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+</p>
+
+<a href="https://github.com/mdo/github-buttons" class="btn">View on GitHub</a>
+
+---
+
+<3

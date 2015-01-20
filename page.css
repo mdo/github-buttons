@@ -11,6 +11,7 @@ layout: null
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 html {
   font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -19,6 +20,7 @@ html {
     font-size: 18px;
   }
 }
+
 body {
   padding: 1.5rem 1.5rem 3rem;
   margin: 0;
@@ -27,6 +29,7 @@ body {
   background-color: #fff;
   border-top: .5rem solid #08c;
 }
+
 h1, h2 {
   margin-top: 0;
   line-height: 1;
@@ -34,15 +37,23 @@ h1, h2 {
 }
 h1 {
   margin-bottom: .5rem;
+  font-size: 3rem;
 }
 h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+h1 + p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
 a {
   color: #08c;
   text-decoration: none;
@@ -50,6 +61,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 .deprecated {
   display: inline-block;
   padding: .25rem .5rem;
@@ -147,22 +159,11 @@ pre code {
  * Masthead
  */
 
-.masthead {
-  margin-bottom: 2rem;
+.tweet-button {
+  margin: 0 0 1rem;
 }
-.masthead .tweet-button {
-  margin: 0 auto 1rem;
-}
-.masthead .introducing {
-  margin-bottom: 1rem;
+.tweet-button + p {
   color: #999;
-}
-.masthead h1 {
-  font-size: 3rem;
-}
-.masthead .tagline {
-  font-size: 1.25rem;
-  color: #555;
 }
 
 
@@ -196,14 +197,20 @@ hr {
 
 .example {
   margin-bottom: 1rem;
-  line-height: 30px;
   overflow: auto;
 }
+.example iframe {
+  display: block;
+}
 .example iframe + iframe {
-  margin-top: .5rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 34em) {
+  .example {
+    display: inline-block;
+    line-height: 30px;
+  }
   .example iframe {
     float: left;
   }
