@@ -1,19 +1,19 @@
 # GitHub Buttons
 
-Showcase your GitHub (repo's) success with these three simple, static buttons featuring dynamic watch, fork and follower counts and a link to your GitHub repo or profile page.
+Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, and follower counts.
 
 To get started, checkout <https://ghbtns.com>!
 
-
-
 ## Usage
 
-These buttons are hosted via GitHub Pages, meaning all you need to do is include an iframe and you're set. Once included, you can configure it with various options. Here's the include:
+These buttons are hosted via GitHub Pages, meaning all you need to do is include an `<iframe>` and you're set. Once included, you can configure it with various options. Here's an example include:
 
 ``` html
 <iframe src="https://ghbtns.com/github-btn.html?user=USERNAME&repo=REPONAME&type=BUTTONTYPE"
   allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
 ```
+
+Note that the example uses `https://`. This is provided via CloudFlare's free Universal SSL offering. If you prefer, you can still use `http://`.
 
 ### Requirements
 
@@ -33,8 +33,6 @@ Show the optional watchers or forks count: *none* by default or `true`
 
 `size`<br>
 Optional flag for using a larger button: *none* by default or `large`
-
-
 
 ## Examples
 
@@ -87,8 +85,6 @@ Optional flag for using a larger button: *none* by default or `large`
   allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
 ```
 
-
-
 ## Limitations
 
 For the first versions, functionality is limited and some concessions were made:
@@ -99,23 +95,17 @@ For the first versions, functionality is limited and some concessions were made:
 
 More refinement and functionalty is planned with open-sourcing--any help is always appreciated!
 
-
-
 ## Bug tracker
+
 Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/github-buttons/issues>.
-
-
 
 ## See also
 
 - [ntkme/github-buttons](https://github.com/ntkme/github-buttons)
 
-
-
 ## Twitter account
+
 Keep up to date on announcements and more by following Mark on Twitter, <a href="http://twitter.com/mdo">@mdo</a>.
-
-
 
 ## Author
 
@@ -124,8 +114,6 @@ Keep up to date on announcements and more by following Mark on Twitter, <a href=
 + http://twitter.com/mdo
 + http://github.com/mdo
 
-
-
 ## Copyright and license
 
-Copyright 2014 Mark Otto. Released under Apache 2.0.
+Copyright 2014-2015 Mark Otto. Released under Apache 2.0.
