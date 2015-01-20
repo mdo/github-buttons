@@ -13,7 +13,7 @@ These buttons are hosted via GitHub Pages, meaning all you need to do is include
   frameborder="0" scrolling="0" width="62" height="20"></iframe>
 ```
 
-Note that the example uses `https://`. This is provided via CloudFlare's free Universal SSL offering. If you prefer, you can still use `http://`.
+Note that the examples here use `https://`. This is provided via CloudFlare's free Universal SSL offering. If you prefer, you can still use `http://`.
 
 ### Requirements
 
@@ -98,6 +98,10 @@ More refinement and functionalty is planned with open-sourcing--any help is alwa
 ## Bug tracker
 
 Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/github-buttons/issues>.
+
+## Development
+
+The GitHub buttons site is built with Jekyll (requires Ruby and more). The HTML page containing all the HTML, CSS, and JS for each button is minified manually via <http://kangax.github.io/html-minifier/>.
 
 ## See also
 
