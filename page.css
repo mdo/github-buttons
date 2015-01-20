@@ -21,9 +21,11 @@ html {
 }
 body {
   padding: 1.5rem 1.5rem 3rem;
+  margin: 0;
   font-size: 1rem;
-  color: #555;
+  color: #333;
   background-color: #fff;
+  border-top: .5rem solid #08c;
 }
 h1, h2 {
   margin-top: 0;
@@ -96,6 +98,7 @@ pre code {
 }
 .highlight pre {
   margin-bottom: 0;
+  word-wrap: break-word;
 }
 .highlight + .highlight {
   margin-top: 1rem;
@@ -159,6 +162,7 @@ pre code {
 }
 .masthead .tagline {
   font-size: 1.25rem;
+  color: #555;
 }
 
 
@@ -195,12 +199,18 @@ hr {
   line-height: 30px;
   overflow: auto;
 }
-.example iframe {
-  float: left;
-}
 .example iframe + iframe {
-  margin-top: 5px;
-  margin-left: 1rem;
+  margin-top: .5rem;
+}
+
+@media (min-width: 34em) {
+  .example iframe {
+    float: left;
+  }
+  .example iframe + iframe {
+    margin-top: 5px;
+    margin-left: 1rem;
+  }
 }
 
 /*
