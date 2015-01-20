@@ -198,7 +198,7 @@ body {
       if (v == '2') {
         mainButton.className += ' github-watchers';
         text.innerHTML = 'Watch';
-        counter.href = 'https://github.com/' + user + '/' + repo;
+        counter.href = 'https://github.com/' + user + '/' + repo + '/watchers';
       } else {
         mainButton.className += ' github-stargazers';
         text.innerHTML = 'Star';
@@ -213,6 +213,7 @@ body {
     case 'fork':
       mainButton.className += ' github-forks';
       text.innerHTML = 'Fork';
+      button.href = 'https://github.com/' + user + '/' + repo + '/fork';
       counter.href = 'https://github.com/' + user + '/' + repo + '/network';
       break;
     case 'follow':
