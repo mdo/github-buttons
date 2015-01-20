@@ -27,7 +27,6 @@ body {
   font-size: 1rem;
   color: #333;
   background-color: #fff;
-  border-top: .5rem solid #08c;
 }
 
 h1, h2 {
@@ -42,6 +41,10 @@ h1 {
 h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+h3 {
+  margin-top: 2rem;
+  margin-bottom: .5rem;
 }
 
 p {
@@ -62,6 +65,23 @@ a:hover {
   text-decoration: underline;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: .5rem;
+  font-size: 90%;
+  vertical-align: top;
+  border: 1px solid #eee;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
 .deprecated {
   display: inline-block;
   padding: .25rem .5rem;
@@ -71,6 +91,11 @@ a:hover {
   color: #fff;
   background-color: #ff4136;
   border-radius: .2rem;
+}
+
+#markdown-toc > li:first-child,
+#markdown-toc > li:last-child {
+  display: none;
 }
 
 /*

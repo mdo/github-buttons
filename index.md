@@ -2,17 +2,10 @@
 layout: default
 ---
 
-<div class="tweet-button">
-  <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="mdo">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-</div>
+## Contents
 
-Introducing the unofficial
-
-# GitHub buttons
-
-Showcase your GitHub repo's success with hotlinkable GitHub star, fork, or follow buttons. Available in two sizes with up-to-date counts.
-
-Made by [@mdo](http://twitter.com/mdo). Licensed [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0").
+* Comment to trigger ToC generation
+{:toc}
 
 ---
 
@@ -67,6 +60,35 @@ As such, for today's unofficial Watch button, **you must add `v=2` to the parame
 
 <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 {% endhighlight %}
+
+---
+
+## Available options
+
+### SSL support
+
+Example buttons are shown with `https://` URLs. While they're hosted on GitHub Pages, the SSL option is provided via [CloudFlare's free Universal SSL](https://blog.cloudflare.com/introducing-universal-ssl/) offering. If you prefer, you can still use `http://`.
+
+### Required parameters
+
+You **must** declare a value for each of the following URL parameters:
+
+|---
+| Option | Description |
+|-|:-|:-:|-:
+| `user` | GitHub username that owns the repo |
+| `repo` | GitHub repository to pull the forks and watchers counts |
+| `type` | Type of button to show: `watch`, `fork`, or `follow` |
+
+### Optional parameters
+
+The following URL parameters are **not** required. Add them as you wish.
+
+|---
+| Option | Description |
+|-|:-|:-:|-:
+| `count` | Show the optional watchers or forks count: *none* by default or `true` |
+| `size` | Optional flag for using a larger button: *none* by default or `large` |
 
 ---
 
