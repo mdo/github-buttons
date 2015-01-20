@@ -112,6 +112,18 @@ This deprecated button is still around to avoid breaking every site that current
 
 ---
 
+## Limitations
+
+For these first versions, functionality is limited and some concessions made:
+
+- Width and height must be specified for all buttons (which actually adds some control for those with OCD like myself).
+- All attributes must be passed through via URL parameters.
+- CSS and JavaScript are all included in the same HTML file to reduce complexity.
+
+More refinement and functionality is planned with open-sourcing--any help is always appreciated!
+
+---
+
 ## Open source
 
 The unofficial GitHub buttons are available on GitHub for downloading, forking, or contributing.
