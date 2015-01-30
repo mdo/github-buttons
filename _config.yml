@@ -4,3 +4,8 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
+
+exclude:
+- "LICENSE.md"
+- "package.json"
+- "README.md"
