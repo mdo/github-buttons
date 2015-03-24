@@ -14,7 +14,7 @@ The GitHub buttons site is built with Jekyll (requires Ruby and more). The HTML 
 
 ## See also
 
-- [ntkme/github-buttons](https://github.com/ntkme/github-buttons)
+- [ntkme/github-buttons](https://buttons.github.io)
 
 ## Twitter account
 
