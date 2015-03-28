@@ -10,7 +10,7 @@ layout: default
 ---
 
 ## Star
-
+### HTML 4.01
 <div class="example">
   <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
   <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
@@ -20,6 +20,16 @@ layout: default
 
 <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 {% endhighlight %}
+### HTML 5
+<div class="example">
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large"  style="border-width: 0; width:160px; height:30px; overflow:hidden"></iframe>
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true"  style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
+</div>
+{% highlight html %}
+<iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large"  style="border-width: 0; width:160px; height:30px; overflow:hidden"></iframe>
+
+<iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true"  style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
+{% endhighlight %}
 
 ## Watch
 
@@ -27,6 +37,7 @@ Originally, GitHub's Watch button was used for notification settings (today's Wa
 
 As such, for today's unofficial Watch button, **you must add `v=2` to the parameters**. If you don't, you'll get [the deprecated button](#deprecated).
 
+###HTML 4.01
 <div class="example">
   <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
   <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
@@ -37,8 +48,19 @@ As such, for today's unofficial Watch button, **you must add `v=2` to the parame
 <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 {% endhighlight %}
 
-## Fork
+###HTML5
+<div class="example">
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large&v=2" style="border-width: 0; width:160px; height:30px; overflow:hidden"></iframe>
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
+</div>
+{% highlight html %}
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large&v=2" style="border-width: 0; width:160px; height:30px; overflow:hidden"></iframe>
 
+<iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
+{% endhighlight %}
+
+## Fork
+### HTML 4.01
 <div class="example">
   <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
   <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
@@ -49,8 +71,19 @@ As such, for today's unofficial Watch button, **you must add `v=2` to the parame
 <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 {% endhighlight %}
 
-## Follow
+### HTML 5
+<div class="example">
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true&size=large" style="border-width: 0; width:158px; height:30px; overflow:hidden""></iframe>
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
+</div>
+{% highlight html %}
+<iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true&size=large" style="border-width: 0; width:158px; height:30px; overflow:hidden"></iframe>
 
+<iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
+{% endhighlight %}
+
+## Follow
+### HTML 4.01
 <div class="example">
   <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
   <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
@@ -59,6 +92,17 @@ As such, for today's unofficial Watch button, **you must add `v=2` to the parame
 <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+{% endhighlight %}
+
+### HTML 5
+<div class="example">
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large"style="border-width: 0; width:220px; height:30px; overflow:hidden"></iframe>
+  <iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true"style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
+</div>
+{% highlight html %}
+<iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large"style="border-width: 0; width:220px; height:30px; overflow:hidden"></iframe>
+
+<iframe seamless="seamless" src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true"style="border-width: 0; width:170px; height:20px; overflow:hidden"></iframe>
 {% endhighlight %}
 
 ---
