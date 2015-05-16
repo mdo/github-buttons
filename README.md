@@ -18,14 +18,14 @@ The GitHub buttons site is built with Jekyll (requires Ruby and more). The HTML 
 
 ## Twitter account
 
-Keep up to date on announcements and more by following Mark on Twitter, <a href="http://twitter.com/mdo">@mdo</a>.
+Keep up to date on announcements and more by following Mark on Twitter, <a href="https://twitter.com/mdo">@mdo</a>.
 
 ## Author
 
 **Mark Otto**
 
-+ http://twitter.com/mdo
-+ http://github.com/mdo
++ https://twitter.com/mdo
++ https://github.com/mdo
 
 ## Copyright and license
 
