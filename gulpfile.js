@@ -1,5 +1,5 @@
 var gulp    = require('gulp');
-var htmlmin = require('gulp-html-minifier');
+var htmlmin = require('gulp-htmlmin');
 
 // Minify HTML
 gulp.task('minify', function() {

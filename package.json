@@ -24,6 +24,6 @@
   ],
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-html-minifier": "^0.1.6",
+    "gulp-htmlmin": "^1.1.1"
   }
 }
