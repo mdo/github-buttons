@@ -7,7 +7,8 @@ gulp.task('minify', function() {
     .pipe(htmlmin({
       collapseWhitespace: true,
       minifyCSS: true,
-      minifyJS: true
+      minifyJS: true,
+      removeOptionalTags: true
     }))
     .pipe(gulp.dest('./'))
 });
