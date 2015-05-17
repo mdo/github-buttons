@@ -130,11 +130,11 @@
     }
   </style>
   <span class="github-btn" id="github-btn">
-    <a class="gh-btn" id="gh-btn" href="#" target="_blank">
-      <span class="gh-ico"></span>
+    <a class="gh-btn" id="gh-btn" href="#" target="_blank" aria-label="">
+      <span class="gh-ico" aria-hidden="true"></span>
       <span class="gh-text" id="gh-text"></span>
     </a>
-    <a class="gh-count" id="gh-count" href="#" target="_blank"></a>
+    <a class="gh-count" id="gh-count" href="#" target="_blank" aria-label=""></a>
   </span>
   <script>
     // Read a page's GET URL variables and return them as an associative array.
@@ -161,7 +161,7 @@
         mainButton = document.getElementById('github-btn'),
         text = document.getElementById('gh-text'),
         counter = document.getElementById('gh-count');
-
+        labelSuffix = ' on GitHub';
 
     // Add commas to numbers
     function addCommas(n) {
@@ -179,18 +179,23 @@
         case 'watch':
           if (v === '2') {
             counter.innerHTML = addCommas(obj.data.subscribers_count);
+            counter.setAttribute('aria-label', counter.innerHTML + ' watchers' + labelSuffix);
           } else {
             counter.innerHTML = addCommas(obj.data.stargazers_count);
+            counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
           }
           break;
         case 'star':
           counter.innerHTML = addCommas(obj.data.stargazers_count);
+          counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
           break;
         case 'fork':
           counter.innerHTML = addCommas(obj.data.network_count);
+          counter.setAttribute('aria-label', counter.innerHTML + ' forks' + labelSuffix);
           break;
         case 'follow':
           counter.innerHTML = addCommas(obj.data.followers);
+          counter.setAttribute('aria-label', counter.innerHTML + ' followers' + labelSuffix);
           break;
       }
 
@@ -234,6 +239,7 @@
         counter.href = 'https://github.com/' + user + '/followers';
         break;
     }
+    button.setAttribute('aria-label', text.innerHTML + labelSuffix);
 
     // Change the size
     if (size === 'large') {
