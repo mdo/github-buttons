@@ -21,7 +21,7 @@ var user = params.user,
     button = document.getElementById('gh-btn'),
     mainButton = document.getElementById('github-btn'),
     text = document.getElementById('gh-text'),
-    counter = document.getElementById('gh-count');
+    counter = document.getElementById('gh-count'),
     labelSuffix = ' on GitHub';
 
 // Add commas to numbers
