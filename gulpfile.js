@@ -18,8 +18,9 @@ gulp.task('minify', ['inlinesource'], function() {
   gulp.src('./github-btn.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
-      minifyCSS: true,
+      minifyCSS: { advanced: false, compatibility: 'ie8' },
       minifyJS: true,
+      removeAttributeQuotes: true,
       removeOptionalTags: true
     }))
     .pipe(gulp.dest('./'))
