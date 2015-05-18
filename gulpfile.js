@@ -1,15 +1,20 @@
 var gulp         = require('gulp'),
     htmlmin      = require('gulp-htmlmin'),
-    inlinesource = require('gulp-inline-source');
+    inlinesource = require('gulp-inline-source'),
+    rename       = require('gulp-rename');
 
-gulp.task('inlinesource', function () {
-  return gulp.src('./src/github-btn.html')
+// Inline CSS and JS
+gulp.task('inlinesource', function (cb) {
+  return gulp.src('./src/btn.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./github-btn.html'));
+    .pipe(rename('github-btn.html'))
+    .pipe(gulp.dest('./'));
+
+  cb(err);
 });
 
 // Minify HTML
-gulp.task('minify', function() {
+gulp.task('minify', ['inlinesource'], function() {
   gulp.src('./github-btn.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
@@ -17,7 +22,8 @@ gulp.task('minify', function() {
       minifyJS: true,
       removeOptionalTags: true
     }))
+    .pipe(gulp.dest('./'))
 });
 
 // Default Task
-gulp.task('default', ['minify']);
+gulp.task('default', ['inlinesource', 'minify']);
