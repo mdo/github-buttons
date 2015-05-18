@@ -21,5 +21,11 @@
   "files": [
     "github-btn.html",
     "LICENSE.md"
-  ]
+  ],
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-htmlmin": "^1.1.1",
+    "gulp-inline-source": "^1.3.0",
+    "run-sequence": "^1.1.0"
+  }
 }
