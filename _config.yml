@@ -6,6 +6,10 @@ highlighter:      pygments
 permalink:        pretty
 
 exclude:
+- "node_modules"
+- "src"
+- "CNAME"
+- "gulpfile.js"
 - "LICENSE.md"
 - "package.json"
 - "README.md"
