@@ -17,7 +17,6 @@ gulp.task('minify', function() {
       minifyJS: true,
       removeOptionalTags: true
     }))
-    // .pipe(gulp.dest('./'))
 });
 
 // Default Task
