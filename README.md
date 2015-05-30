@@ -10,16 +10,16 @@ Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/git
 
 ## Development
 
-The GitHub buttons source code is split across three files in `src/` — the HTML, CSS, and JS — and compiled with [Gulp](http://gulpjs.com).
-The `github-btn.hml` file contains the button markup and includes the CSS and JS. Those includes are inlined and the overall page minified with Gulp.
+The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS—and compiled with [Gulp](http://gulpjs.com).
+The `github-btn.hml` file contains the button markup and includes the external CSS and JS. Those includes are inlined and the overall page minified with Gulp.
+
 To build the files, just run Gulp:
 
 ```shell
 $ gulp
 ```
 
-Lastly, the `https://ghbtns.com` site is built with Jekyll (requires Ruby and more).
-Install [Jekyll](http://jekyllrb.com) and run a local server to view your changes:
+Lastly, the `https://ghbtns.com` site is built with Jekyll (requires Ruby and more). Install [Jekyll](http://jekyllrb.com) and run a local server to view your changes:
 
 ```shell
 $ jekyll serve --watch
