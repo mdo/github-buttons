@@ -5,4 +5,11 @@ highlighter:      pygments
 # Permalinks
 permalink:        pretty
 
-# Custom vars
+exclude:
+- "node_modules"
+- "src"
+- "CNAME"
+- "gulpfile.js"
+- "LICENSE.md"
+- "package.json"
+- "README.md"
