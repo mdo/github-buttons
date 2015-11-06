@@ -135,6 +135,4 @@ The unofficial GitHub buttons are available on GitHub for downloading, forking, 
 
 <a href="https://github.com/mdo/github-buttons" class="btn">View on GitHub</a>
 
----
-
-<3
+--- 
