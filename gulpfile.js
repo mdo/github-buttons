@@ -17,11 +17,17 @@ gulp.task('inlinesource', function (cb) {
 gulp.task('minify', ['inlinesource'], function() {
   gulp.src('./github-btn.html')
     .pipe(htmlmin({
+      collapseBooleanAttributes: true,
       collapseWhitespace: true,
-      minifyCSS: { advanced: false, compatibility: 'ie8' },
+      minifyCSS: { advanced: false, compatibility: 'ie9' },
       minifyJS: true,
       removeAttributeQuotes: true,
-      removeOptionalTags: true
+      removeComments: true,
+      removeOptionalAttributes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true
     }))
     .pipe(gulp.dest('./'))
 });
