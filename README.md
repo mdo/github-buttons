@@ -10,10 +10,10 @@ Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/git
 
 ## Development
 
-The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS—and compiled with [Gulp](http://gulpjs.com).
-The `github-btn.hml` file contains the button markup and includes the external CSS and JS. Those includes are inlined and the overall page minified with Gulp.
+The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS—and compiled with [gulp](http://gulpjs.com).
+The `github-btn.hml` file contains the button markup and includes the external CSS and JS. Those includes are inlined and the overall page minified with gulp.
 
-To build the files, just run Gulp:
+To build the files, just run gulp:
 
 ```shell
 $ gulp
