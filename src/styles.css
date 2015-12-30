@@ -124,3 +124,6 @@ body {
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
 }
+.github-btn-align-right {
+  float: right;
+}

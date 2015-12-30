@@ -18,6 +18,7 @@ var user = params.user,
     count = params.count,
     size = params.size,
     v = params.v,
+    align = params.align,
     head = document.getElementsByTagName('head')[0],
     button = document.getElementById('gh-btn'),
     mainButton = document.getElementById('github-btn'),
@@ -106,6 +107,11 @@ button.setAttribute('aria-label', text.innerHTML + labelSuffix);
 // Change the size
 if (size === 'large') {
   mainButton.className += ' github-btn-large';
+}
+
+// Change the alignment
+if (align === 'right') {
+  mainButton.className += ' github-btn-align-right';
 }
 
 if (type === 'follow') {
