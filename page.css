@@ -1,212 +1,252 @@
-/* DOCS RESET
--------------------------------------------------- */
+---
+---
+
+/*
+ * Reset
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (min-width: 34em) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
-  padding: 40px 20px;
-  color: #555;
-  text-shadow: 0 1px 0 #fff;
+  padding: 1.5rem 1.5rem 3rem;
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
   background-color: #fff;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), color-stop(25%, #fff), to(#fff));
-  background-image: -webkit-linear-gradient(#eee, #fff 25%, #fff);
-  background-image: -moz-linear-gradient(top, #eee, #fff 25%, #fff);
-  background-image: -ms-linear-gradient(#eee, #fff 25%, #fff);
-  background-image: -o-linear-gradient(#eee, #fff 25%, #fff);
-  background-image: linear-gradient(#eee, #fff 25%, #fff);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow: auto;
 }
-body,
-p,
-li {
-  font-size: 14px;
-  line-height: 20px;
-}
-h1, h2, h3, h4, h5, h6 {
+
+h1, h2 {
+  margin-top: 0;
+  line-height: 1;
   text-rendering: optimizeLegibility;
 }
-
-/* Set width of site */
-.container {
-  width: auto;
-  max-width: 820px;
+h1 {
+  margin-bottom: .5rem;
+  font-size: 3rem;
+}
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  margin-top: 2rem;
+  margin-bottom: .5rem;
 }
 
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-  content:"";
-  display:table;
-}
-.clearfix:after {
-  clear:both;
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-/* Change up the buttons to match GitHub */
-.primary.btn {
+h1 + p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: .5rem;
+  font-size: 90%;
+  vertical-align: top;
+  border: 1px solid #eee;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+.deprecated {
+  display: inline-block;
+  padding: .25rem .5rem;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #ff4136;
+  border-radius: .2rem;
+}
+
+#markdown-toc > li:first-child,
+#markdown-toc > li:last-child {
+  display: none;
+}
+
+/*
+ * Code
+ */
+
+code,
+pre {
+  font-family: Menlo, "Courier New", monospace;
+  font-size: 95%;
+}
+code {
+  padding: 2px 4px;
+  font-size: 85%;
+  color: #d44950;
+  background-color: #f7f7f9;
+  border-radius: .2rem;
+}
+
+pre {
+  display: block;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+.highlight {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  background-color: #f7f7f9;
+}
+.highlight pre {
+  margin-bottom: 0;
+  word-wrap: break-word;
+}
+.highlight + .highlight {
+  margin-top: 1rem;
+}
+
+
+/*
+ * Download button
+ */
+
+.btn {
+  display: inline-block;
+  padding: .5rem 1.25rem;
+  font-weight: 500;
   color: #fff;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0,0,0,.5);
   background-color: #3072b3; /* Old browsers */
   background-repeat: repeat-x; /* Repeat the gradient */
-  background-image: -moz-linear-gradient(top, #599bdc 0%, #3072b3 100%); /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#599bdc), color-stop(100%,#3072b3)); /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top, #599bdc 0%,#3072b3 100%); /* Chrome 10+,Safari 5.1+ */
-  background-image: -ms-linear-gradient(top, #599bdc 0%,#3072b3 100%); /* IE10+ */
-  background-image: -o-linear-gradient(top, #599bdc 0%,#3072b3 100%); /* Opera 11.10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#599bdc', endColorstr='#3072b3',GradientType=0 ); /* IE6-9 */
-  background-image: linear-gradient(top, #599bdc 0%,#3072b3 100%); /* W3C */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #599bdc), color-stop(100%, #3072b3)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, #599bdc 0, #3072b3 100%); /* Chrome 10+,Safari 5.1+ */
+  background-image: -moz-linear-gradient(top, #599bdc 0, #3072b3 100%); /* FF3.6+ */
+  background-image: -ms-linear-gradient(top, #599bdc 0, #3072b3 100%); /* IE10+ */
+  background-image: -o-linear-gradient(top, #599bdc 0, #3072b3 100%); /* Opera 11.10+ */
+  background-image: linear-gradient(top, #599bdc 0, #3072b3 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bdc', endColorstr='#3072b3', GradientType=0); /* IE6-9 */
   border: 1px solid #2967a4;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
   -webkit-transition: none;
      -moz-transition: none;
+       -o-transition: none;
           transition: none;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 2px rgba(0,0,0,.2);
-     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 2px rgba(0,0,0,.2);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 2px rgba(0,0,0,.2);
 }
-.primary.btn:hover {
+.btn:hover {
+  text-decoration: none;
   background-position: 0 -15px;
 }
-.primary.btn:active {
+.btn:active {
   background-image: none;
   background-color: #3072b3; /* Old browsers */
-  -webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
-     -moz-box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
-          box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
 }
 
 
-/* MASTHEAD
--------------------------------------------------- */
-.masthead {
-  margin-bottom: 30px;
+/*
+ * Masthead
+ */
+
+.tweet-button {
+  margin: 0 0 1rem;
 }
-.masthead h1,
-.masthead p {
-  text-align: center;
-}
-.masthead h1 {
-  margin-bottom: 10px;
-  font-size: 80px;
-  line-height: 1;
-}
-.masthead p {
-  font-size: 18px;
-  line-height: 30px;
-}
-.masthead .introducing {
-  margin-bottom: 20px;
+.tweet-button + p {
   color: #999;
 }
-.masthead .tagline {
-  margin-bottom: 30px;
-  font-size: 24px;
-}
-.masthead .tweet-button {
-  width: 55px;
-  margin: 0 auto 20px;
+
+
+/*
+ * Grid and columns
+ */
+
+.container {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-/* BODY
--------------------------------------------------- */
+/*
+ * Misc
+ */
 
-/* Two-column buttons */
-.about-buttons {
-  text-align: center;
-}
-.about-star,
-.about-fork,
-.about-follow {
-  width: 32%;
-  float: left;
-}
-.about-buttons div + div {
-  margin-left: 2%;
-}
-.about-buttons ul {
-  margin-left: 0;
-  list-style: none;
-}
-.about-buttons iframe {
-  margin: 10px 0;
-}
-
-/* Download button */
-.download {
-  margin: 30px 0 50px;
-  text-align: center;
-}
-.download .btn {
-  font-size: 20px;
-  padding: 12px 24px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-}
-
-
-/* FOOTER
--------------------------------------------------- */
-.footer {
-  margin-top: 40px;
-  padding: 0;
-  border-top: 0;
-}
-.footer p {
-  text-align: center;
-}
-iframe + iframe {
-  margin-left: 10px;
-}
-
-
-/* MISC
--------------------------------------------------- */
-
-/* Small lines after each section */
-.masthead:after,
-.body:after {
+hr {
   display: block;
-  content: '';
-  width: 100px;
+  width: 7rem;
   height: 1px;
-  margin: 0 auto;
+  margin: 2.5rem 0;
   background-color: #eee;
+  border: 0;
 }
 
+/*
+ * Embed spacing
+ */
 
-/* RESPONSIVE
--------------------------------------------------- */
+.example {
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+.example iframe {
+  display: block;
+}
+.example iframe + iframe {
+  margin-top: 1rem;
+}
 
-@media (max-width: 840px) {
-  .masthead h1 {
-    font-size: 60px;
+@media (min-width: 34em) {
+  .example {
+    display: inline-block;
+    line-height: 30px;
   }
-  .masthead p,
-  .masthead .tagline {
-    font-size: 18px;
-    line-height: 24px;
+  .example iframe {
+    float: left;
   }
-
-  .about-watch,
-  .about-fork,
-  .about-follow {
-    width: auto;
-    float: none;
-    margin-bottom: 20px;
-  }
-  .about-buttons div + div {
-    margin-left: 0;
+  .example iframe + iframe {
+    margin-top: 5px;
+    margin-left: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  .masthead h1 {
-    font-size: 40px;
-  }
-  .masthead p,
-  .masthead .tagline {
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
+/*
+ * Syntax highlighting
+ */
+
+{% include syntax.css %}
