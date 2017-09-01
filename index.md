@@ -137,4 +137,8 @@ The unofficial GitHub buttons are available on GitHub for downloading, forking, 
 
 ---
 
-<3
+<img class="hrt-icon" src="http://www.iconarchive.com/download/i66645/designbolts/free-valentine-heart/Heart.ico"> 
+
+<p>
+  With Love
+</p>
