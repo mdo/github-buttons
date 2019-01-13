@@ -68,7 +68,7 @@ function callback(obj) {
 }
 
 // Set href to be URL for repo
-button.href = 'https://github.com/' + user + '/' + repo + '/';
+button.href = 'https://github.com/' + user + '/' + repo;
 
 // Add the class, change the text label, set count link href
 switch (type) {
