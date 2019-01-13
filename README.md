@@ -2,7 +2,7 @@
 
 Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, and follower counts.
 
-To get started, checkout <https://ghbtns.com>!
+To get started, checkout <https://ghbtns.com/>!
 
 ## Bug tracker
 
@@ -10,24 +10,19 @@ Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/git
 
 ## Development
 
-The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS—and compiled with [gulp](http://gulpjs.com).
-The `github-btn.hml` file contains the button markup and includes the external CSS and JS. Those includes are inlined and the overall page minified with gulp.
+The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS. We then use inline-source-cli and html-minifer to create the dist `github-btn.html` file which includes everything.
 
-To build the files, just run gulp:
+To build the files, just run `npm run build`.
 
-```shell
-$ gulp
-```
-
-Lastly, the `https://ghbtns.com` site is built with Jekyll (requires Ruby and more). Install [Jekyll](http://jekyllrb.com) and run a local server to view your changes:
+Lastly, the `https://ghbtns.com/` site is built with Jekyll (requires Ruby and more). Install [Jekyll](https://jekyllrb.com/) and run a local server to view your changes:
 
 ```shell
-$ jekyll serve --watch
+$ jekyll serve
 ```
 
 ## See also
 
-- [ntkme/github-buttons](https://buttons.github.io)
+- [ntkme/github-buttons](https://buttons.github.io/)
 
 ## Twitter account
 

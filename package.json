@@ -2,11 +2,12 @@
   "name": "github-buttons",
   "version": "1.1.0",
   "description": "Showcase your GitHub (repo's) success with these buttons",
-  "homepage": "https://ghbtns.com",
+  "homepage": "https://ghbtns.com/",
   "author": "Mark Otto <markdotto@gmail.com> (https://github.com/mdo)",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mdo/github-buttons.git"
+    "url": "git+https://github.com/mdo/github-buttons.git"
   },
   "bugs": {
     "url": "https://github.com/mdo/github-buttons/issues"
@@ -17,16 +18,19 @@
     "iframe",
     "html"
   ],
-  "license": "Apache License, Version 2.0",
+  "scripts": {
+    "build": "inline-source --compress false --root src src/btn.html | html-minifier --config-file html-minifier.json -o github-btn.html",
+    "test": "npm run build"
+  },
   "files": [
-    "github-btn.html",
-    "LICENSE.md"
+    "github-btn.html"
   ],
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-htmlmin": "^1.1.1",
-    "gulp-inline-source": "^1.3.0",
-    "gulp-rename": "^1.2.2",
-    "run-sequence": "^1.1.0"
+    "html-minifier": "^4.0.0",
+    "inline-source-cli": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
