@@ -1,29 +1,30 @@
 // Read a page's GET URL variables and return them as an associative array.
 // Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
 var params = (function () {
-  var vars = [],
-      hash;
+  var vars = [];
+  var hash;
   var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  for (var i = 0; i < hashes.length; i++) {
+
+  for (var i = 0, len = hashes.length; i < len; i++) {
     hash = hashes[i].split('=');
     vars.push(hash[0]);
     vars[hash[0]] = hash[1];
   }
   return vars;
-}());
+})();
 
-var user = params.user,
-    repo = params.repo,
-    type = params.type,
-    count = params.count,
-    size = params.size,
-    v = params.v,
-    head = document.getElementsByTagName('head')[0],
-    button = document.getElementById('gh-btn'),
-    mainButton = document.getElementById('github-btn'),
-    text = document.getElementById('gh-text'),
-    counter = document.getElementById('gh-count'),
-    labelSuffix = ' on GitHub';
+var user = params.user;
+var repo = params.repo;
+var type = params.type;
+var count = params.count;
+var size = params.size;
+var v = params.v;
+var head = document.getElementsByTagName('head')[0];
+var button = document.getElementById('gh-btn');
+var mainButton = document.getElementById('github-btn');
+var text = document.getElementById('gh-text');
+var counter = document.getElementById('gh-count');
+var labelSuffix = ' on GitHub';
 
 // Add commas to numbers
 function addCommas(n) {
@@ -62,7 +63,7 @@ function callback(obj) {
   }
 
   // Show the count if asked
-  if (count === 'true' && counter.innerHTML !== 'undefined') {
+  if (count === 'true' && typeof counter.innerHTML !== 'undefined') {
     counter.style.display = 'block';
   }
 }
