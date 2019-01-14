@@ -1,6 +1,7 @@
 permalink: pretty
 
 exclude:
+- ".sass-cache"
 - "LICENSE.md"
 - "node_modules/"
 - "html-minifier.json"
@@ -8,3 +9,6 @@ exclude:
 - "package-lock.json"
 - "README.md"
 - "src/"
+
+sass:
+  style: compressed
