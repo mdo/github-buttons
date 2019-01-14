@@ -2,12 +2,14 @@ permalink: pretty
 
 exclude:
 - ".sass-cache"
-- "LICENSE.md"
-- "node_modules/"
+- "Gemfile"
+- "Gemfile.lock"
 - "html-minifier.json"
+- "LICENSE.md"
 - "package.json"
 - "package-lock.json"
 - "README.md"
+- "node_modules/"
 - "src/"
 
 sass:
