@@ -1,13 +1,11 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
-
 # Permalinks
-permalink:        pretty
+permalink: pretty
 
 exclude:
 - "node_modules"
 - "src"
+- "Gemfile"
+- "Gemfile.lock"
 - "CNAME"
 - "gulpfile.js"
 - "LICENSE.md"
