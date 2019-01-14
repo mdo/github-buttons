@@ -1,14 +1,10 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
+permalink: pretty
 
 exclude:
-- "node_modules"
-- "src"
-- "CNAME"
 - "LICENSE.md"
+- "node_modules/"
+- "html-minifier.json"
 - "package.json"
+- "package-lock.json"
 - "README.md"
+- "src/"
