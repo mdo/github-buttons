@@ -17,7 +17,7 @@ To build the files, just run `npm run build`.
 Lastly, the `https://ghbtns.com/` site is built with Jekyll (requires Ruby and more). Install [Jekyll](https://jekyllrb.com/) and run a local server to view your changes:
 
 ```shell
-$ jekyll serve
+$ bundle exec jekyll serve
 ```
 
 ## See also
