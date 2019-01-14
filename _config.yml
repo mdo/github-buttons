@@ -1,11 +1,8 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
-
 # Permalinks
-permalink:        pretty
+permalink: pretty
 
 exclude:
+- ".sass-cache"
 - "node_modules"
 - "src"
 - "CNAME"
@@ -13,3 +10,6 @@ exclude:
 - "LICENSE.md"
 - "package.json"
 - "README.md"
+
+sass:
+  style: compressed
