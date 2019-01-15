@@ -1,29 +1,35 @@
 // Read a page's GET URL variables and return them as an associative array.
 // Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
 var params = (function () {
-  var vars = [],
-      hash;
-  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  for (var i = 0; i < hashes.length; i++) {
+  var vars = [];
+  var hash;
+  var location = window.location;
+  var hashes = location.href.slice(location.href.indexOf('?') + 1).split('&');
+
+  for (var i = 0, len = hashes.length; i < len; i++) {
     hash = hashes[i].split('=');
     vars.push(hash[0]);
     vars[hash[0]] = hash[1];
   }
+
   return vars;
 }());
 
-var user = params.user,
-    repo = params.repo,
-    type = params.type,
-    count = params.count,
-    size = params.size,
-    v = params.v,
-    head = document.getElementsByTagName('head')[0],
-    button = document.getElementById('gh-btn'),
-    mainButton = document.getElementById('github-btn'),
-    text = document.getElementById('gh-text'),
-    counter = document.getElementById('gh-count'),
-    labelSuffix = ' on GitHub';
+var user = params.user;
+var repo = params.repo;
+var type = params.type;
+var count = params.count;
+var size = params.size;
+var v = params.v;
+var head = document.getElementsByTagName('head')[0];
+var button = document.getElementById('gh-btn');
+var mainButton = document.getElementById('github-btn');
+var text = document.getElementById('gh-text');
+var counter = document.getElementById('gh-count');
+var labelSuffix = ' on GitHub';
+
+var GH_DOT_COM = 'https://github.com/';
+var REPO_URL = GH_DOT_COM + user + '/' + repo;
 
 // Add commas to numbers
 function addCommas(n) {
@@ -36,7 +42,7 @@ function jsonp(path, cbName) {
   head.insertBefore(el, head.firstChild);
 }
 
-function callback(obj) {
+window.callback = function(obj) {
   switch (type) {
     case 'watch':
       if (v === '2') {
@@ -68,7 +74,7 @@ function callback(obj) {
 }
 
 // Set href to be URL for repo
-button.href = 'https://github.com/' + user + '/' + repo + '/';
+button.href = REPO_URL;
 
 // Add the class, change the text label, set count link href
 switch (type) {
@@ -76,31 +82,32 @@ switch (type) {
     if (v === '2') {
       mainButton.className += ' github-watchers';
       text.innerHTML = 'Watch';
-      counter.href = 'https://github.com/' + user + '/' + repo + '/watchers';
+      counter.href = REPO_URL + '/watchers';
     } else {
       mainButton.className += ' github-stargazers';
       text.innerHTML = 'Star';
-      counter.href = 'https://github.com/' + user + '/' + repo + '/stargazers';
+      counter.href = REPO_URL + '/stargazers';
     }
     break;
   case 'star':
     mainButton.className += ' github-stargazers';
     text.innerHTML = 'Star';
-    counter.href = 'https://github.com/' + user + '/' + repo + '/stargazers';
+    counter.href = REPO_URL + '/stargazers';
     break;
   case 'fork':
     mainButton.className += ' github-forks';
     text.innerHTML = 'Fork';
-    button.href = 'https://github.com/' + user + '/' + repo + '/fork';
-    counter.href = 'https://github.com/' + user + '/' + repo + '/network';
+    button.href = REPO_URL + '/fork';
+    counter.href = REPO_URL + '/network';
     break;
   case 'follow':
     mainButton.className += ' github-me';
     text.innerHTML = 'Follow @' + user;
-    button.href = 'https://github.com/' + user;
-    counter.href = 'https://github.com/' + user + '/followers';
+    button.href = GH_DOT_COM + user;
+    counter.href = GH_DOT_COM + user + '/followers';
     break;
 }
+
 button.setAttribute('aria-label', text.innerHTML + labelSuffix);
 
 // Change the size
