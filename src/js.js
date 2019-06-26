@@ -100,6 +100,12 @@ switch (type) {
     button.href = 'https://github.com/' + user;
     counter.href = 'https://github.com/' + user + '/followers';
     break;
+  case 'sponsor':
+    mainButton.className += ' github-me';
+    text.innerHTML = 'Sponsor @' + user;
+    button.href = 'https://github.com/users/' + user + '/sponsorship';
+    counter.href = 'https://github.com/' + user + '/followers';
+    break;
 }
 button.setAttribute('aria-label', text.innerHTML + labelSuffix);
 
@@ -110,6 +116,6 @@ if (size === 'large') {
 
 if (type === 'follow') {
   jsonp('https://api.github.com/users/' + user);
-} else {
+} else if (type !== 'sponsor') {
   jsonp('https://api.github.com/repos/' + user + '/' + repo);
 }
