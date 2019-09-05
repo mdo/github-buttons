@@ -61,6 +61,18 @@ As such, for today's unofficial Watch button, **you must add `v=2` to the parame
 <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
 {% endhighlight %}
 
+## Sponsor
+
+<div class="example">
+  <iframe src="github-btn.html?user=mdo&type=sponsor&size=large" frameborder="0" scrolling="0" width="220" height="30"></iframe>
+  <iframe src="github-btn.html?user=mdo&type=sponsor" frameborder="0" scrolling="0" width="170" height="20"></iframe>
+</div>
+{% highlight html %}
+<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=sponsor&size=large" frameborder="0" scrolling="0" width="220" height="30"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=sponsor" frameborder="0" scrolling="0" width="170" height="20"></iframe>
+{% endhighlight %}
+
 ---
 
 ## Available options

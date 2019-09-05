@@ -100,6 +100,11 @@ switch (type) {
     button.href = 'https://github.com/' + user;
     counter.href = 'https://github.com/' + user + '/followers';
     break;
+  case 'sponsor':
+    mainButton.className += ' github-sponsors';
+    text.innerHTML = 'Sponsor @' + user;
+    button.href = 'https://github.com/users/' + user + '/sponsorship';
+    break;
 }
 button.setAttribute('aria-label', text.innerHTML + labelSuffix);
 
