@@ -20,17 +20,23 @@
     "html"
   ],
   "scripts": {
+    "start": "npm-run-all --parallel build docs-serve watch",
+    "docs-build": "bundle exec jekyll build",
+    "docs-serve": "bundle exec jekyll serve",
     "build": "inline-source --compress false --root src src/btn.html | html-minifier --config-file html-minifier.json -o github-btn.html",
     "dist": "npm run build",
-    "test": "npm run build"
+    "test": "npm run build",
+    "watch": "chokidar src/ --initial --command \"npm run build\""
   },
   "files": [
     "github-btn.html"
   ],
   "dependencies": {},
   "devDependencies": {
+    "chokidar-cli": "^2.1.0",
     "html-minifier": "^4.0.0",
-    "inline-source-cli": "^2.0.0"
+    "inline-source-cli": "^2.0.0",
+    "npm-run-all": "^4.1.5"
   },
   "engines": {
     "node": ">=10"
