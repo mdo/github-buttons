@@ -164,7 +164,7 @@ pre {
   background-image: -moz-linear-gradient(top, #599bdc 0, #3072b3 100%); /* FF3.6+ */
   background-image: -ms-linear-gradient(top, #599bdc 0, #3072b3 100%); /* IE10+ */
   background-image: -o-linear-gradient(top, #599bdc 0, #3072b3 100%); /* Opera 11.10+ */
-  background-image: linear-gradient(top, #599bdc 0, #3072b3 100%); /* W3C */
+  background-image: linear-gradient(to bottom, #599bdc 0, #3072b3 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bdc', endColorstr='#3072b3', GradientType=0); /* IE6-9 */
   border: 1px solid #2967a4;
   border-radius: 6px;
