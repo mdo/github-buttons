@@ -48,29 +48,29 @@ window.callback = function(obj) {
   switch (type) {
     case 'watch':
       if (v === '2') {
-        counter.innerHTML = addCommas(obj.data.subscribers_count);
-        counter.setAttribute('aria-label', counter.innerHTML + ' watchers' + labelSuffix);
+        counter.textContent = addCommas(obj.data.subscribers_count);
+        counter.setAttribute('aria-label', counter.textContent + ' watchers' + labelSuffix);
       } else {
-        counter.innerHTML = addCommas(obj.data.stargazers_count);
-        counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
+        counter.textContent = addCommas(obj.data.stargazers_count);
+        counter.setAttribute('aria-label', counter.textContent + ' stargazers' + labelSuffix);
       }
       break;
     case 'star':
-      counter.innerHTML = addCommas(obj.data.stargazers_count);
-      counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
+      counter.textContent = addCommas(obj.data.stargazers_count);
+      counter.setAttribute('aria-label', counter.textContent + ' stargazers' + labelSuffix);
       break;
     case 'fork':
-      counter.innerHTML = addCommas(obj.data.network_count);
-      counter.setAttribute('aria-label', counter.innerHTML + ' forks' + labelSuffix);
+      counter.textContent = addCommas(obj.data.network_count);
+      counter.setAttribute('aria-label', counter.textContent + ' forks' + labelSuffix);
       break;
     case 'follow':
-      counter.innerHTML = addCommas(obj.data.followers);
-      counter.setAttribute('aria-label', counter.innerHTML + ' followers' + labelSuffix);
+      counter.textContent = addCommas(obj.data.followers);
+      counter.setAttribute('aria-label', counter.textContent + ' followers' + labelSuffix);
       break;
   }
 
   // Show the count if asked
-  if (count === 'true' && counter.innerHTML !== 'undefined') {
+  if (count === 'true' && counter.textContent !== 'undefined') {
     counter.style.display = 'block';
   }
 };
@@ -83,40 +83,40 @@ switch (type) {
   case 'watch':
     if (v === '2') {
       mainButton.className += ' github-watchers';
-      text.innerHTML = 'Watch';
+      text.textContent = 'Watch';
       counter.href = REPO_URL + '/watchers';
     } else {
       mainButton.className += ' github-stargazers';
-      text.innerHTML = 'Star';
+      text.textContent = 'Star';
       counter.href = REPO_URL + '/stargazers';
     }
     break;
   case 'star':
     mainButton.className += ' github-stargazers';
-    text.innerHTML = 'Star';
+    text.textContent = 'Star';
     counter.href = REPO_URL + '/stargazers';
     break;
   case 'fork':
     mainButton.className += ' github-forks';
-    text.innerHTML = 'Fork';
+    text.textContent = 'Fork';
     button.href = REPO_URL + '/fork';
     counter.href = REPO_URL + '/network';
     break;
   case 'follow':
     mainButton.className += ' github-me';
-    text.innerHTML = 'Follow @' + user;
+    text.textContent = 'Follow @' + user;
     button.href = GH_URL + user;
     counter.href = GH_URL + user + '/followers';
     break;
   case 'sponsor':
     mainButton.className += ' github-me';
-    text.innerHTML = 'Sponsor @' + user;
+    text.textContent = 'Sponsor @' + user;
     button.href = GH_URL + user + '/sponsorship';
     counter.href = GH_URL + user + '/followers';
     break;
 }
 
-button.setAttribute('aria-label', text.innerHTML + labelSuffix);
+button.setAttribute('aria-label', text.textContent + labelSuffix);
 
 // Change the size
 if (size === 'large') {
