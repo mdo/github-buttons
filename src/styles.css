@@ -51,7 +51,7 @@ body {
   background-image: none;
   background-color: #dcdcdc;
   border-color: #b5b5b5;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15);
 }
 .gh-ico {
   width: 14px;
@@ -70,7 +70,7 @@ body {
 }
 .gh-count:hover,
 .gh-count:focus {
-  color: #4183C4;
+  color: #4183c4;
 }
 .gh-count:before,
 .gh-count:after {
