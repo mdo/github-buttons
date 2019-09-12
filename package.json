@@ -28,9 +28,6 @@
     "test": "npm run build",
     "watch": "chokidar src/ --initial --command \"npm run build\""
   },
-  "files": [
-    "github-btn.html"
-  ],
   "dependencies": {},
   "devDependencies": {
     "chokidar-cli": "^2.1.0",
