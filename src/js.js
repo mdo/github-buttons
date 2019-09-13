@@ -37,9 +37,10 @@ function addCommas(n) {
   return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
 }
 
-function jsonp(path, cbName) {
+function jsonp(path) {
   var el = document.createElement('script');
-  el.src = path + '?callback=' + (cbName ? cbName : 'callback');
+
+  el.src = path + '?callback=callback';
   head.insertBefore(el, head.firstChild);
 }
 
