@@ -3,12 +3,6 @@
     "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
-    "function-name-case": [
-      "lower",
-      "ignoreFunctions": [
-        "/DXImageTransform/"
-      ]
-    ],
     "property-no-vendor-prefix": null,
     "value-no-vendor-prefix": null
   }
