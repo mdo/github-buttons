@@ -30,7 +30,7 @@ body {
   background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);
   background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);
   background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfcfc", endColorstr="#eeeeee", GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fcfcfc, endColorstr=#eeeeee, GradientType=0)";
   background-repeat: no-repeat;
   border: 1px solid #d5d5d5;
 }
@@ -44,7 +44,7 @@ body {
   background-image: -ms-linear-gradient(top, #eee 0, #ddd 100%);
   background-image: -o-linear-gradient(top, #eee 0, #ddd 100%);
   background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#dddddd", GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#eeeeee, endColorstr=#ddddd, GradientType=0)";
   border-color: #ccc;
 }
 .gh-btn:active {
