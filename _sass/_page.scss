@@ -4,8 +4,8 @@
 
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -86,13 +86,14 @@ th {
   display: inline-block;
   padding: .25rem .5rem;
   font-size: 75%;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.6;
   color: #fff;
   background-color: #ff4136;
   border-radius: .2rem;
 }
 
+// stylelint-disable-next-line selector-max-id
 #markdown-toc > li:first-child,
 #markdown-toc > li:last-child {
   display: none;
@@ -132,8 +133,8 @@ pre {
 }
 
 .highlight {
-  margin: 0 0 1rem;
   padding: 1rem;
+  margin: 0 0 1rem;
   background-color: #f7f7f9;
 
   pre {
@@ -156,19 +157,19 @@ pre {
   font-weight: 500;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
   background-color: #3072b3; /* Old browsers */
-  background-repeat: repeat-x; /* Repeat the gradient */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #599bdc), color-stop(100%, #3072b3)); /* Chrome,Safari4+ */
   background-image: -webkit-linear-gradient(top, #599bdc 0, #3072b3 100%); /* Chrome 10+,Safari 5.1+ */
   background-image: -moz-linear-gradient(top, #599bdc 0, #3072b3 100%); /* FF3.6+ */
   background-image: -ms-linear-gradient(top, #599bdc 0, #3072b3 100%); /* IE10+ */
   background-image: -o-linear-gradient(top, #599bdc 0, #3072b3 100%); /* Opera 11.10+ */
   background-image: linear-gradient(to bottom, #599bdc 0, #3072b3 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bdc', endColorstr='#3072b3', GradientType=0); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#599bdc", endColorstr="#3072b3", GradientType=0); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
   border: 1px solid #2967a4;
   border-radius: 6px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
 
   &:hover {
     text-decoration: none;
@@ -176,9 +177,9 @@ pre {
   }
 
   &:active {
-    background-image: none;
     background-color: #3072b3; /* Old browsers */
-    box-shadow: inset 0 5px 10px rgba(0,0,0,.125), 0 1px 2px rgba(0,0,0,.2);
+    background-image: none;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, .125), 0 1px 2px rgba(0, 0, 0, .2);
   }
 }
 
@@ -203,8 +204,8 @@ pre {
 
 .container {
   max-width: 32rem;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 

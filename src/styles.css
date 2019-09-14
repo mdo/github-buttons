@@ -1,8 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  font: 700 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow: hidden;
+  font: 700 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .github-btn {
   height: 20px;
@@ -48,8 +48,8 @@ body {
   border-color: #ccc;
 }
 .gh-btn:active {
-  background-image: none;
   background-color: #dcdcdc;
+  background-image: none;
   border-color: #b5b5b5;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15);
 }
@@ -70,24 +70,24 @@ body {
 .gh-count:focus {
   color: #4183c4;
 }
-.gh-count:before,
-.gh-count:after {
-  content: "";
+.gh-count::before,
+.gh-count::after {
   position: absolute;
   display: inline-block;
   width: 0;
   height: 0;
+  content: "";
   border-color: transparent;
   border-style: solid;
 }
-.gh-count:before {
+.gh-count::before {
   top: 50%;
   left: -3px;
   margin-top: -4px;
   border-width: 4px 4px 4px 0;
   border-right-color: #fafafa;
 }
-.gh-count:after {
+.gh-count::after {
   top: 50%;
   left: -4px;
   z-index: -1;
@@ -112,12 +112,12 @@ body {
 .github-btn-large .gh-count {
   margin-left: 6px;
 }
-.github-btn-large .gh-count:before {
+.github-btn-large .gh-count::before {
   left: -5px;
   margin-top: -6px;
   border-width: 6px 6px 6px 0;
 }
-.github-btn-large .gh-count:after {
+.github-btn-large .gh-count::after {
   left: -6px;
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
