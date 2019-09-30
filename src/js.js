@@ -85,34 +85,34 @@
   switch (type) {
     case 'watch':
       if (v === '2') {
-        mainButton.className += ' github-watchers';
+        mainButton.classList.add('github-watchers');
         text.textContent = 'Watch';
         counter.href = REPO_URL + '/watchers';
       } else {
-        mainButton.className += ' github-stargazers';
+        mainButton.classList.add('github-stargazers');
         text.textContent = 'Star';
         counter.href = REPO_URL + '/stargazers';
       }
       break;
     case 'star':
-      mainButton.className += ' github-stargazers';
+      mainButton.classList.add('github-stargazers');
       text.textContent = 'Star';
       counter.href = REPO_URL + '/stargazers';
       break;
     case 'fork':
-      mainButton.className += ' github-forks';
+      mainButton.classList.add('github-forks');
       text.textContent = 'Fork';
       button.href = REPO_URL + '/fork';
       counter.href = REPO_URL + '/network';
       break;
     case 'follow':
-      mainButton.className += ' github-me';
+      mainButton.classList.add('github-me');
       text.textContent = 'Follow @' + user;
       button.href = GH_URL + user;
       counter.href = GH_URL + user + '/followers';
       break;
     case 'sponsor':
-      mainButton.className += ' github-me';
+      mainButton.classList.add('github-me');
       text.textContent = 'Sponsor @' + user;
       button.href = GH_URL + user + '/sponsorship';
       counter.href = GH_URL + user + '/followers';
@@ -123,7 +123,7 @@
 
   // Change the size
   if (size === 'large') {
-    mainButton.className += ' github-btn-large';
+    mainButton.classList.add('github-btn-large');
   }
 
   if (type === 'follow') {
