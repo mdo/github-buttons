@@ -24,7 +24,6 @@
   var count = params.count;
   var size = params.size;
   var v = params.v;
-  var head = document.getElementsByTagName('head')[0];
   var button = document.getElementById('gh-btn');
   var mainButton = document.getElementById('github-btn');
   var text = document.getElementById('gh-text');
@@ -41,10 +40,11 @@
   }
 
   function jsonp(path) {
-    var el = document.createElement('script');
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
 
-    el.src = path + '?callback=callback';
-    head.insertBefore(el, head.firstChild);
+    script.src = path + '?callback=callback';
+    head.insertBefore(script, head.firstChild);
   }
 
   window.callback = function(obj) {
