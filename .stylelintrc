@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-twbs-bootstrap/scss"
+  ],
+  "rules": {
+    "no-duplicate-selectors": true,
+    "function-name-case": [
+      "lower",
+      "ignoreFunctions": [
+        "/DXImageTransform/"
+      ]
+    ],
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null
+  }
+}
