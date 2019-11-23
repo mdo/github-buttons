@@ -187,9 +187,11 @@ pre {
  */
 
 .tweet-button {
-  margin: 0 0 1rem;
+  height: 30px;
+  overflow: hidden;
 
   + p {
+    margin-top: 1rem;
     color: #767676;
   }
 }
