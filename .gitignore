@@ -34,5 +34,10 @@ nbproject
 .komodotools
 
 # Folders to ignore
-/node_modules/
+/.bundle/
 /.jekyll-cache/
+/node_modules/
+/vendor/
+
+# Local Netlify folder
+.netlify
