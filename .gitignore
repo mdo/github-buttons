@@ -36,3 +36,6 @@ nbproject
 # Folders to ignore
 /node_modules/
 /.jekyll-cache/
+
+# Local Netlify folder
+.netlify
