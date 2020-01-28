@@ -1,9 +1,9 @@
-(function () {
+(function() {
   'use strict';
 
   // Read a page's GET URL variables and return them as an associative array.
   // Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
-  var params = (function () {
+  var params = (function() {
     var vars = [];
     var hash;
     var location = window.location;
@@ -57,6 +57,7 @@
           counter.textContent = addCommas(obj.data.stargazers_count);
           counter.setAttribute('aria-label', counter.textContent + ' stargazers' + labelSuffix);
         }
+
         break;
       case 'star':
         counter.textContent = addCommas(obj.data.stargazers_count);
@@ -93,6 +94,7 @@
         text.textContent = 'Star';
         counter.href = REPO_URL + '/stargazers';
       }
+
       break;
     case 'star':
       mainButton.className += ' github-stargazers';

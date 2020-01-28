@@ -26,9 +26,12 @@
     "build": "inline-source --compress false --root src src/btn.html | html-minifier --config-file html-minifier.json -o github-btn.html",
     "dist": "npm run build",
     "stylelint": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
-    "test": "npm run stylelint && npm run build && npm run docs-build",
+    "lint": "npm-run-all --continue-on-error --parallel stylelint xo",
+    "xo": "xo",
+    "test": "npm-run-all lint build docs-build",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css": "chokidar \"{src,_sass}/**/*.{css,scss}\" --initial --command \"npm run stylelint\"",
+    "watch-js": "chokidar \"src/*.js\" --initial --command \"npm run xo\"",
     "watch-main": "chokidar src/ --initial --command \"npm run build\""
   },
   "dependencies": {},
@@ -38,9 +41,33 @@
     "inline-source-cli": "^2.0.0",
     "npm-run-all": "^4.1.5",
     "stylelint": "^13.3.3",
-    "stylelint-config-twbs-bootstrap": "^2.0.1"
+    "stylelint-config-twbs-bootstrap": "^2.0.1",
+    "xo": "^0.30.0"
   },
   "engines": {
     "node": ">=10"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 3,
+      "sourceType": "script"
+    },
+    "esnext": false,
+    "space": true,
+    "rules": {
+      "capitalized-comments": "off",
+      "default-case": "off",
+      "no-negated-condition": "off",
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "spaced-comment": "off",
+      "unicorn/prefer-query-selector": "off",
+      "unicorn/prevent-abbreviations": "off"
+    }
   }
 }
