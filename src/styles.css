@@ -2,7 +2,10 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font: 700 11px/14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
 }
 .github-btn {
   height: 20px;
