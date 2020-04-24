@@ -27,13 +27,8 @@ body {
 }
 .gh-btn {
   background-color: #eee;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), color-stop(100%, #eee));
-  background-image: -webkit-linear-gradient(top, #fcfcfc 0, #eee 100%);
-  background-image: -moz-linear-gradient(top, #fcfcfc 0, #eee 100%);
-  background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);
-  background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), to(#eee));
   background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfcfc", endColorstr="#eeeeee", GradientType=0);
   background-repeat: no-repeat;
   border: 1px solid #d5d5d5;
 }
@@ -41,13 +36,8 @@ body {
 .gh-btn:focus {
   text-decoration: none;
   background-color: #ddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(100%, #ddd));
-  background-image: -webkit-linear-gradient(top, #eee 0, #ddd 100%);
-  background-image: -moz-linear-gradient(top, #eee 0, #ddd 100%);
-  background-image: -ms-linear-gradient(top, #eee 0, #ddd 100%);
-  background-image: -o-linear-gradient(top, #eee 0, #ddd 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), to(#ddd));
   background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#dddddd", GradientType=0);
   border-color: #ccc;
 }
 .gh-btn:active {
