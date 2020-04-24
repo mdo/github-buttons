@@ -109,11 +109,12 @@ This deprecated button is still around to avoid breaking every site that current
 
 For these first versions, functionality is limited and some concessions made:
 
-- Width and height must be specified for all buttons (which actually adds some control for those with OCD like myself).
+- Width and height must be specified for all buttons (which actually adds some fun control for people like me).
 - All attributes must be passed through via URL parameters.
 - CSS and JavaScript are all included in the same HTML file to reduce complexity.
+- We include the `frameborder` property by default since we cannot know your setup, but you can optionally remove this and set it yourself via CSS.
 
-More refinement and functionality is planned with open-sourcing--any help is always appreciated!
+More refinement and functionality is planned with open-sourcing—any help is always appreciated!
 
 ---
 
