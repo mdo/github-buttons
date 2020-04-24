@@ -116,7 +116,7 @@
     case 'sponsor':
       mainButton.className += ' github-me';
       text.textContent = 'Sponsor @' + user;
-      button.href = GH_URL + user + '/sponsorship';
+      button.href = GH_URL + 'sponsors/' + user;
       counter.href = GH_URL + user + '/followers';
       break;
   }
