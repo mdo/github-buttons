@@ -22,6 +22,11 @@ body {
   background-color: #fff;
 }
 
+iframe {
+  overflow: hidden;
+  border: 0;
+}
+
 h1,
 h2 {
   margin-top: 0;

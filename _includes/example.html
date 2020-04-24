@@ -11,7 +11,7 @@
 {%- assign class = include.class -%}
 
 <div{% if id %} id="{{ id }}"{% endif %} class="example{% if class %} {{ class }}{% endif %}">
-  {{- include.content | replace: "https://ghbtns.com/", "" -}}
+  {{- include.content | replace: 'https://ghbtns.com/', '' | replace: ' frameborder="0" scrolling="0"' '' -}}
 </div>
 
 {%- highlight html -%}

@@ -122,8 +122,8 @@ More refinement and functionality is planned with open-sourcing--any help is alw
 The unofficial GitHub buttons are available on GitHub for downloading, forking, or contributing.
 
 <p>
-  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160" height="30"></iframe>
-  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160" height="30"></iframe>
+  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=star&count=true&size=large" width="160" height="30"></iframe>
+  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=fork&count=true&size=large" width="160" height="30"></iframe>
 </p>
 
 <a href="https://github.com/mdo/github-buttons" class="btn">View on GitHub</a>
