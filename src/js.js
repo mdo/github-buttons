@@ -128,6 +128,7 @@
   }
 
   button.setAttribute('aria-label', text.textContent + LABEL_SUFFIX);
+  document.title = text.textContent + LABEL_SUFFIX;
 
   // Change the size
   if (size === 'large') {
