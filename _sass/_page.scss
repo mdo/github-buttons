@@ -91,12 +91,6 @@ th {
   border-radius: .2rem;
 }
 
-// stylelint-disable-next-line selector-max-id
-#markdown-toc > li:first-child,
-#markdown-toc > li:last-child {
-  display: none;
-}
-
 /*
  * Code
  */

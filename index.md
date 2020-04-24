@@ -3,6 +3,7 @@ layout: default
 ---
 
 ## Contents
+{:.no_toc}
 
 * Comment to trigger ToC generation
 {:toc}
