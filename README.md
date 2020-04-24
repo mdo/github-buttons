@@ -13,25 +13,27 @@ Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/git
 Clone the project and install dependencies before getting started. GitHub Buttons require Node.js, Ruby, and Bundler for local development.
 
 ```shell
-$ npm i
-$ bundle
+npm i
+bundle i
 ```
 
 The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS. We use inline-source-cli and html-minifer to include it all in the compiled `github-btn.html` file. To build this file:
 
 ```shell
-$ npm run build
+npm run build
 ```
 
 The `https://ghbtns.com/` site is built with Jekyll. After installing the dependencies, you can run a local server:
 
 ```shell
-$ bundle exec jekyll serve
+bundle exec jekyll serve
 ```
+
+Open `http://127.0.0.1:4000` to browse locally.
 
 ## See also
 
-- [ntkme/github-buttons](https://buttons.github.io/)
+* [ntkme/github-buttons](https://buttons.github.io/)
 
 ## Twitter account
 
@@ -41,9 +43,9 @@ Keep up to date on announcements and more by following Mark on Twitter, [@mdo](h
 
 **Mark Otto**
 
-* https://twitter.com/mdo
-* https://github.com/mdo
+* <https://twitter.com/mdo>
+* <https://github.com/mdo>
 
 ## Copyright and license
 
-Copyright 2014-2020 Mark Otto. Released under Apache 2.0.
+Copyright 2014-2020 Mark Otto. Released under [Apache 2.0](LICENSE.md).
