@@ -71,9 +71,8 @@ Example buttons are shown with `https://` URLs. While they're hosted on GitHub P
 
 You **must** declare a value for each of the following URL parameters:
 
-|---
 | Option | Description |
-|-|:-|:-:|-:
+| ------ | :---------- |
 | `user` | GitHub username that owns the repo |
 | `repo` | GitHub repository to pull the forks and watchers counts |
 | `type` | Type of button to show: `watch`, `fork`, `sponsor`, or `follow` |
@@ -82,9 +81,8 @@ You **must** declare a value for each of the following URL parameters:
 
 The following URL parameters are **not** required. Add them as you wish.
 
-|---
 | Option | Description |
-|-|:-|:-:|-:
+| ------ | :---------- |
 | `count` | Show the optional watchers or forks count: *none* by default or `true` |
 | `size` | Optional flag for using a larger button: *none* by default or `large` |
 
