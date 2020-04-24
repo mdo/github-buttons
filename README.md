@@ -1,4 +1,4 @@
-# GitHub Buttons
+# GitHub Buttons [![Build Status](https://github.com/mdo/github-buttons/workflows/CI/badge.svg)](https://github.com/mdo/github-buttons/actions?workflow=CI)
 
 Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, sponsor, and follower counts.
 
