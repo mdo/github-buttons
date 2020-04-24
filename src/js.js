@@ -123,7 +123,6 @@
       mainButton.className += ' github-me';
       text.textContent = 'Sponsor @' + user;
       button.href = GITHUB_URL + 'sponsors/' + user;
-      counter.href = GH_URL + user + '/followers';
       break;
   }
 
