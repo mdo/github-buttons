@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font: 700 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 700 11px/14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 .github-btn {
   height: 20px;
@@ -68,7 +68,7 @@ body {
 }
 .gh-count:hover,
 .gh-count:focus {
-  color: #4183c4;
+  color: #0366d6;
 }
 .gh-count::before,
 .gh-count::after {
