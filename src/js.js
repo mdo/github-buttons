@@ -79,8 +79,8 @@
         break;
     }
 
-    // Show the count if asked
-    if (count === 'true' && counter.textContent !== 'undefined') {
+    // Show the count if asked and if it's not empty or 'undefined'
+    if (count === 'true' && counter.textContent !== '' && counter.textContent !== 'undefined') {
       counter.style.display = 'block';
     }
   };
