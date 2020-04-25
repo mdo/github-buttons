@@ -73,7 +73,7 @@ You **must** declare a value for each of the following URL parameters:
 
 | Option | Description |
 | ------ | :---------- |
-| `user` | GitHub username that owns the repo |
+| `user` | GitHub username that owns the repo/Username to sponsor |
 | `repo` | GitHub repository to pull the forks and watchers counts |
 | `type` | Type of button to show: `watch`, `fork`, `sponsor`, or `follow` |
 
@@ -109,10 +109,10 @@ This deprecated button is still around to avoid breaking every site that current
 
 For these first versions, functionality is limited and some concessions made:
 
-- Width and height must be specified for all buttons (which actually adds some fun control for people like me).
-- All attributes must be passed through via URL parameters.
-- CSS and JavaScript are all included in the same HTML file to reduce complexity.
-- We include the `frameborder` property by default since we cannot know your setup, but you can optionally remove this and set it yourself via CSS.
+* Width and height must be specified for all buttons (which actually adds some fun control for people like me).
+* All attributes must be passed through via URL parameters.
+* CSS and JavaScript are all included in the same HTML file to reduce complexity.
+* We include the `frameborder` and `scrolling` attributes by default since we cannot know your setup, but you can optionally remove them and set them yourself via CSS.
 
 More refinement and functionality is planned with open-sourcing—any help is always appreciated!
 
