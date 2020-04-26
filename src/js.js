@@ -135,9 +135,15 @@
     mainButton.className += ' github-btn-large';
   }
 
+  // If count is not requested or type is sponsor,
+  // there's no need to make an API call
+  if (count !== 'true' || type === 'sponsor') {
+    return;
+  }
+
   if (type === 'follow') {
     jsonp(API_URL + 'users/' + user);
-  } else if (type !== 'sponsor') {
+  } else {
     jsonp(API_URL + 'repos/' + user + '/' + repo);
   }
 })();
