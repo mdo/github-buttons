@@ -110,9 +110,17 @@ This deprecated button is still around to avoid breaking every site that current
 For these first versions, functionality is limited and some concessions made:
 
 * Width and height must be specified for all buttons (which actually adds some fun control for people like me).
+* Make sure you adapt the snippets to your needs by modifying the parameters and the title.
 * All attributes must be passed through via URL parameters.
 * CSS and JavaScript are all included in the same HTML file to reduce complexity.
-* We include the `frameborder` and `scrolling` attributes by default since we cannot know your setup, but you can optionally remove them and set them yourself via CSS.
+* We include the `frameborder` and `scrolling` attributes by default since we cannot know your setup, but you can optionally remove them and set them yourself via CSS:
+
+  {% highlight css %}
+  iframe {
+    overflow: hidden;
+    border: 0;
+  }
+  {% endhighlight %}
 
 More refinement and functionality is planned with open-sourcing—any help is always appreciated!
 
