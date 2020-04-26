@@ -42,10 +42,10 @@
   var v = parameters.v;
 
   // Elements
-  var button = document.getElementById('gh-btn');
-  var mainButton = document.getElementById('github-btn');
-  var text = document.getElementById('gh-text');
-  var counter = document.getElementById('gh-count');
+  var button = document.querySelector('.gh-btn');
+  var mainButton = document.querySelector('.github-btn');
+  var text = document.querySelector('.gh-text');
+  var counter = document.querySelector('.gh-count');
 
   // Constants
   var LABEL_SUFFIX = ' on GitHub';
