@@ -24,7 +24,7 @@
   }
 
   function jsonp(path) {
-    var head = document.getElementsByTagName('head')[0];
+    var head = document.head;
     var script = document.createElement('script');
 
     script.src = path + '?callback=callback';
