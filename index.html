@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Unofficial GitHub Watch &amp; Fork Buttons</title>
+    <meta name="author" content="Mark Otto">
+    <meta name="description" content="A set of static buttons with dynamic watch and fork counts for any repo hosted on GitHub.">
+    <meta name="generator" content="Jekyll v4.0.0">
+    <link rel="canonical" href="https://ghbtns.com/">
+    <link rel="dns-prefetch" href="https://api.github.com">
+    <style>*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;font-size:16px;line-height:1.5}body{padding:1.5rem 1.5rem 3rem;margin:0;font-size:1rem;color:#333;background-color:#fff}iframe{overflow:hidden;border:0}h1,h2{margin-top:0;line-height:1;text-rendering:optimizeLegibility}h1{margin-bottom:.5rem;font-size:3rem}h2{margin-top:2rem;margin-bottom:1rem}h3{margin-top:2rem;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}h1+p{font-size:1.25rem;color:#555}a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}table{width:100%;border-collapse:collapse}th,td{padding:.5rem;font-size:90%;vertical-align:top;border:1px solid #eee}th{background-color:#f5f5f5}.deprecated{display:inline-block;padding:.25rem .5rem;font-size:75%;font-weight:700;line-height:1.6;color:#fff;background-color:#e5271c;border-radius:.2rem}code,pre{font-family:Menlo, "Courier New", monospace;font-size:95%}code{padding:2px 4px;font-size:85%;color:#d53049;background-color:#f7f7f9;border-radius:.2rem}pre{display:block;margin:0 0 1rem;line-height:1.4;white-space:pre;white-space:pre-wrap}pre code{padding:0;color:inherit;background-color:transparent;border:0}.highlight{padding:1rem;margin:0 0 1rem;background-color:#f7f7f9}.highlight pre{margin-bottom:0;word-wrap:break-word}.highlight+.highlight{margin-top:1rem}.btn{display:inline-block;padding:.5rem 1.25rem;font-weight:700;color:#fff;text-decoration:none;background-color:#0366d6;border:1px solid #0366d6;border-radius:6px}.btn:hover{text-decoration:none;background-color:#005cc5}.btn:active{border-color:#005cc5;box-shadow:inset 0 5px 10px rgba(0,0,0,0.2)}.tweet-button{height:30px;overflow:hidden}.tweet-button+p{margin-top:1rem;color:#767676}.container{max-width:40rem;margin-right:auto;margin-left:auto}hr{display:block;width:7rem;height:1px;margin:2.5rem 0;background-color:#eee;border:0}.example{margin-bottom:1rem;overflow:auto}.example iframe{display:block}.example iframe+iframe{margin-top:1rem}@media (min-width: 34em){.example{display:inline-block;line-height:30px}.example iframe{float:left}.example iframe+iframe{margin-top:5px;margin-left:1rem}}#markdown-toc li{margin-bottom:.25rem}.hll{background-color:#ffc}.c{color:#727272}.k{color:#069}.o{color:#555}.cm{color:#727272}.cp{color:#008085}.c1{color:#727272}.cs{color:#727272}.gd{background-color:#fcc;border:1px solid #c00}.ge{font-style:italic}.gr{color:#f00}.gh{color:#030}.gi{background-color:#cfc;border:1px solid #0c0}.go{color:#aaa}.gp{color:#009}.gu{color:#030}.gt{color:#9c6}.kc{color:#069}.kd{color:#069}.kn{color:#069}.kp{color:#069}.kr{color:#069}.kt{color:#078}.m{color:#bc511f}.s{color:#d82d36}.na{color:#006ee0}.nb{color:#366}.nc{color:#168174}.no{color:#360}.nd{color:#685fe3}.ni{color:#727272}.ne{color:#c00}.nf{color:#b715f4}.nl{color:#685fe3}.nn{color:#007ca5}.nt{color:#2f6f9f}.nv{color:#033}.ow{color:#000}.w{color:#bbb}.mf{color:#bc511f}.mh{color:#bc511f}.mi{color:#bc511f}.mo{color:#bc511f}.sb{color:#c30}.sc{color:#c30}.sd{font-style:italic;color:#c30}.s2{color:#c30}.se{color:#c30}.sh{color:#c30}.si{color:#a00}.sx{color:#c30}.sr{color:#337e7e}.s1{color:#c30}.ss{color:#fc3}.bp{color:#366}.vc{color:#033}.vg{color:#033}.vi{color:#033}.il{color:#bc511f}
+</style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tweet-button">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="mdo">Tweet</a>
+      </div>
+
+      <p>Introducing the unofficial</p>
+      <h1>GitHub buttons</h1>
+      <p>Showcase your GitHub repo’s success with hotlinkable GitHub star, fork, sponsor, and follow buttons. Available in two sizes with up-to-date counts.</p>
+      <p>Made by <a href="https://twitter.com/mdo">@mdo</a>. Available on <a href="https://github.com/mdo/github-buttons">GitHub</a>. Licensed <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2</a>.</p>
+
+      <hr>
+
+      <h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#star" id="markdown-toc-star">Star</a></li>
+  <li><a href="#watch" id="markdown-toc-watch">Watch</a></li>
+  <li><a href="#fork" id="markdown-toc-fork">Fork</a></li>
+  <li><a href="#follow" id="markdown-toc-follow">Follow</a></li>
+  <li><a href="#sponsor" id="markdown-toc-sponsor">Sponsor</a></li>
+  <li><a href="#available-options" id="markdown-toc-available-options">Available options</a>    <ul>
+      <li><a href="#ssl-support" id="markdown-toc-ssl-support">SSL support</a></li>
+      <li><a href="#required-parameters" id="markdown-toc-required-parameters">Required parameters</a></li>
+      <li><a href="#optional-parameters" id="markdown-toc-optional-parameters">Optional parameters</a></li>
+    </ul>
+  </li>
+  <li><a href="#original-watch-aka-star" id="markdown-toc-original-watch-aka-star">Original Watch, aka Star</a></li>
+  <li><a href="#limitations" id="markdown-toc-limitations">Limitations</a></li>
+  <li><a href="#open-source" id="markdown-toc-open-source">Open source</a></li>
+</ul>
+
+<hr />
+
+<h2 id="star">Star</h2>
+
+<div class="example">
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=star&amp;count=true&amp;size=large" width="170" height="30" title="Star twbs/bootstrap on GitHub"></iframe>
+
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=star&amp;count=true" width="150" height="20" title="Star twbs/bootstrap on GitHub"></iframe>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=star&amp;count=true&amp;size=large"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">title=</span><span class="s">"Star twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=star&amp;count=true"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"20"</span> <span class="na">title=</span><span class="s">"Star twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
+
+<h2 id="watch">Watch</h2>
+
+<p>Originally, GitHub’s Watch button was used for notification settings (today’s Watch) and repository bookmarking (today’s Star). In August 2012, <a href="https://github.com/blog/1204-notifications-stars">they split the functionality into two buttons</a>, after these unofficial buttons were released.</p>
+
+<p>As such, for today’s unofficial Watch button, <strong>you must add <code class="highlighter-rouge">v=2</code> to the parameters</strong>. If you don’t, you’ll get <a href="#deprecated">the deprecated button</a>.</p>
+
+<div class="example">
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" width="170" height="30" title="Watch twbs/bootstrap on GitHub"></iframe>
+
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true&amp;v=2" width="150" height="20" title="Watch twbs/bootstrap on GitHub"></iframe>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">title=</span><span class="s">"Watch twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true&amp;v=2"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"20"</span> <span class="na">title=</span><span class="s">"Watch twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
+
+<h2 id="fork">Fork</h2>
+
+<div class="example">
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true&amp;size=large" width="170" height="30" title="Fork twbs/bootstrap on GitHub"></iframe>
+
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true" width="150" height="20" title="Fork twbs/bootstrap on GitHub"></iframe>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true&amp;size=large"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">title=</span><span class="s">"Fork twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"20"</span> <span class="na">title=</span><span class="s">"Fork twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
+
+<h2 id="follow">Follow</h2>
+
+<div class="example">
+<iframe src="github-btn.html?user=mdo&amp;type=follow&amp;count=true&amp;size=large" width="230" height="30" title="Follow @mdo on GitHub"></iframe>
+
+<iframe src="github-btn.html?user=mdo&amp;type=follow&amp;count=true" width="170" height="20" title="Follow @mdo on GitHub"></iframe>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=mdo&amp;type=follow&amp;count=true&amp;size=large"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"230"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">title=</span><span class="s">"Follow @mdo on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=mdo&amp;type=follow&amp;count=true"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"20"</span> <span class="na">title=</span><span class="s">"Follow @mdo on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
+
+<h2 id="sponsor">Sponsor</h2>
+
+<div class="example">
+<iframe src="github-btn.html?user=mdo&amp;type=sponsor&amp;size=large" width="180" height="30" title="Sponsor @mdo on GitHub"></iframe>
+
+<iframe src="github-btn.html?user=mdo&amp;type=sponsor" width="150" height="20" title="Sponsor @mdo on GitHub"></iframe>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=mdo&amp;type=sponsor&amp;size=large"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"180"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">title=</span><span class="s">"Sponsor @mdo on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=mdo&amp;type=sponsor"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"20"</span> <span class="na">title=</span><span class="s">"Sponsor @mdo on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
+
+<hr />
+
+<h2 id="available-options">Available options</h2>
+
+<h3 id="ssl-support">SSL support</h3>
+
+<p>Example buttons are shown with <code class="highlighter-rouge">https://</code> URLs. While they’re hosted on GitHub Pages, the SSL option is provided via <a href="https://blog.cloudflare.com/introducing-universal-ssl/">CloudFlare’s free Universal SSL</a> offering. If you prefer, you can still use <code class="highlighter-rouge">http://</code>.</p>
+
+<h3 id="required-parameters">Required parameters</h3>
+
+<p>You <strong>must</strong> declare a value for each of the following URL parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">user</code></td>
+      <td style="text-align: left">GitHub username that owns the repo/Username to sponsor</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">repo</code></td>
+      <td style="text-align: left">GitHub repository to pull the forks and watchers counts</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">type</code></td>
+      <td style="text-align: left">Type of button to show: <code class="highlighter-rouge">watch</code>, <code class="highlighter-rouge">fork</code>, <code class="highlighter-rouge">sponsor</code>, or <code class="highlighter-rouge">follow</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="optional-parameters">Optional parameters</h3>
+
+<p>The following URL parameters are <strong>not</strong> required. Add them as you wish.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">count</code></td>
+      <td style="text-align: left">Show the optional watchers or forks count: <em>none</em> by default or <code class="highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">size</code></td>
+      <td style="text-align: left">Optional flag for using a larger button: <em>none</em> by default or <code class="highlighter-rouge">large</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><span class="deprecated" id="deprecated">Deprecated</span></p>
+
+<h2 id="original-watch-aka-star">Original Watch, aka Star</h2>
+
+<p>With the button split in August 2012, GitHub’s API continued to return the Star count for old Watch buttons. Thus, the original unofficial Watch button returns a makeshift Star button.</p>
+
+<p>This deprecated button is still around to avoid breaking every site that currently utilizes these embeds.</p>
+
+<div class="example">
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true&amp;size=large" width="170" height="30" title="Watch twbs/bootstrap on GitHub"></iframe>
+
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true" width="170" height="20" title="Watch twbs/bootstrap on GitHub"></iframe>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true&amp;size=large"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">title=</span><span class="s">"Watch twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"20"</span> <span class="na">title=</span><span class="s">"Watch twbs/bootstrap on GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
+
+<hr />
+
+<h2 id="limitations">Limitations</h2>
+
+<p>For these first versions, functionality is limited and some concessions made:</p>
+
+<ul>
+  <li>Width and height must be specified for all buttons (which actually adds some fun control for people like me).</li>
+  <li>Make sure you adapt the snippets to your needs by modifying the parameters and the title.</li>
+  <li>All attributes must be passed through via URL parameters.</li>
+  <li>CSS and JavaScript are all included in the same HTML file to reduce complexity.</li>
+  <li>We include the <code class="highlighter-rouge">frameborder</code> and <code class="highlighter-rouge">scrolling</code> attributes by default since we cannot know your setup, but you can optionally remove them and set them yourself via CSS:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">  <span class="nt">iframe</span> <span class="p">{</span>
+    <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  </code></pre></figure>
+
+<p>More refinement and functionality is planned with open-sourcing—any help is always appreciated!</p>
+
+<hr />
+
+<h2 id="open-source">Open source</h2>
+
+<p>The unofficial GitHub buttons are available on GitHub for downloading, forking, or contributing.</p>
+
+<p>
+  <iframe src="github-btn.html?user=mdo&amp;repo=github-buttons&amp;type=star&amp;count=true&amp;size=large" width="160" height="30" title="Star mdo/github-buttons on GitHub"></iframe>
+  <iframe src="github-btn.html?user=mdo&amp;repo=github-buttons&amp;type=fork&amp;count=true&amp;size=large" width="160" height="30" title="Star mdo/github-buttons on GitHub"></iframe>
+</p>
+
+<p><a href="https://github.com/mdo/github-buttons" class="btn">View on GitHub</a></p>
+
+<hr />
+
+<p>&lt;3</p>
+
+    </div>
+
+    <script async src="https://platform.twitter.com/widgets.js"></script>
+  </body>
+</html>
