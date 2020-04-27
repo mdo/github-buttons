@@ -1,15 +1,16 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
+permalink: pretty
 
 exclude:
-- "node_modules"
-- "src"
-- "CNAME"
-- "gulpfile.js"
+- ".sass-cache"
+- "Gemfile"
+- "Gemfile.lock"
+- "html-minifier.json"
 - "LICENSE.md"
 - "package.json"
+- "package-lock.json"
 - "README.md"
+- "node_modules/"
+- "src/"
+
+sass:
+  style: compressed

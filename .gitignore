@@ -1,7 +1,7 @@
 # Ignore docs files
-_gh_pages
-_site
-.ruby-version
+/.sass-cache/
+/_site/
+/.ruby-version
 
 # Numerous always-ignore extensions
 *.diff
@@ -33,10 +33,11 @@ nbproject
 *.komodoproject
 .komodotools
 
-# grunt-html-validation
-validation-status.json
-validation-report.json
-
 # Folders to ignore
-node_modules
-bower_components
+/.bundle/
+/.jekyll-cache/
+/node_modules/
+/vendor/
+
+# Local Netlify folder
+.netlify

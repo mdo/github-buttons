@@ -1,0 +1,19 @@
+{%- comment -%}
+  Usage: include example.html content=markup [args],
+  where content is a capture with the HTML content
+
+  args can be one of the following:
+    id - null (default)
+    class - "example" (default)
+{%- endcomment -%}
+
+{%- assign id = include.id -%}
+{%- assign class = include.class -%}
+
+<div{% if id %} id="{{ id }}"{% endif %} class="example{% if class %} {{ class }}{% endif %}">
+  {{- include.content | replace: 'https://ghbtns.com/', '' | replace: ' frameborder="0" scrolling="0"' '' -}}
+</div>
+
+{%- highlight html -%}
+  {{- include.content -}}
+{%- endhighlight -%}

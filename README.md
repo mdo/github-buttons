@@ -1,8 +1,8 @@
-# GitHub Buttons
+# GitHub Buttons [![Build Status](https://github.com/mdo/github-buttons/workflows/CI/badge.svg)](https://github.com/mdo/github-buttons/actions?workflow=CI)
 
-Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, and follower counts.
+Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, sponsor, and follower counts.
 
-To get started, checkout <https://ghbtns.com>!
+To get started, checkout <https://ghbtns.com/>!
 
 ## Bug tracker
 
@@ -10,24 +10,30 @@ Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/git
 
 ## Development
 
-The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS—and compiled with [gulp](http://gulpjs.com).
-The `github-btn.hml` file contains the button markup and includes the external CSS and JS. Those includes are inlined and the overall page minified with gulp.
-
-To build the files, just run gulp:
+Clone the project and install dependencies before getting started. GitHub Buttons require Node.js, Ruby, and Bundler for local development.
 
 ```shell
-$ gulp
+npm i
+bundle i
 ```
 
-Lastly, the `https://ghbtns.com` site is built with Jekyll (requires Ruby and more). Install [Jekyll](http://jekyllrb.com) and run a local server to view your changes:
+The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS. We use inline-source-cli and html-minifer to include it all in the compiled `github-btn.html` file. To build this file:
 
 ```shell
-$ jekyll serve --watch
+npm run build
 ```
+
+The `https://ghbtns.com/` site is built with Jekyll. After installing the dependencies, you can run a local server:
+
+```shell
+bundle exec jekyll serve
+```
+
+Open `http://127.0.0.1:4000` to browse locally.
 
 ## See also
 
-- [ntkme/github-buttons](https://buttons.github.io)
+* [ntkme/github-buttons](https://buttons.github.io/)
 
 ## Twitter account
 
@@ -37,9 +43,9 @@ Keep up to date on announcements and more by following Mark on Twitter, [@mdo](h
 
 **Mark Otto**
 
-* https://twitter.com/mdo
-* https://github.com/mdo
+* <https://twitter.com/mdo>
+* <https://github.com/mdo>
 
 ## Copyright and license
 
-Copyright 2014-2015 Mark Otto. Released under Apache 2.0.
+Copyright 2014-2020 Mark Otto. Released under [Apache 2.0](LICENSE.md).

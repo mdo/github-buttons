@@ -3,6 +3,7 @@ layout: default
 ---
 
 ## Contents
+{:.no_toc}
 
 * Comment to trigger ToC generation
 {:toc}
@@ -11,15 +12,12 @@ layout: default
 
 ## Star
 
-<div class="example">
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160" height="30"></iframe>
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-</div>
-{% highlight html %}
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160" height="30"></iframe>
+{% capture example %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="Star twbs/bootstrap on GitHub"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-{% endhighlight %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="Star twbs/bootstrap on GitHub"></iframe>
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Watch
 
@@ -27,39 +25,39 @@ Originally, GitHub's Watch button was used for notification settings (today's Wa
 
 As such, for today's unofficial Watch button, **you must add `v=2` to the parameters**. If you don't, you'll get [the deprecated button](#deprecated).
 
-<div class="example">
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160" height="30"></iframe>
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-</div>
-{% highlight html %}
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160" height="30"></iframe>
+{% capture example %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="Watch twbs/bootstrap on GitHub"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-{% endhighlight %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="150" height="20" title="Watch twbs/bootstrap on GitHub"></iframe>
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Fork
 
-<div class="example">
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158" height="30"></iframe>
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-</div>
-{% highlight html %}
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158" height="30"></iframe>
+{% capture example %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="Fork twbs/bootstrap on GitHub"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-{% endhighlight %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" frameborder="0" scrolling="0" width="150" height="20" title="Fork twbs/bootstrap on GitHub"></iframe>
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Follow
 
-<div class="example">
-  <iframe src="github-btn.html?user=mdo&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220" height="30"></iframe>
-  <iframe src="github-btn.html?user=mdo&type=follow&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-</div>
-{% highlight html %}
-<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220" height="30"></iframe>
+{% capture example %}
+<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="Follow @mdo on GitHub"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-{% endhighlight %}
+<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true" frameborder="0" scrolling="0" width="170" height="20" title="Follow @mdo on GitHub"></iframe>
+{% endcapture %}
+{% include example.html content=example %}
+
+## Sponsor
+
+{% capture example %}
+<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=sponsor&size=large" frameborder="0" scrolling="0" width="180" height="30" title="Sponsor @mdo on GitHub"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=sponsor" frameborder="0" scrolling="0" width="150" height="20" title="Sponsor @mdo on GitHub"></iframe>
+{% endcapture %}
+{% include example.html content=example %}
 
 ---
 
@@ -73,20 +71,18 @@ Example buttons are shown with `https://` URLs. While they're hosted on GitHub P
 
 You **must** declare a value for each of the following URL parameters:
 
-|---
 | Option | Description |
-|-|:-|:-:|-:
-| `user` | GitHub username that owns the repo |
+| ------ | :---------- |
+| `user` | GitHub username that owns the repo/Username to sponsor |
 | `repo` | GitHub repository to pull the forks and watchers counts |
-| `type` | Type of button to show: `watch`, `fork`, or `follow` |
+| `type` | Type of button to show: `watch`, `fork`, `sponsor`, or `follow` |
 
 ### Optional parameters
 
 The following URL parameters are **not** required. Add them as you wish.
 
-|---
 | Option | Description |
-|-|:-|:-:|-:
+| ------ | :---------- |
 | `count` | Show the optional watchers or forks count: *none* by default or `true` |
 | `size` | Optional flag for using a larger button: *none* by default or `large` |
 
@@ -100,15 +96,12 @@ With the button split in August 2012, GitHub's API continued to return the Star 
 
 This deprecated button is still around to avoid breaking every site that currently utilizes these embeds.
 
-<div class="example">
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-  <iframe src="github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-</div>
-{% highlight html %}
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+{% capture example %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="Watch twbs/bootstrap on GitHub"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
-{% endhighlight %}
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true" frameborder="0" scrolling="0" width="170" height="20" title="Watch twbs/bootstrap on GitHub"></iframe>
+{% endcapture %}
+{% include example.html content=example %}
 
 ---
 
@@ -116,11 +109,20 @@ This deprecated button is still around to avoid breaking every site that current
 
 For these first versions, functionality is limited and some concessions made:
 
-- Width and height must be specified for all buttons (which actually adds some control for those with OCD like myself).
-- All attributes must be passed through via URL parameters.
-- CSS and JavaScript are all included in the same HTML file to reduce complexity.
+* Width and height must be specified for all buttons (which actually adds some fun control for people like me).
+* Make sure you adapt the snippets to your needs by modifying the parameters and the title.
+* All attributes must be passed through via URL parameters.
+* CSS and JavaScript are all included in the same HTML file to reduce complexity.
+* We include the `frameborder` and `scrolling` attributes by default since we cannot know your setup, but you can optionally remove them and set them yourself via CSS:
 
-More refinement and functionality is planned with open-sourcing--any help is always appreciated!
+  {% highlight css %}
+  iframe {
+    overflow: hidden;
+    border: 0;
+  }
+  {% endhighlight %}
+
+More refinement and functionality is planned with open-sourcing—any help is always appreciated!
 
 ---
 
@@ -129,8 +131,8 @@ More refinement and functionality is planned with open-sourcing--any help is alw
 The unofficial GitHub buttons are available on GitHub for downloading, forking, or contributing.
 
 <p>
-  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160" height="30"></iframe>
-  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160" height="30"></iframe>
+  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=star&count=true&size=large" width="160" height="30" title="Star mdo/github-buttons on GitHub"></iframe>
+  <iframe src="github-btn.html?user=mdo&repo=github-buttons&type=fork&count=true&size=large" width="160" height="30" title="Star mdo/github-buttons on GitHub"></iframe>
 </p>
 
 <a href="https://github.com/mdo/github-buttons" class="btn">View on GitHub</a>

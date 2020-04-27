@@ -1,115 +1,161 @@
-// Read a page's GET URL variables and return them as an associative array.
-// Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
-var params = (function () {
-  var vars = [],
-      hash;
-  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  for (var i = 0; i < hashes.length; i++) {
-    hash = hashes[i].split('=');
-    vars.push(hash[0]);
-    vars[hash[0]] = hash[1];
+(function() {
+  'use strict';
+
+  // Read a page's GET URL variables and return them as an associative array.
+  // Source: https://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+  function getUrlParameters() {
+    var vars = [];
+    var hash;
+    var location = window.location;
+    var hashes = location.href.slice(location.href.indexOf('?') + 1).split('&');
+
+    for (var i = 0, len = hashes.length; i < len; i++) {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+
+    return vars;
   }
-  return vars;
-}());
 
-var user = params.user,
-    repo = params.repo,
-    type = params.type,
-    count = params.count,
-    size = params.size,
-    v = params.v,
-    head = document.getElementsByTagName('head')[0],
-    button = document.getElementById('gh-btn'),
-    mainButton = document.getElementById('github-btn'),
-    text = document.getElementById('gh-text'),
-    counter = document.getElementById('gh-count'),
-    labelSuffix = ' on GitHub';
+  // Add commas to numbers
+  function addCommas(n) {
+    return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+  }
 
-// Add commas to numbers
-function addCommas(n) {
-  return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
-}
+  function jsonp(path) {
+    var head = document.head;
+    var script = document.createElement('script');
 
-function jsonp(path, cbName) {
-  var el = document.createElement('script');
-  el.src = path + '?callback=' + (cbName ? cbName : 'callback');
-  head.insertBefore(el, head.firstChild);
-}
+    script.src = path + '?callback=callback';
+    head.insertBefore(script, head.firstChild);
+  }
 
-function callback(obj) {
+  var parameters = getUrlParameters();
+
+  // Parameters
+  var user = parameters.user;
+  var repo = parameters.repo;
+  var type = parameters.type;
+  var count = parameters.count;
+  var size = parameters.size;
+  var v = parameters.v;
+
+  // Elements
+  var button = document.querySelector('.gh-btn');
+  var mainButton = document.querySelector('.github-btn');
+  var text = document.querySelector('.gh-text');
+  var counter = document.querySelector('.gh-count');
+
+  // Constants
+  var LABEL_SUFFIX = ' on GitHub';
+  var GITHUB_URL = 'https://github.com/';
+  var API_URL = 'https://api.github.com/';
+  var REPO_URL = GITHUB_URL + user + '/' + repo;
+  var USER_REPO = user + '/' + repo;
+
+  window.callback = function(obj) {
+    if (obj.data.message === 'Not Found') {
+      return;
+    }
+
+    switch (type) {
+      case 'watch':
+        if (v === '2') {
+          counter.textContent = obj.data.subscribers_count && addCommas(obj.data.subscribers_count);
+          counter.setAttribute('aria-label', counter.textContent + ' watchers' + LABEL_SUFFIX);
+        } else {
+          counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+          counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
+        }
+
+        break;
+      case 'star':
+        counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+        counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
+        break;
+      case 'fork':
+        counter.textContent = obj.data.network_count && addCommas(obj.data.network_count);
+        counter.setAttribute('aria-label', counter.textContent + ' forks' + LABEL_SUFFIX);
+        break;
+      case 'follow':
+        counter.textContent = obj.data.followers && addCommas(obj.data.followers);
+        counter.setAttribute('aria-label', counter.textContent + ' followers' + LABEL_SUFFIX);
+        break;
+    }
+
+    // Show the count if asked and if it's not empty
+    if (count === 'true' && counter.textContent !== '') {
+      counter.style.display = 'block';
+      counter.removeAttribute('aria-hidden');
+    }
+  };
+
+  // Set href to be URL for repo
+  button.href = REPO_URL;
+
+  var title;
+
+  // Add the class, change the text label, set count link href
   switch (type) {
     case 'watch':
       if (v === '2') {
-        counter.innerHTML = addCommas(obj.data.subscribers_count);
-        counter.setAttribute('aria-label', counter.innerHTML + ' watchers' + labelSuffix);
+        mainButton.className += ' github-watchers';
+        text.textContent = 'Watch';
+        counter.href = REPO_URL + '/watchers';
       } else {
-        counter.innerHTML = addCommas(obj.data.stargazers_count);
-        counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
+        mainButton.className += ' github-stargazers';
+        text.textContent = 'Star';
+        counter.href = REPO_URL + '/stargazers';
       }
+
+      title = text.textContent + ' ' + USER_REPO;
       break;
     case 'star':
-      counter.innerHTML = addCommas(obj.data.stargazers_count);
-      counter.setAttribute('aria-label', counter.innerHTML + ' stargazers' + labelSuffix);
+      mainButton.className += ' github-stargazers';
+      text.textContent = 'Star';
+      counter.href = REPO_URL + '/stargazers';
+      title = text.textContent + ' ' + USER_REPO;
       break;
     case 'fork':
-      counter.innerHTML = addCommas(obj.data.network_count);
-      counter.setAttribute('aria-label', counter.innerHTML + ' forks' + labelSuffix);
+      mainButton.className += ' github-forks';
+      text.textContent = 'Fork';
+      button.href = REPO_URL + '/fork';
+      counter.href = REPO_URL + '/network';
+      title = text.textContent + ' ' + USER_REPO;
       break;
     case 'follow':
-      counter.innerHTML = addCommas(obj.data.followers);
-      counter.setAttribute('aria-label', counter.innerHTML + ' followers' + labelSuffix);
+      mainButton.className += ' github-me';
+      text.textContent = 'Follow @' + user;
+      button.href = GITHUB_URL + user;
+      counter.href = GITHUB_URL + user + '/followers';
+      title = text.textContent;
+      break;
+    case 'sponsor':
+      mainButton.className += ' github-me';
+      text.textContent = 'Sponsor @' + user;
+      button.href = GITHUB_URL + 'sponsors/' + user;
+      title = text.textContent;
       break;
   }
 
-  // Show the count if asked
-  if (count === 'true' && counter.innerHTML !== 'undefined') {
-    counter.style.display = 'block';
+  button.setAttribute('aria-label', title + LABEL_SUFFIX);
+  document.title = title + LABEL_SUFFIX;
+
+  // Change the size if requested
+  if (size === 'large') {
+    mainButton.className += ' github-btn-large';
   }
-}
 
-// Set href to be URL for repo
-button.href = 'https://github.com/' + user + '/' + repo + '/';
+  // If count is not requested or type is sponsor,
+  // there's no need to make an API call
+  if (count !== 'true' || type === 'sponsor') {
+    return;
+  }
 
-// Add the class, change the text label, set count link href
-switch (type) {
-  case 'watch':
-    if (v === '2') {
-      mainButton.className += ' github-watchers';
-      text.innerHTML = 'Watch';
-      counter.href = 'https://github.com/' + user + '/' + repo + '/watchers';
-    } else {
-      mainButton.className += ' github-stargazers';
-      text.innerHTML = 'Star';
-      counter.href = 'https://github.com/' + user + '/' + repo + '/stargazers';
-    }
-    break;
-  case 'star':
-    mainButton.className += ' github-stargazers';
-    text.innerHTML = 'Star';
-    counter.href = 'https://github.com/' + user + '/' + repo + '/stargazers';
-    break;
-  case 'fork':
-    mainButton.className += ' github-forks';
-    text.innerHTML = 'Fork';
-    button.href = 'https://github.com/' + user + '/' + repo + '/fork';
-    counter.href = 'https://github.com/' + user + '/' + repo + '/network';
-    break;
-  case 'follow':
-    mainButton.className += ' github-me';
-    text.innerHTML = 'Follow @' + user;
-    button.href = 'https://github.com/' + user;
-    counter.href = 'https://github.com/' + user + '/followers';
-    break;
-}
-button.setAttribute('aria-label', text.innerHTML + labelSuffix);
-
-// Change the size
-if (size === 'large') {
-  mainButton.className += ' github-btn-large';
-}
-
-if (type === 'follow') {
-  jsonp('https://api.github.com/users/' + user);
-} else {
-  jsonp('https://api.github.com/repos/' + user + '/' + repo);
-}
+  if (type === 'follow') {
+    jsonp(API_URL + 'users/' + user);
+  } else {
+    jsonp(API_URL + 'repos/' + user + '/' + repo);
+  }
+})();

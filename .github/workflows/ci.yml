@@ -1,0 +1,82 @@
+name: CI
+on: [push, pull_request]
+env:
+  CI: true
+  NODE: 12.x
+  RUBY: 2.6.x
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v1
+
+      - name: Set Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: "${{ env.NODE }}"
+
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "${{ env.RUBY }}"
+
+      - name: Disable gem docs
+        run: 'echo "gem: --no-document" > ~/.gemrc'
+
+      - name: Set up Ruby cache
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-ruby-v${{ env.RUBY }}-${{ hashFiles('Gemfile') }}-${{ hashFiles('Gemfile.lock') }}-${{ hashFiles('.github/workflows/ci.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-ruby-v${{ env.RUBY }}-${{ hashFiles('Gemfile') }}-${{ hashFiles('Gemfile.lock') }}-${{ hashFiles('.github/workflows/ci.yml') }}
+
+      - name: Set up Bundler
+        run: gem install bundler -v "~> 1.17"
+
+      - run: ruby --version
+      - run: gem --version
+      - run: bundle --version
+      - run: node --version
+      - run: npm --version
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Install bundler dependencies
+        run: bundle install --deployment --jobs=4 --retry=3 --clean
+
+      - name: Run tests
+        run: npm test
+
+      - name: Upload docs
+        uses: actions/upload-artifact@v1
+        if: success() && startsWith(github.ref, 'refs/tags/')
+        with:
+          name: docs
+          path: ./_site/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    if: startsWith(github.ref, 'refs/tags/')
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download docs
+        uses: actions/download-artifact@v1
+        with:
+          name: docs
+          path: ./_site/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          emptyCommits: false
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site/
