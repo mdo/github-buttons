@@ -84,8 +84,8 @@
         break;
     }
 
-    // Show the count if asked and if it's not empty or 'undefined'
-    if (count === 'true' && counter.textContent !== '' && counter.textContent !== 'undefined') {
+    // Show the count if asked and if it's not empty
+    if (count === 'true' && counter.textContent !== '') {
       counter.style.display = 'block';
       counter.removeAttribute('aria-hidden');
     }
@@ -142,7 +142,7 @@
   button.setAttribute('aria-label', title + LABEL_SUFFIX);
   document.title = title + LABEL_SUFFIX;
 
-  // Change the size
+  // Change the size if requested
   if (size === 'large') {
     mainButton.className += ' github-btn-large';
   }
