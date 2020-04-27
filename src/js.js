@@ -55,6 +55,10 @@
   var USER_REPO = user + '/' + repo;
 
   window.callback = function(obj) {
+    if (obj.data.message === 'Not Found') {
+      return;
+    }
+
     switch (type) {
       case 'watch':
         if (v === '2') {
