@@ -1,6 +1,7 @@
 # Ignore docs files
 /.sass-cache/
 /_site/
+/docs/.jekyll-cache/
 /.ruby-version
 
 # Numerous always-ignore extensions
@@ -35,7 +36,6 @@ nbproject
 
 # Folders to ignore
 /.bundle/
-/.jekyll-cache/
 /node_modules/
 /vendor/
 

@@ -17,7 +17,7 @@ npm i
 bundle i
 ```
 
-The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS. We use inline-source-cli and html-minifer to include it all in the compiled `github-btn.html` file. To build this file:
+The GitHub buttons source code is split across three files in `src/`—the HTML, CSS, and JS. We use inline-source-cli and html-minifer to include it all in the compiled [`docs/github-btn.html`](docs/github-btn.html) file. To build this file:
 
 ```shell
 npm run build
