@@ -62,24 +62,24 @@
     switch (type) {
       case 'watch':
         if (v === '2') {
-          counter.textContent = addCommas(obj.data.subscribers_count);
+          counter.textContent = obj.data.subscribers_count && addCommas(obj.data.subscribers_count);
           counter.setAttribute('aria-label', counter.textContent + ' watchers' + LABEL_SUFFIX);
         } else {
-          counter.textContent = addCommas(obj.data.stargazers_count);
+          counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
           counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
         }
 
         break;
       case 'star':
-        counter.textContent = addCommas(obj.data.stargazers_count);
+        counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
         counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
         break;
       case 'fork':
-        counter.textContent = addCommas(obj.data.network_count);
+        counter.textContent = obj.data.network_count && addCommas(obj.data.network_count);
         counter.setAttribute('aria-label', counter.textContent + ' forks' + LABEL_SUFFIX);
         break;
       case 'follow':
-        counter.textContent = addCommas(obj.data.followers);
+        counter.textContent = obj.data.followers && addCommas(obj.data.followers);
         counter.setAttribute('aria-label', counter.textContent + ' followers' + LABEL_SUFFIX);
         break;
     }
