@@ -6,8 +6,7 @@
   function getUrlParameters() {
     var vars = [];
     var hash;
-    var location = window.location;
-    var hashes = location.href.slice(location.href.indexOf('?') + 1).split('&');
+    var hashes = window.location.hash.slice(1).split('&');
 
     for (var i = 0, len = hashes.length; i < len; i++) {
       hash = hashes[i].split('=');
