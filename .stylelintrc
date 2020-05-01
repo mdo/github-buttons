@@ -3,6 +3,7 @@
     "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
+    "at-rule-no-vendor-prefix": null,
     "no-duplicate-selectors": true,
     "property-no-vendor-prefix": null,
     "value-no-vendor-prefix": null
