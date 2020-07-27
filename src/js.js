@@ -40,6 +40,7 @@
   var count = parameters.count;
   var size = parameters.size;
   var v = parameters.v;
+  var theme = parameters.theme;
 
   // Elements
   var button = document.querySelector('.gh-btn');
@@ -159,3 +160,7 @@
     jsonp(API_URL + 'repos/' + user + '/' + repo);
   }
 })();
+
+if (theme === dark) {
+  document.getElementsByTagName("body")[0].setAttribute("class", "dark");
+}
