@@ -3,7 +3,7 @@ on: [push, pull_request]
 env:
   CI: true
   NODE: 12.x
-  RUBY: 2.6.x
+  RUBY: 2.7.x
 
 jobs:
   test:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Set Node.js version
         uses: actions/setup-node@v1
@@ -23,8 +23,11 @@ jobs:
         with:
           ruby-version: "${{ env.RUBY }}"
 
-      - name: Disable gem docs
-        run: 'echo "gem: --no-document" > ~/.gemrc'
+      - name: Set up Ruby env
+        run: |
+          echo "gem: --no-document" > ~/.gemrc # Disable gem docs
+          bundle config set clean 'true'
+          bundle config set deployment 'true'
 
       - name: Set up Ruby cache
         uses: actions/cache@v2
@@ -34,9 +37,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-ruby-v${{ env.RUBY }}-${{ hashFiles('Gemfile') }}-${{ hashFiles('Gemfile.lock') }}
             ${{ runner.os }}-ruby-v${{ env.RUBY }}-
-
-      - name: Set up Bundler
-        run: gem install bundler -v "~> 1.17"
 
       - run: ruby --version
       - run: gem --version
