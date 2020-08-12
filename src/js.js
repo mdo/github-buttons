@@ -128,7 +128,7 @@
       mainButton.className += ' github-me';
       text.textContent = 'Follow @' + user;
       button.href = GITHUB_URL + user;
-      counter.href = GITHUB_URL + user + '/followers';
+      counter.href = GITHUB_URL + user + '?tab=followers';
       title = text.textContent;
       break;
     case 'sponsor':
