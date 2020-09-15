@@ -3,16 +3,16 @@ description:    "A set of static buttons with dynamic watch and fork counts for 
 url:            "https://ghbtns.com"
 
 # Social
-authors:        "Mark Otto"
 author:
+  name:         "Mark Otto"
   twitter:      "mdo"
 
 permalink:      pretty
 
 sass:
-  style: compressed
+  style:        compressed
 
-source: docs
+source:         docs
 
 plugins:
   - jekyll-seo-tag
