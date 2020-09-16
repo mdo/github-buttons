@@ -46,7 +46,7 @@ jobs:
         run: npm ci
 
       - name: Install bundler dependencies
-        run: bundle install --deployment --jobs=4 --retry=3 --clean
+        run: bundle install --jobs=4 --retry=3
 
       - name: Run tests
         run: npm test
