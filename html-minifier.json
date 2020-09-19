@@ -20,7 +20,9 @@
     }
   },
   "minifyJS": {
-    "compress": true,
+    "compress": {
+      "passes": 2
+    },
     "mangle": true
   },
   "processConditionalComments": true,
