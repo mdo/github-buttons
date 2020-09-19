@@ -109,6 +109,7 @@ This deprecated button is still around to avoid breaking every site that current
 
 For these first versions, functionality is limited and some concessions made:
 
+* Mind the GitHub API rate limit which is 60 requests per hour for unauthenticated users.
 * Width and height must be specified for all buttons (which actually adds some fun control for people like me).
 * Make sure you adapt the snippets to your needs by modifying the parameters and the title.
 * All attributes must be passed through via URL parameters.
