@@ -16,3 +16,4 @@ source:         docs
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
