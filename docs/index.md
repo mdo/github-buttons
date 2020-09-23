@@ -21,7 +21,7 @@ layout: default
 
 ## Watch
 
-Originally, GitHub's Watch button was used for notification settings (today's Watch) and repository bookmarking (today's Star). In August 2012, [they split the functionality into two buttons](https://github.com/blog/1204-notifications-stars), after these unofficial buttons were released.
+Originally, GitHub's Watch button was used for notification settings (today's Watch) and repository bookmarking (today's Star). In August 2012, [they split the functionality into two buttons](https://github.blog/2012-08-06-notifications-stars/), after these unofficial buttons were released.
 
 As such, for today's unofficial Watch button, **you must add `v=2` to the parameters**. If you don't, you'll get [the deprecated button](#deprecated).
 
