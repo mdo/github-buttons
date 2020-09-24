@@ -48,4 +48,4 @@ Keep up to date on announcements and more by following Mark on Twitter, [@mdo](h
 
 ## Copyright and license
 
-Copyright 2014-2020 Mark Otto. Released under [Apache 2.0](LICENSE.md).
+Copyright 2014-2020 Mark Otto. Released under the [Apache 2.0 License](LICENSE).
