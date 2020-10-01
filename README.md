@@ -2,11 +2,11 @@
 
 Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, sponsor, and follower counts.
 
-To get started, checkout <https://ghbtns.com/>!
+To get started, checkout <https://ghbtns.com/>
 
-## Bug tracker
+## Bug Tracker
 
-Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/github-buttons/issues>.
+Have a bug? Please create an issue here on GitHub at <https://github.com/mdo/github-buttons/issues>
 
 ## Development
 
@@ -35,7 +35,7 @@ Open `http://127.0.0.1:4000` to browse locally.
 
 * [ntkme/github-buttons](https://buttons.github.io/)
 
-## Twitter account
+## Twitter Account
 
 Keep up to date on announcements and more by following Mark on Twitter, [@mdo](https://twitter.com/mdo).
 
