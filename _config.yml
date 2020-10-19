@@ -5,7 +5,9 @@ url:            "https://ghbtns.com"
 # Social
 author:
   name:         "Mark Otto"
-  twitter:      "mdo"
+
+twitter:
+  username:     "mdo"
 
 permalink:      pretty
 
