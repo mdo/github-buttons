@@ -52,7 +52,7 @@ jobs:
         run: npm test
 
       - name: Upload docs
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: success() && startsWith(github.ref, 'refs/tags/')
         with:
           name: docs
@@ -67,7 +67,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Download docs
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: docs
           path: ./_site/
