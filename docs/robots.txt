@@ -6,5 +6,5 @@ layout: null
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
+Disallow: /*?*
 Sitemap: {{ site.url }}/sitemap.xml
