@@ -92,7 +92,7 @@
     }
 
     // Show the count if asked and if it's not empty
-    if (count === 'true' && counter.textContent !== '') {
+    if (count && counter.textContent !== '') {
       counter.style.display = 'block';
       counter.removeAttribute('aria-hidden');
     }
@@ -165,7 +165,7 @@
 
   // If count is not requested or type is sponsor,
   // there's no need to make an API call
-  if (count !== 'true' || type === 'sponsor') {
+  if (!count || type === 'sponsor') {
     return;
   }
 
