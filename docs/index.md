@@ -65,7 +65,7 @@ As such, for today's unofficial Watch button, **you must add `v=2` to the parame
 
 ### SSL support
 
-Example buttons are shown with `https://` URLs. While they're hosted on GitHub Pages, the SSL option is provided via [CloudFlare's free Universal SSL](https://blog.cloudflare.com/introducing-universal-ssl/) offering.
+Example buttons are shown with `https://` URLs. While they're hosted on GitHub Pages, the SSL option is provided via [Cloudflare's free Universal SSL](https://blog.cloudflare.com/introducing-universal-ssl/) offering.
 
 ### Required parameters
 
