@@ -40,6 +40,7 @@
   var count = parameters.count;
   var size = parameters.size;
   var v = parameters.v;
+  var noText = parameters.text;
 
   // Elements
   var button = document.querySelector('.gh-btn');
@@ -139,6 +140,13 @@
       break;
   }
 
+  if (noText === 'false') {
+    button.className += ' no-text';
+    text.setAttribute('aria-hidden', true);
+    text.style.display = 'none';
+    text.textContent = '';
+  }
+
   button.setAttribute('aria-label', title + LABEL_SUFFIX);
   document.title = title + LABEL_SUFFIX;
 
@@ -149,7 +157,7 @@
 
   // If count is not requested or type is sponsor,
   // there's no need to make an API call
-  if (count !== 'true' || type === 'sponsor') {
+  if (count !== 'true' || type === 'sponsor' || noText === 'false') {
     return;
   }
 
