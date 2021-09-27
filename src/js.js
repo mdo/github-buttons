@@ -9,7 +9,7 @@
     var location = window.location;
     var hashes = location.href.slice(location.href.indexOf('?') + 1).split('&');
 
-    for (var i = 0, len = hashes.length; i < len; i++) {
+    for (var i = 0; i < hashes.length; i++) {
       hash = hashes[i].split('=');
       vars.push(hash[0]);
       vars[hash[0]] = hash[1];
