@@ -10,6 +10,8 @@ body {
 .github-btn {
   height: 20px;
   overflow: hidden;
+  font-size:30px;
+  margin:10px 20px 30px 10px;
 }
 .gh-btn,
 .gh-count,
