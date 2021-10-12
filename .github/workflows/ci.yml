@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   FORCE_COLOR: 2
-  NODE: 14.x
+  NODE: 16
   RUBY: 2.7
 
 jobs:
