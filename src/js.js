@@ -19,8 +19,28 @@
   }
 
   // Add commas to numbers
-  function addCommas(n) {
-    return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+  function formatNumber(n) {
+    var result = n;
+
+    if (trunc === 'true' || trunc == 1) {
+      if (n >= 100000000) {
+        result = (n/1000000).toFixed(0) + 'm';
+      }
+      else if (n >= 1000000) {
+        result = (n/1000000).toFixed(1) + 'm';
+      }
+      else if (n >= 100000) {
+        result = (n/1000).toFixed(0) + 'k';
+      }
+      else if (n >= 1000) {
+        result = (n/1000).toFixed(1) + 'k';
+      }
+    }
+    else {
+      result = String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+    }
+
+    return result;
   }
 
   function jsonp(path) {
@@ -40,6 +60,7 @@
   var count = parameters.count;
   var size = parameters.size;
   var v = parameters.v;
+  var trunc = parameters.trunc;
 
   // Elements
   var button = document.querySelector('.gh-btn');
@@ -62,24 +83,24 @@
     switch (type) {
       case 'watch':
         if (v === '2') {
-          counter.textContent = obj.data.subscribers_count && addCommas(obj.data.subscribers_count);
+          counter.textContent = obj.data.subscribers_count && formatNumber(obj.data.subscribers_count);
           counter.setAttribute('aria-label', counter.textContent + ' watchers' + LABEL_SUFFIX);
         } else {
-          counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+          counter.textContent = obj.data.stargazers_count && formatNumber(obj.data.stargazers_count);
           counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
         }
 
         break;
       case 'star':
-        counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+        counter.textContent = obj.data.stargazers_count && formatNumber(obj.data.stargazers_count);
         counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
         break;
       case 'fork':
-        counter.textContent = obj.data.network_count && addCommas(obj.data.network_count);
+        counter.textContent = obj.data.network_count && formatNumber(obj.data.network_count);
         counter.setAttribute('aria-label', counter.textContent + ' forks' + LABEL_SUFFIX);
         break;
       case 'follow':
-        counter.textContent = obj.data.followers && addCommas(obj.data.followers);
+        counter.textContent = obj.data.followers && formatNumber(obj.data.followers);
         counter.setAttribute('aria-label', counter.textContent + ' followers' + LABEL_SUFFIX);
         break;
     }

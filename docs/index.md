@@ -85,6 +85,7 @@ The following URL parameters are **not** required. Add them as you wish.
 | ------ | :---------- |
 | `count` | Show the optional watchers or forks count: *none* by default or `true` |
 | `size` | Optional flag for using a larger button: *none* by default or `large` |
+| `trunc` | Optional flag for truncating big numbers: *none* by default or `true` |
 
 ---
 
