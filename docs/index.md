@@ -72,7 +72,7 @@ Example buttons are shown with `https://` URLs. While they're hosted on GitHub P
 You **must** declare a value for each of the following URL parameters:
 
 | Option | Description |
-| ------ | :---------- |
+| ------ | ----------- |
 | `user` | GitHub username that owns the repo/Username to sponsor |
 | `repo` | GitHub repository to pull the forks and watchers counts |
 | `type` | Type of button to show: `watch`, `fork`, `sponsor`, or `follow` |
@@ -82,7 +82,7 @@ You **must** declare a value for each of the following URL parameters:
 The following URL parameters are **not** required. Add them as you wish.
 
 | Option | Description |
-| ------ | :---------- |
+| ------ | ----------- |
 | `count` | Show the optional watchers or forks count: *none* by default or `true` |
 | `size` | Optional flag for using a larger button: *none* by default or `large` |
 
@@ -116,12 +116,12 @@ For these first versions, functionality is limited and some concessions made:
 * CSS and JavaScript are all included in the same HTML file to reduce complexity.
 * We include the `frameborder` and `scrolling` attributes by default since we cannot know your setup, but you can optionally remove them and set them yourself via CSS:
 
-  {% highlight css %}
-  iframe {
-    overflow: hidden;
-    border: 0;
-  }
-  {% endhighlight %}
+    {% highlight css %}
+    iframe {
+      overflow: hidden;
+      border: 0;
+    }
+    {% endhighlight %}
 
 More refinement and functionality is planned with open-sourcing—any help is always appreciated!
 
@@ -140,4 +140,4 @@ The unofficial GitHub buttons are available on GitHub for downloading, forking, 
 
 ---
 
-<3
+❤️
