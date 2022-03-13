@@ -1,4 +1,4 @@
-# GitHub Buttons [![Build Status](https://img.shields.io/github/workflow/status/mdo/github-buttons/CI/master?label=CI&logo=github)](https://github.com/mdo/github-buttons/actions?workflow=CI) [![Total alerts](https://img.shields.io/lgtm/alerts/g/mdo/github-buttons?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mdo/github-buttons/alerts/)
+# GitHub Buttons [![Build Status](https://img.shields.io/github/workflow/status/mdo/github-buttons/CI/master?label=CI&logo=github)](https://github.com/mdo/github-buttons/actions?query=workflow%3ACI+branch%3Amaster) [![LGTM alerts](https://img.shields.io/lgtm/alerts/g/mdo/github-buttons?logo=lgtm)](https://lgtm.com/projects/g/mdo/github-buttons/alerts/)
 
 Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, sponsor, and follower counts.
 
@@ -48,4 +48,4 @@ Keep up to date on announcements and more by following Mark on Twitter, [@mdo](h
 
 ## Copyright and license
 
-Copyright 2014-2021 Mark Otto. Released under the [Apache 2.0 License](LICENSE).
+Copyright 2014-2022 Mark Otto. Released under the [Apache 2.0 License](LICENSE).
