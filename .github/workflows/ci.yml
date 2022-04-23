@@ -10,7 +10,7 @@ on:
 env:
   FORCE_COLOR: 2
   NODE: 16
-  RUBY: 2.7
+  RUBY: 3.1
 
 jobs:
   test:
@@ -29,14 +29,8 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "${{ env.RUBY }}"
+          ruby-version: ${{ env.RUBY }}
           bundler-cache: true
-
-      - name: Version info
-        run: |
-          ruby --version
-          gem --version
-          bundle --version
 
       - name: Install npm dependencies
         run: npm ci
@@ -58,7 +52,8 @@ jobs:
     if: github.repository == 'mdo/github-buttons' && startsWith(github.ref, 'refs/tags/')
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Clone repository
+        uses: actions/checkout@v3
 
       - name: Download docs
         uses: actions/download-artifact@v3
