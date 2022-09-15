@@ -39,14 +39,14 @@
     "chokidar-cli": "^3.0.0",
     "html-minifier": "^4.0.0",
     "inline-source-cli": "^2.0.0",
-    "lockfile-lint": "^4.7.5",
+    "lockfile-lint": "^4.8.0",
     "npm-run-all": "^4.1.5",
-    "stylelint": "^14.9.1",
-    "stylelint-config-twbs-bootstrap": "^4.0.0",
-    "xo": "^0.50.0"
+    "stylelint": "^14.11.0",
+    "stylelint-config-twbs-bootstrap": "^6.0.0",
+    "xo": "^0.52.3"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "xo": {
     "envs": [
