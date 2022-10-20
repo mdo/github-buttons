@@ -1,4 +1,4 @@
-# GitHub Buttons [![Build Status](https://img.shields.io/github/workflow/status/mdo/github-buttons/CI/master?label=CI&logo=github)](https://github.com/mdo/github-buttons/actions?query=workflow%3ACI+branch%3Amaster) [![LGTM alerts](https://img.shields.io/lgtm/alerts/g/mdo/github-buttons?logo=lgtm)](https://lgtm.com/projects/g/mdo/github-buttons/alerts/)
+# GitHub Buttons [![Build Status](https://img.shields.io/github/workflow/status/mdo/github-buttons/CI/master?label=CI&logo=github)](https://github.com/mdo/github-buttons/actions?query=workflow%3ACI+branch%3Amaster)
 
 Showcase your GitHub (repo's) success with these static buttons featuring links to your GitHub repo or profile page and up-to-date watch, fork, sponsor, and follower counts.
 
