@@ -10,7 +10,7 @@ on:
 env:
   FORCE_COLOR: 2
   NODE: 16
-  RUBY: 3.1
+  RUBY: "3.1"
 
 jobs:
   test:
@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -54,6 +56,8 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Download docs
         uses: actions/download-artifact@v3
