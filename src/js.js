@@ -1,18 +1,15 @@
 (function() {
   'use strict';
 
-  // Read a page's GET URL variables and return them as an associative array.
-  // Source: https://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
   function getUrlParameters() {
-    var vars = [];
-    var hash;
-    var location = window.location;
-    var hashes = location.href.slice(location.href.indexOf('?') + 1).split('&');
+    // TODO: Replace with URLSearchParams later
+    const hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    const vars = [];
 
-    for (var i = 0; i < hashes.length; i++) {
-      hash = hashes[i].split('=');
-      vars.push(hash[0]);
-      vars[hash[0]] = hash[1];
+    for (const hash of hashes) {
+      const [name, value] = hash.split('=');
+      vars.push(name);
+      vars[name] = value;
     }
 
     return vars;
@@ -24,36 +21,27 @@
   }
 
   function jsonp(path) {
-    var head = document.head;
-    var script = document.createElement('script');
+    const script = document.createElement('script');
 
-    script.src = path + '?callback=callback';
-    head.insertBefore(script, head.firstChild);
+    script.src = `${path}?callback=callback`;
+    document.head.insertBefore(script, document.head.firstChild);
   }
 
-  var parameters = getUrlParameters();
-
   // Parameters
-  var user = parameters.user;
-  var repo = parameters.repo;
-  var type = parameters.type;
-  var count = parameters.count;
-  var size = parameters.size;
-  var v = parameters.v;
-  var noText = parameters.text;
+  const { user, repo, type, count, size, text: noText, v } = getUrlParameters();
 
   // Elements
-  var button = document.querySelector('.gh-btn');
-  var mainButton = document.querySelector('.github-btn');
-  var text = document.querySelector('.gh-text');
-  var counter = document.querySelector('.gh-count');
+  const button = document.querySelector('.gh-btn');
+  const mainButton = document.querySelector('.github-btn');
+  const text = document.querySelector('.gh-text');
+  const counter = document.querySelector('.gh-count');
 
   // Constants
-  var LABEL_SUFFIX = ' on GitHub';
-  var GITHUB_URL = 'https://github.com/';
-  var API_URL = 'https://api.github.com/';
-  var REPO_URL = GITHUB_URL + user + '/' + repo;
-  var USER_REPO = user + '/' + repo;
+  const LABEL_SUFFIX = 'on GitHub';
+  const GITHUB_URL = 'https://github.com/';
+  const API_URL = 'https://api.github.com/';
+  const REPO_URL = `${GITHUB_URL + user}/${repo}`;
+  const USER_REPO = `${user}/${repo}`;
 
   window.callback = function(obj) {
     if (obj.data.message === 'Not Found') {
@@ -64,10 +52,10 @@
       case 'watch': {
         if (v === '2') {
           counter.textContent = obj.data.subscribers_count && addCommas(obj.data.subscribers_count);
-          counter.setAttribute('aria-label', counter.textContent + ' watchers' + LABEL_SUFFIX);
+          counter.setAttribute('aria-label', `${counter.textContent} watchers ${LABEL_SUFFIX}`);
         } else {
           counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
-          counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
+          counter.setAttribute('aria-label', `${counter.textContent} stargazers ${LABEL_SUFFIX}`);
         }
 
         break;
@@ -75,19 +63,19 @@
 
       case 'star': {
         counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
-        counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
+        counter.setAttribute('aria-label', `${counter.textContent} stargazers ${LABEL_SUFFIX}`);
         break;
       }
 
       case 'fork': {
         counter.textContent = obj.data.network_count && addCommas(obj.data.network_count);
-        counter.setAttribute('aria-label', counter.textContent + ' forks' + LABEL_SUFFIX);
+        counter.setAttribute('aria-label', `${counter.textContent} forks ${LABEL_SUFFIX}`);
         break;
       }
 
       case 'follow': {
         counter.textContent = obj.data.followers && addCommas(obj.data.followers);
-        counter.setAttribute('aria-label', counter.textContent + ' followers' + LABEL_SUFFIX);
+        counter.setAttribute('aria-label', `${counter.textContent} followers ${LABEL_SUFFIX}`);
         break;
       }
     }
@@ -102,73 +90,73 @@
   // Set href to be URL for repo
   button.href = REPO_URL;
 
-  var title;
+  let title;
 
   // Add the class, change the text label, set count link href
   switch (type) {
     case 'watch': {
       if (v === '2') {
-        mainButton.className += ' github-watchers';
+        mainButton.classList.add('github-watchers');
         text.textContent = 'Watch';
-        counter.href = REPO_URL + '/watchers';
+        counter.href = `${REPO_URL}/watchers`;
       } else {
-        mainButton.className += ' github-stargazers';
+        mainButton.classList.add('github-stargazers');
         text.textContent = 'Star';
-        counter.href = REPO_URL + '/stargazers';
+        counter.href = `${REPO_URL}/stargazers`;
       }
 
-      title = text.textContent + ' ' + USER_REPO;
+      title = `${text.textContent} ${USER_REPO}`;
       break;
     }
 
     case 'star': {
-      mainButton.className += ' github-stargazers';
+      mainButton.classList.add('github-stargazers');
       text.textContent = 'Star';
-      counter.href = REPO_URL + '/stargazers';
-      title = text.textContent + ' ' + USER_REPO;
+      counter.href = `${REPO_URL}/stargazers`;
+      title = `${text.textContent} ${USER_REPO}`;
       break;
     }
 
     case 'fork': {
-      mainButton.className += ' github-forks';
+      mainButton.classList.add('github-forks');
       text.textContent = 'Fork';
-      button.href = REPO_URL + '/fork';
-      counter.href = REPO_URL + '/network';
-      title = text.textContent + ' ' + USER_REPO;
+      button.href = `${REPO_URL}/fork`;
+      counter.href = `${REPO_URL}/network`;
+      title = `${text.textContent} ${USER_REPO}`;
       break;
     }
 
     case 'follow': {
-      mainButton.className += ' github-me';
-      text.textContent = 'Follow @' + user;
+      mainButton.classList.add('github-me');
+      text.textContent = `Follow @${user}`;
       button.href = GITHUB_URL + user;
-      counter.href = GITHUB_URL + user + '?tab=followers';
+      counter.href = `${GITHUB_URL + user}?tab=followers`;
       title = text.textContent;
       break;
     }
 
     case 'sponsor': {
-      mainButton.className += ' github-me';
-      text.textContent = 'Sponsor @' + user;
-      button.href = GITHUB_URL + 'sponsors/' + user;
+      mainButton.classList.add('github-me');
+      text.textContent = `Sponsor @${user}`;
+      button.href = `${GITHUB_URL}sponsors/${user}`;
       title = text.textContent;
       break;
     }
   }
 
   if (noText === 'false') {
-    button.className += ' no-text';
+    button.classList.add('no-text');
     text.setAttribute('aria-hidden', true);
     text.style.display = 'none';
     text.textContent = '';
   }
 
-  button.setAttribute('aria-label', title + LABEL_SUFFIX);
-  document.title = title + LABEL_SUFFIX;
+  button.setAttribute('aria-label', `${title} ${LABEL_SUFFIX}`);
+  document.title = `${title} ${LABEL_SUFFIX}`;
 
   // Change the size if requested
   if (size === 'large') {
-    mainButton.className += ' github-btn-large';
+    mainButton.classList.add('github-btn-large');
   }
 
   // If count is not requested or type is sponsor,
@@ -178,8 +166,8 @@
   }
 
   if (type === 'follow') {
-    jsonp(API_URL + 'users/' + user);
+    jsonp(`${API_URL}users/${user}`);
   } else {
-    jsonp(API_URL + 'repos/' + user + '/' + repo);
+    jsonp(`${API_URL}repos/${user}/${repo}`);
   }
 })();
