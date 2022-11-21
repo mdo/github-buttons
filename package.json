@@ -29,6 +29,7 @@
     "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "lint": "npm-run-all --continue-on-error --parallel lockfile-lint stylelint xo",
     "xo": "xo",
+    "netlify": "cross-env-shell JEKYLL_ENV=netlify npm-run-all build docs-build",
     "test": "npm-run-all lint build docs-build",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css": "chokidar \"{src,docs/_sass}/**/*.{css,scss}\" --initial --command \"npm run stylelint\"",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
+    "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
     "inline-source-cli": "^2.0.0",
     "lockfile-lint": "^4.9.6",
