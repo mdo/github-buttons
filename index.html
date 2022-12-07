@@ -7,7 +7,7 @@
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Unofficial GitHub Buttons | A set of static buttons with dynamic watch and fork counts for any repo hosted on GitHub.</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.1" />
 <meta property="og:title" content="Unofficial GitHub Buttons" />
 <meta name="author" content="Mark Otto" />
 <meta property="og:locale" content="en_US" />
@@ -50,6 +50,7 @@
   <li><a href="#fork" id="markdown-toc-fork">Fork</a></li>
   <li><a href="#follow" id="markdown-toc-follow">Follow</a></li>
   <li><a href="#sponsor" id="markdown-toc-sponsor">Sponsor</a></li>
+  <li><a href="#no-text-variant" id="markdown-toc-no-text-variant">No text variant</a></li>
   <li><a href="#available-options" id="markdown-toc-available-options">Available options</a>    <ul>
       <li><a href="#ssl-support" id="markdown-toc-ssl-support">SSL support</a></li>
       <li><a href="#required-parameters" id="markdown-toc-required-parameters">Required parameters</a></li>
@@ -122,6 +123,13 @@
 
 <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=mdo&amp;type=sponsor"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"150"</span> <span class="na">height=</span><span class="s">"20"</span> <span class="na">title=</span><span class="s">"GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
 
+<h2 id="no-text-variant">No text variant</h2>
+
+<div class="example">
+<iframe src="github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=star&amp;size=large&amp;text=false" width="170" height="30" title="GitHub"></iframe>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=star&amp;size=large&amp;text=false"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"170"</span> <span class="na">height=</span><span class="s">"30"</span> <span class="na">title=</span><span class="s">"GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
+
 <hr />
 
 <h2 id="available-options">Available options</h2>
@@ -138,21 +146,21 @@
   <thead>
     <tr>
       <th>Option</th>
-      <th style="text-align: left">Description</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">user</code></td>
-      <td style="text-align: left">GitHub username that owns the repo/Username to sponsor</td>
+      <td>GitHub username that owns the repo/Username to sponsor</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">repo</code></td>
-      <td style="text-align: left">GitHub repository to pull the forks and watchers counts</td>
+      <td>GitHub repository to pull the forks and watchers counts</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">type</code></td>
-      <td style="text-align: left">Type of button to show: <code class="language-plaintext highlighter-rouge">watch</code>, <code class="language-plaintext highlighter-rouge">fork</code>, <code class="language-plaintext highlighter-rouge">sponsor</code>, or <code class="language-plaintext highlighter-rouge">follow</code></td>
+      <td>Type of button to show: <code class="language-plaintext highlighter-rouge">watch</code>, <code class="language-plaintext highlighter-rouge">fork</code>, <code class="language-plaintext highlighter-rouge">sponsor</code>, or <code class="language-plaintext highlighter-rouge">follow</code></td>
     </tr>
   </tbody>
 </table>
@@ -165,17 +173,21 @@
   <thead>
     <tr>
       <th>Option</th>
-      <th style="text-align: left">Description</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">count</code></td>
-      <td style="text-align: left">Show the optional watchers or forks count: <em>none</em> by default or <code class="language-plaintext highlighter-rouge">true</code></td>
+      <td>Show the optional watchers or forks count: <em>none</em> by default or <code class="language-plaintext highlighter-rouge">true</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">size</code></td>
-      <td style="text-align: left">Optional flag for using a larger button: <em>none</em> by default or <code class="language-plaintext highlighter-rouge">large</code></td>
+      <td>Optional flag for using a larger button: <em>none</em> by default or <code class="language-plaintext highlighter-rouge">large</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">text</code></td>
+      <td>Optional flag for hiding the text: <em>none</em> by default or <code class="language-plaintext highlighter-rouge">false</code></td>
     </tr>
   </tbody>
 </table>
@@ -214,11 +226,11 @@
   <li>We include the <code class="language-plaintext highlighter-rouge">frameborder</code> and <code class="language-plaintext highlighter-rouge">scrolling</code> attributes by default since we cannot know your setup, but you can optionally remove them and set them yourself via CSS:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css">  <span class="nt">iframe</span> <span class="p">{</span>
-    <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-    <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="p">}</span>
-  </code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">iframe</span> <span class="p">{</span>
+      <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+      <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    </code></pre></figure>
 
 <p>More refinement and functionality is planned with open-sourcing—any help is always appreciated!</p>
 
@@ -237,7 +249,7 @@
 
 <hr />
 
-<p>&lt;3</p>
+<p>❤️</p>
 
     </div>
 
