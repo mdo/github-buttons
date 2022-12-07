@@ -5,5 +5,5 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow:{% if jekyll.environment == "netlify" %} /{% endif %}
+Disallow: {% if jekyll.environment == "netlify" %}/{% else %}/*?*{% endif %}
 Sitemap: {{ site.url }}/sitemap.xml
