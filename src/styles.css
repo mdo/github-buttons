@@ -117,3 +117,6 @@ body {
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
 }
+.no-text .gh-ico {
+  margin-right: 0;
+}

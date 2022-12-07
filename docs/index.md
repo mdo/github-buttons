@@ -59,6 +59,13 @@ As such, for today's unofficial Watch button, **you must add `v=2` to the parame
 {% endcapture %}
 {% include example.html content=example %}
 
+## No text variant
+
+{% capture example %}
+<iframe src="{{ site.url }}/github-btn.html?user=twbs&repo=bootstrap&type=star&size=large&text=false" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+{% endcapture %}
+{% include example.html content=example %}
+
 ---
 
 ## Available options
@@ -85,6 +92,7 @@ The following URL parameters are **not** required. Add them as you wish.
 | ------ | ----------- |
 | `count` | Show the optional watchers or forks count: *none* by default or `true` |
 | `size` | Optional flag for using a larger button: *none* by default or `large` |
+| `text` | Optional flag for hiding the text: *none* by default or `false` |
 
 ---
 
