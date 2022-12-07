@@ -60,7 +60,7 @@
     }
 
     switch (type) {
-      case 'watch':
+      case 'watch': {
         if (v === '2') {
           counter.textContent = obj.data.subscribers_count && addCommas(obj.data.subscribers_count);
           counter.setAttribute('aria-label', counter.textContent + ' watchers' + LABEL_SUFFIX);
@@ -70,18 +70,25 @@
         }
 
         break;
-      case 'star':
+      }
+
+      case 'star': {
         counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
         counter.setAttribute('aria-label', counter.textContent + ' stargazers' + LABEL_SUFFIX);
         break;
-      case 'fork':
+      }
+
+      case 'fork': {
         counter.textContent = obj.data.network_count && addCommas(obj.data.network_count);
         counter.setAttribute('aria-label', counter.textContent + ' forks' + LABEL_SUFFIX);
         break;
-      case 'follow':
+      }
+
+      case 'follow': {
         counter.textContent = obj.data.followers && addCommas(obj.data.followers);
         counter.setAttribute('aria-label', counter.textContent + ' followers' + LABEL_SUFFIX);
         break;
+      }
     }
 
     // Show the count if asked and if it's not empty
@@ -98,7 +105,7 @@
 
   // Add the class, change the text label, set count link href
   switch (type) {
-    case 'watch':
+    case 'watch': {
       if (v === '2') {
         mainButton.className += ' github-watchers';
         text.textContent = 'Watch';
@@ -111,32 +118,41 @@
 
       title = text.textContent + ' ' + USER_REPO;
       break;
-    case 'star':
+    }
+
+    case 'star': {
       mainButton.className += ' github-stargazers';
       text.textContent = 'Star';
       counter.href = REPO_URL + '/stargazers';
       title = text.textContent + ' ' + USER_REPO;
       break;
-    case 'fork':
+    }
+
+    case 'fork': {
       mainButton.className += ' github-forks';
       text.textContent = 'Fork';
       button.href = REPO_URL + '/fork';
       counter.href = REPO_URL + '/network';
       title = text.textContent + ' ' + USER_REPO;
       break;
-    case 'follow':
+    }
+
+    case 'follow': {
       mainButton.className += ' github-me';
       text.textContent = 'Follow @' + user;
       button.href = GITHUB_URL + user;
       counter.href = GITHUB_URL + user + '?tab=followers';
       title = text.textContent;
       break;
-    case 'sponsor':
+    }
+
+    case 'sponsor': {
       mainButton.className += ' github-me';
       text.textContent = 'Sponsor @' + user;
       button.href = GITHUB_URL + 'sponsors/' + user;
       title = text.textContent;
       break;
+    }
   }
 
   button.setAttribute('aria-label', title + LABEL_SUFFIX);
