@@ -1,15 +1,20 @@
 (function() {
   'use strict';
 
+  const allowedQueryParams = new Set(['user', 'repo', 'type', 'count', 'size', 'text', 'v']);
+
   function getUrlParameters() {
     // TODO: Replace with URLSearchParams later
     const hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
     const vars = [];
 
     for (const hash of hashes) {
-      const [name, value] = hash.split('=');
-      vars.push(name);
-      vars[name] = value;
+      const [parameter, value] = hash.split('=');
+
+      if (allowedQueryParams.has(parameter)) {
+        vars.push(parameter);
+        vars[parameter] = value;
+      }
     }
 
     return vars;
