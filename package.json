@@ -71,6 +71,7 @@
       ],
       "spaced-comment": "off",
       "unicorn/prefer-module": "off",
+      "unicorn/prefer-set-has": "off",
       "unicorn/prefer-top-level-await": "off",
       "unicorn/prevent-abbreviations": "off"
     }

@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  var allowedQueryParams = ['user', 'repo', 'type', 'count', 'size', 'text', 'v'];
+
   // Read a page's GET URL variables and return them as an associative array.
   // Source: https://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
   function getUrlParameters() {
@@ -11,8 +13,11 @@
 
     for (var i = 0; i < hashes.length; i++) {
       hash = hashes[i].split('=');
-      vars.push(hash[0]);
-      vars[hash[0]] = hash[1];
+
+      if (allowedQueryParams.includes(hash[0])) {
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+      }
     }
 
     return vars;
