@@ -50,6 +50,11 @@
   "engines": {
     "node": ">=14"
   },
+  "overrides": {
+    "inline-source-cli": {
+      "inline-source": "^8.0.2"
+    }
+  },
   "xo": {
     "envs": [
       "browser"
