@@ -55,7 +55,7 @@
       "browser"
     ],
     "parserOptions": {
-      "ecmaVersion": 5,
+      "ecmaVersion": 2015,
       "sourceType": "script"
     },
     "space": true,
@@ -63,8 +63,11 @@
       "capitalized-comments": "off",
       "default-case": "off",
       "no-negated-condition": "off",
-      "no-var": "off",
-      "prefer-destructuring": "off",
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "prefer-template": "error",
       "space-before-function-paren": [
         "error",
         "never"
