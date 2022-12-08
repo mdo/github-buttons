@@ -6,18 +6,17 @@
   function getUrlParameters() {
     // TODO: Replace with URLSearchParams later
     const hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    const vars = [];
+    const parameters = new Map();
 
     for (const hash of hashes) {
       const [parameter, value] = hash.split('=');
 
       if (allowedQueryParams.has(parameter)) {
-        vars.push(parameter);
-        vars[parameter] = value;
+        parameters.set(parameter, value);
       }
     }
 
-    return vars;
+    return parameters;
   }
 
   // Add commas to numbers
@@ -33,7 +32,14 @@
   }
 
   // Parameters
-  const { user, repo, type, count, size, text: noText, v } = getUrlParameters();
+  const parameters = getUrlParameters();
+  const user = parameters.get('user');
+  const repo = parameters.get('repo');
+  const type = parameters.get('type');
+  const count = parameters.get('count');
+  const size = parameters.get('size');
+  const noText = parameters.get('text');
+  const v = parameters.get('v');
 
   // Elements
   const button = document.querySelector('.gh-btn');
