@@ -1,6 +1,19 @@
 (function() {
   'use strict';
 
+  const entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    '\'': '&#39;',
+    '/': '&#x2F;',
+  };
+
+  function escapeHTML(str) {
+    return String(str).replace(/[&<>"'/]/g, s => entityMap[s]);
+  }
+
   const allowedQueryParams = new Set(['user', 'repo', 'type', 'count', 'size', 'text', 'v']);
 
   function getUrlParameters() {
@@ -12,7 +25,7 @@
       const [parameter, value] = hash.split('=');
 
       if (allowedQueryParams.has(parameter)) {
-        parameters.set(parameter, value);
+        parameters.set(parameter, escapeHTML(value));
       }
     }
 
