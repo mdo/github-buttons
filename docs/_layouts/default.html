@@ -6,12 +6,15 @@
     <link rel="dns-prefetch" href="https://api.github.com">
 
     {% seo %}
+
     <style>
-    {%- capture include_to_scssify -%}
-      {%- include page.scss -%}
-    {%- endcapture -%}
-    {{- include_to_scssify | scssify -}}
+      {%- capture include_to_scssify -%}
+        {%- include page.scss -%}
+      {%- endcapture -%}
+      {{- include_to_scssify | scssify -}}
     </style>
+
+    <script async src="https://platform.twitter.com/widgets.js"></script>
   </head>
 
   <body>
@@ -29,7 +32,5 @@
 
       {{ content }}
     </div>
-
-    <script async src="https://platform.twitter.com/widgets.js"></script>
   </body>
 </html>
