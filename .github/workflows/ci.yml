@@ -11,8 +11,8 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 16
-  RUBY: "3.1"
+  NODE: 18
+  RUBY: "3.2"
 
 jobs:
   test:

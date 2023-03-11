@@ -27,7 +27,6 @@ body {
 }
 .gh-btn {
   background-color: #eee;
-  /* stylelint-disable-next-line function-no-unknown */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), to(#eee));
   background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
   background-repeat: no-repeat;
@@ -37,7 +36,6 @@ body {
 .gh-btn:focus {
   text-decoration: none;
   background-color: #ddd;
-  /* stylelint-disable-next-line function-no-unknown */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), to(#ddd));
   background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
   border-color: #ccc;
