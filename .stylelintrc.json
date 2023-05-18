@@ -2,6 +2,8 @@
   "extends": [
     "stylelint-config-twbs-bootstrap"
   ],
+  "reportInvalidScopeDisables": true,
+  "reportNeedlessDisables": true,
   "rules": {
     "no-duplicate-selectors": true,
     "property-no-vendor-prefix": null,

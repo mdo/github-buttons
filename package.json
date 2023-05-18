@@ -25,7 +25,7 @@
     "docs-serve": "bundle exec jekyll serve",
     "build": "inline-source --compress false --root src src/btn.html | html-minifier-terser --config-file html-minifier.json -o docs/github-btn.html",
     "dist": "npm run build",
-    "stylelint": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore --rd",
+    "stylelint": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
     "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "lint": "npm-run-all --continue-on-error --parallel lockfile-lint stylelint xo",
     "xo": "xo",
@@ -39,16 +39,16 @@
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "cross-env": "^7.0.3",
-    "html-minifier-terser": "^7.1.0",
+    "html-minifier-terser": "^7.2.0",
     "inline-source-cli": "^2.0.0",
     "lockfile-lint": "^4.10.1",
-    "npm-run-all": "^4.1.5",
-    "stylelint": "^15.3.0",
-    "stylelint-config-twbs-bootstrap": "^8.0.0",
-    "xo": "^0.53.1"
+    "npm-run-all2": "^6.0.5",
+    "stylelint": "^15.6.2",
+    "stylelint-config-twbs-bootstrap": "^10.0.0",
+    "xo": "^0.54.2"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "overrides": {
     "inline-source-cli": {
@@ -67,7 +67,6 @@
     "rules": {
       "capitalized-comments": "off",
       "default-case": "off",
-      "no-negated-condition": "off",
       "object-curly-spacing": [
         "error",
         "always"
@@ -78,6 +77,7 @@
         "never"
       ],
       "spaced-comment": "off",
+      "unicorn/no-negated-condition": "off",
       "unicorn/prefer-module": "off",
       "unicorn/prefer-top-level-await": "off",
       "unicorn/prevent-abbreviations": "off"
