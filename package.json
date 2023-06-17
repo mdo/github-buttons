@@ -41,9 +41,9 @@
     "cross-env": "^7.0.3",
     "html-minifier-terser": "^7.2.0",
     "inline-source-cli": "^2.0.0",
-    "lockfile-lint": "^4.10.1",
+    "lockfile-lint": "^4.10.5",
     "npm-run-all2": "^6.0.5",
-    "stylelint": "^15.6.2",
+    "stylelint": "^15.7.0",
     "stylelint-config-twbs-bootstrap": "^10.0.0",
     "xo": "^0.54.2"
   },
