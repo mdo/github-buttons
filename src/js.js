@@ -21,6 +21,7 @@
 
   // Add commas to numbers
   function addCommas(n) {
+    // eslint-disable-next-line unicorn/prefer-string-replace-all
     return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
   }
 

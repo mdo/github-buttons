@@ -41,14 +41,14 @@
     "cross-env": "^7.0.3",
     "html-minifier-terser": "^7.2.0",
     "inline-source-cli": "^2.0.0",
-    "lockfile-lint": "^4.12.1",
-    "npm-run-all2": "^6.1.1",
-    "stylelint": "^15.11.0",
-    "stylelint-config-twbs-bootstrap": "^12.0.0",
-    "xo": "^0.54.2"
+    "lockfile-lint": "^4.13.2",
+    "npm-run-all2": "^6.1.2",
+    "stylelint": "^16.4.0",
+    "stylelint-config-twbs-bootstrap": "^14.1.0",
+    "xo": "^0.58.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "overrides": {
     "inline-source-cli": {
