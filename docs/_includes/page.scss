@@ -1,3 +1,3 @@
 // Our bundle CSS files are listed here so that we inlcude the dist file in Jekyll
-@import "page";
-@import "syntax";
+@use "page";
+@use "syntax";

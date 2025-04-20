@@ -41,11 +41,11 @@
     "cross-env": "^7.0.3",
     "html-minifier-terser": "^7.2.0",
     "inline-source-cli": "^2.0.0",
-    "lockfile-lint": "^4.13.2",
-    "npm-run-all2": "^6.1.2",
-    "stylelint": "^16.4.0",
-    "stylelint-config-twbs-bootstrap": "^14.1.0",
-    "xo": "^0.58.0"
+    "lockfile-lint": "^4.14.0",
+    "npm-run-all2": "^7.0.2",
+    "stylelint": "^16.18.0",
+    "stylelint-config-twbs-bootstrap": "^16.0.0",
+    "xo": "^0.60.0"
   },
   "engines": {
     "node": ">=18"
@@ -78,6 +78,7 @@
       ],
       "spaced-comment": "off",
       "unicorn/no-negated-condition": "off",
+      "unicorn/prefer-global-this": "off",
       "unicorn/prefer-module": "off",
       "unicorn/prefer-top-level-await": "off",
       "unicorn/prevent-abbreviations": "off"
