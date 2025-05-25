@@ -39,49 +39,21 @@
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "cross-env": "^7.0.3",
+    "globals": "^16.2.0",
     "html-minifier-terser": "^7.2.0",
     "inline-source-cli": "^2.0.0",
     "lockfile-lint": "^4.14.1",
     "npm-run-all2": "^8.0.4",
     "stylelint": "^16.20.0",
     "stylelint-config-twbs-bootstrap": "^16.0.0",
-    "xo": "^0.60.0"
+    "xo": "^1.0.5"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "overrides": {
     "inline-source-cli": {
       "inline-source": "^8.0.2"
-    }
-  },
-  "xo": {
-    "envs": [
-      "browser"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2015,
-      "sourceType": "script"
-    },
-    "space": true,
-    "rules": {
-      "capitalized-comments": "off",
-      "default-case": "off",
-      "object-curly-spacing": [
-        "error",
-        "always"
-      ],
-      "prefer-template": "error",
-      "space-before-function-paren": [
-        "error",
-        "never"
-      ],
-      "spaced-comment": "off",
-      "unicorn/no-negated-condition": "off",
-      "unicorn/prefer-global-this": "off",
-      "unicorn/prefer-module": "off",
-      "unicorn/prefer-top-level-await": "off",
-      "unicorn/prevent-abbreviations": "off"
     }
   }
 }
