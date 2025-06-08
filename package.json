@@ -46,7 +46,7 @@
     "npm-run-all2": "^8.0.4",
     "stylelint": "^16.20.0",
     "stylelint-config-twbs-bootstrap": "^16.0.0",
-    "xo": "^1.0.5"
+    "xo": "^1.1.0"
   },
   "engines": {
     "node": ">=20"
