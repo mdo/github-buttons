@@ -38,9 +38,7 @@ module.exports = [
       'prefer-template': 'error',
       'require-unicode-regexp': 'off',
       'unicorn/no-negated-condition': 'off',
-      'unicorn/prefer-global-this': 'off',
       'unicorn/prefer-module': 'off',
-      'unicorn/prefer-top-level-await': 'off',
       'unicorn/prevent-abbreviations': 'off'
     }
   }
