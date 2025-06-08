@@ -4,15 +4,12 @@
   const allowedQueryParams = new Set(['user', 'repo', 'type', 'count', 'size', 'text', 'v']);
 
   function getUrlParameters() {
-    // TODO: Replace with URLSearchParams later
-    const hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    const searchParams = new URLSearchParams(globalThis.location.search);
     const parameters = new Map();
 
-    for (const hash of hashes) {
-      const [parameter, value] = hash.split('=');
-
-      if (allowedQueryParams.has(parameter)) {
-        parameters.set(parameter, value);
+    for (const [param, value] of searchParams.entries()) {
+      if (allowedQueryParams.has(param)) {
+        parameters.set(param, value);
       }
     }
 
@@ -21,15 +18,21 @@
 
   // Add commas to numbers
   function addCommas(n) {
-    // eslint-disable-next-line unicorn/prefer-string-replace-all
-    return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+    return new Intl.NumberFormat().format(n);
   }
 
-  function jsonp(path) {
-    const script = document.createElement('script');
+  async function fetchData(path) {
+    try {
+      const response = await fetch(path);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
-    script.src = `${path}?callback=callback`;
-    document.head.insertBefore(script, document.head.firstChild);
+      return await response.json();
+    } catch (error) {
+      console.error(`Error fetching data: ${error}`);
+      return { data: { message: 'Not Found' } };
+    }
   }
 
   // Parameters
@@ -55,18 +58,18 @@
   const REPO_URL = `${GITHUB_URL + user}/${repo}`;
   const USER_REPO = `${user}/${repo}`;
 
-  window.callback = function(obj) {
-    if (obj.data.message === 'Not Found') {
+  async function processApiData(data) {
+    if (data.message === 'Not Found') {
       return;
     }
 
     switch (type) {
       case 'watch': {
         if (v === '2') {
-          counter.textContent = obj.data.subscribers_count && addCommas(obj.data.subscribers_count);
+          counter.textContent = data.subscribers_count && addCommas(data.subscribers_count);
           counter.setAttribute('aria-label', `${counter.textContent} watchers ${LABEL_SUFFIX}`);
         } else {
-          counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+          counter.textContent = data.stargazers_count && addCommas(data.stargazers_count);
           counter.setAttribute('aria-label', `${counter.textContent} stargazers ${LABEL_SUFFIX}`);
         }
 
@@ -74,19 +77,19 @@
       }
 
       case 'star': {
-        counter.textContent = obj.data.stargazers_count && addCommas(obj.data.stargazers_count);
+        counter.textContent = data.stargazers_count && addCommas(data.stargazers_count);
         counter.setAttribute('aria-label', `${counter.textContent} stargazers ${LABEL_SUFFIX}`);
         break;
       }
 
       case 'fork': {
-        counter.textContent = obj.data.network_count && addCommas(obj.data.network_count);
+        counter.textContent = data.network_count && addCommas(data.network_count);
         counter.setAttribute('aria-label', `${counter.textContent} forks ${LABEL_SUFFIX}`);
         break;
       }
 
       case 'follow': {
-        counter.textContent = obj.data.followers && addCommas(obj.data.followers);
+        counter.textContent = data.followers && addCommas(data.followers);
         counter.setAttribute('aria-label', `${counter.textContent} followers ${LABEL_SUFFIX}`);
         break;
       }
@@ -97,7 +100,7 @@
       counter.style.display = 'block';
       counter.removeAttribute('aria-hidden');
     }
-  };
+  }
 
   // Set href to be URL for repo
   button.href = REPO_URL;
@@ -177,9 +180,14 @@
     return;
   }
 
-  if (type === 'follow') {
-    jsonp(`${API_URL}users/${user}`);
-  } else {
-    jsonp(`${API_URL}repos/${user}/${repo}`);
-  }
+  (async() => {
+    try {
+      const apiPath = type === 'follow' ? `${API_URL}users/${user}` : `${API_URL}repos/${user}/${repo}`;
+      const data = await fetchData(apiPath);
+
+      await processApiData(data);
+    } catch (error) {
+      console.error(`Error fetching GitHub data: ${error}`);
+    }
+  })();
 })();

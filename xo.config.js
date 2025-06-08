@@ -37,9 +37,7 @@ module.exports = [
       'default-case': 'off',
       'prefer-template': 'error',
       'unicorn/no-negated-condition': 'off',
-      'unicorn/prefer-global-this': 'off',
       'unicorn/prefer-module': 'off',
-      'unicorn/prefer-top-level-await': 'off',
       'unicorn/prevent-abbreviations': 'off'
     }
   }
