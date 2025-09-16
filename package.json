@@ -39,14 +39,14 @@
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "cross-env": "^10.0.0",
-    "globals": "^16.3.0",
+    "globals": "^16.4.0",
     "html-minifier-terser": "^7.2.0",
     "inline-source-cli": "^2.0.0",
     "lockfile-lint": "^4.14.1",
     "npm-run-all2": "^8.0.4",
-    "stylelint": "^16.23.0",
+    "stylelint": "^16.24.0",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
-    "xo": "^1.2.1"
+    "xo": "^1.2.2"
   },
   "engines": {
     "node": ">=20"
