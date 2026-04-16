@@ -36,6 +36,7 @@ module.exports = [
       'capitalized-comments': 'off',
       'default-case': 'off',
       'prefer-template': 'error',
+      'require-unicode-regexp': 'off',
       'unicorn/no-negated-condition': 'off',
       'unicorn/prefer-global-this': 'off',
       'unicorn/prefer-module': 'off',
