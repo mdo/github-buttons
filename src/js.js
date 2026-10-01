@@ -110,11 +110,11 @@
       if (v === '2') {
         mainButton.classList.add('github-watchers');
         text.textContent = 'Watch';
-        counter.href = `${REPO_URL}/watchers`;
+        counter.href = REPO_URL;
       } else {
         mainButton.classList.add('github-stargazers');
         text.textContent = 'Star';
-        counter.href = `${REPO_URL}/stargazers`;
+        counter.href = REPO_URL;
       }
 
       title = `${text.textContent} ${USER_REPO}`;
@@ -124,7 +124,7 @@
     case 'star': {
       mainButton.classList.add('github-stargazers');
       text.textContent = 'Star';
-      counter.href = `${REPO_URL}/stargazers`;
+      counter.href = REPO_URL;
       title = `${text.textContent} ${USER_REPO}`;
       break;
     }
