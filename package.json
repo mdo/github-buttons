@@ -39,11 +39,11 @@
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "cross-env": "^10.1.0",
-    "globals": "^17.5.0",
+    "globals": "^17.13.0",
     "html-minifier-terser": "^7.2.0",
     "inline-source-cli": "^2.0.0",
-    "lockfile-lint": "^5.0.0",
-    "npm-run-all2": "^8.0.4",
+    "lockfile-lint": "^5.1.0",
+    "npm-run-all2": "^9.0.3",
     "stylelint": "^16.26.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
     "xo": "^2.0.2"
@@ -55,5 +55,8 @@
     "inline-source-cli": {
       "inline-source": "^8.0.2"
     }
+  },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
   }
 }
